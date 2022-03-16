@@ -198,16 +198,16 @@ Include motivation
 \begin{itemize}
     \item AI used in many use cases (give examples of high risk etc) 
     \item For successful integration of AI, users and public need to trust it. 
-    \item Law came into that decisions for banks etc needed to be explained to the user
+    \item Law came into that decisions for banks etc needed to be explained to the user, the right to explanation, e.g GDPR
     \item this brought about interest in XAI (Why XAI has been seen as important (Issues with this - black box models, not always human able to intervene/oversee))
     \item Lots of work has been done into XAI techniques to give `trust' in AI.
     \item XAI examples to show off the amount of work been done  - survey papers and specific examples? LIME? FATF?
     \item Issues with XAI - critics (to give some doubt over XAI actually giving trust and telling us how AI works)
     \item Is the current work in XAI just useful for machine learning practictoners? 
     \item What is best for the users/ what do users actually want? Has the explaination law confused us of what users actually want/need?
-    \item We want to explore what trust actually is in relation to AI. is it XAI, is it performance? is it counterfactual results (are they more intuitive/what people would like to know)?
+    \item We want to explore what trust actually is in relation to AI. Is it XAI? Is it performance? Is it counterfactual results? (are they more intuitive/what people would like to know)?
     \item There has been the topic of trust between humans and machines before (1987 paper). Which indicates that there needs to be trust not just performance.
-    \item There is no current user study of is XAI gives more trust or what actually gives trust for user. This is what motivates our study.
+    \item There is no current user study of is XAI gives more trust or what actually gives trust for user. And how this changes depending on demographic (AI expert, high stakes decision maker, general public) This is what motivates our study.
 
     % \item medical domain - paper Alex found on simple AI in a medical context out-performing doctors
 \end{itemize}
@@ -220,26 +220,71 @@ Include motivation
 \section{Related Work}
 Literature Review
 
-Work relating to trustworthiness.
-
 Rough overview
 \begin{itemize}
     \item critics of XAI - is it what we really need for trust?, does it really given an explanation for a non AI expert? 
     \item trustworthiness? does XAI make us trust? Lipton paper (Mythos) is trustworthiness resolved XAI or is it performance?
 \end{itemize}
 
-The Mythos of model interpretability\cite{Lipton2018}: critic on if explainability and interpretability can be achieved, does it lead to trust or not?
+\subsection{Available Techniques for Explainability and Interpretability}
+There has been a previous wave of explainability in control systems as well as AI in the late 80ies: Explaining Control Strategies in Problem Solving\cite{Chandrasekaran1989}
 
+There's been a plethora of interpretability and explainability techniques developed in recent years - surge since 2016. There are many survey papers that describe the different techniques and try to come up with a framework to organise them:
+\begin{itemize}
+    \item Explainable AI: A Review of Machine Learning Interpretability Methods\cite{Linardatos2021}
+    \item Notions of explainability and evaluation approaches for explainable artificial intelligence\cite{Vilone2021}
+    \item A Comprehensive Taxonomy for Explainable Artificial Intelligence: A Systematic Survey of Surveys on Methods and Concepts\cite{Schwalbe2021}
+    \item Explainable Artificial Intelligence: a Systematic Review\cite{Vilone2020}
+    \item A Survey of Methods for Explaining Black Box Models\cite{Guidotti2018a}
+    \item Peeking Inside the Black-Box: A Survey on Explainable Artificial Intelligence (XAI)\cite{Adadi2018}
+    \item A Multidisciplinary Survey and Framework for Design and Evaluation of Explainable AI Systems\cite{Mohseni2021}
+    \item Explainable Deep Learning: A Field Guide for the Uninitiated\cite{Ras2020}
+    \item How Case-Based Reasoning Explains Neural Networks: A Theoretical Analysis of XAI Using Post-Hoc Explanation-by-Example from a Survey of ANN-CBR Twin-Systems\cite{Keane2019}
+    \item Improving fairness in machine learning systems: What do industry practitioners need?\cite{Holstein2019}
+    \item Good Counterfactuals and Where to Find Them: A Case-Based Technique for Generating Counterfactuals for Explainable AI (XAI)\cite{Keane2020} 
+    \item Contrastive explanation: A structural-model approach\cite{Miller2021}
+\end{itemize}
+
+\subsection{Paper that argue the need of XAI}
+\begin{itemize}
+    \item XAI-Explainable artificial intelligence\cite{Gunning2019} Quote "Explainability is essential for users to effectively understand, trust, and manage powerful artificial intelligence applications."
+\end{itemize}
+
+
+\subsection{Shortfalls and Critics of current XAI}
+The Mythos of model interpretability\cite{Lipton2018}: critic on if explainability and interpretability can be achieved and does it lead to trust or not? Critics of the vague definition of the terms used.
+
+Do interpretable models achieve their intended effects: Manipulating and Measuring Model Interpretability\cite{Goldstein2021}
 
 Explanation in Artificial Intelligence: Insights from the Social Sciences\cite{Miller2019}
 %https://www.connectedpapers.com/main/e89dfa306723e8ef031765e9c44e5f6f94fd8fda/Explanation-in-Artificial-Intelligence%3A-Insights-from-the-Social-Sciences/graph
 
-Trust Between Humans and Machines, and the Design of Decision Aids %needs bib importing
+Towards A Rigorous Science of Interpretable Machine Learning\cite{Doshi-Velez2017}
+
+
+\subsection{Trust in Machines}
+Trust is an important factor in facilitating Human Computer Interaction. While trust remains hard to define, there's a significant body of work around 'trust in automated systems' for high-stakes decision making.
+
+Trust Between Humans and Machines, and the Design of Decision Aids\cite{Muir1987}
 "The concept of trust is a critical one in the design of decision support systems. A
 decision aid, no matter how sophisticated or "intelligent" it may be, may be rejected
 by a decision maker who does not trust it, and so its potential benefits to system
 performance will be lost."
 %https://www.connectedpapers.com/main/c58081eec27d282757efbb35b023d9c81c699a5e/Trust-Between-Humans-and-Machines%2C-and-the-Design-of-Decision-Aids/graph
+
+Foundations for an Empirically Determined Scale of Trust in Automated Systems\cite{Jian2000}
+An empirically developed measure of trust. The framework developed in this paper has continued to be used in more recent research to measure trust.
+%https://www.connectedpapers.com/main/d3f274a407ab237cfffc822dae103b108b9bdfff/Foundations-for-an-Empirically-Determined-Scale-of-Trust-in-Automated-Systems/graph
+
+Trust in Automation: Integrating Empirical Evidence on Factors That Influence Trust \cite{Hoff2015} Results: "three layers of variability in human–automation trust (dispositional trust, situational trust, and learned trust), which we organize into a model. We propose design recommendations for creating trustworthy automation and identify environmental conditions that can affect the strength of the relationship between trust and reliance."
+
+A Meta-Analysis of Factors Affecting Trust in Human-Robot Interaction\cite{Hancock2011} Results: "Factors related to the robot itself, specifically, its performance, had the greatest current association with trust, and environmental factors were moderately associated. There was little evidence for effects of human-related factors."
+
+In AI We Trust Incrementally: a Multi-layer Model of Trust to Analyze Human-Artificial Intelligence Interactions\cite{Ferrario2020}
+
+Trust and Trust-Engineering in Artificial Intelligence Research: Theory and Praxis\cite{Chen2021}
+
+The relationship between trust in AI and trustworthy machine learning technologies\cite{Toreini2020}
 
 
 \section{Methodology}
