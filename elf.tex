@@ -33,6 +33,13 @@
 %%%% Generic manuscript mode, required for submission
 %%%% and peer review
 \documentclass[manuscript,screen,review]{acmart}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows, patterns}
+\usepackage{graphicx}
+\usepackage{subcaption}
+% \usepackage{draftwatermark}
+% \SetWatermarkText{\includegraphics[width = 0.25\textwidth, opacity = 0.1]{graphics/Untitled-1.png}}
 %% Fonts used in the template cannot be substituted; margin 
 %% adjustments are not allowed.
 %%
@@ -144,6 +151,13 @@
 \begin{abstract}
 Abstract
  Include motivation and Contribution
+ what's our contribution - first sentence
+ why are we doing this research -> one sentence
+ mention survey of x people and focus group -> one sentence on what we did
+ what have we done - why is it new - how have we done it - what are our findings (short)
+ 
+ 
+ 
 \end{abstract}
 
 %%
@@ -192,30 +206,55 @@ Abstract
 
 \newpage
 \section{Introduction}
-Include motivation
+Motivate the research
 
+give an overview of relevant background literature
 
+describe the research question. 
+
+Possibly signpost the findings
+
+% notes on how to writing
+% go straight to the point
+% don't make it so general that it could be used for an other paper
+% don't slash others works
+% include problem / solution
+
+Initial structure:
 \begin{itemize}
-    \item AI used in many use cases (give examples of high risk etc) 
+    \item AI used in many use applications (give examples of high risk etc) - we focused on healthcare
     \item For successful integration of AI, users and public need to trust it. 
-    \item Law came into that decisions for banks etc needed to be explained to the user, the right to explanation, e.g GDPR
+    \item Law came into that decisions for banks etc needed to be explained to the user, the right to explanation, e.g GDPR %https://www.turing.ac.uk/research/impact-stories/a-right-to-explanation
     \item this brought about interest in XAI (Why XAI has been seen as important (Issues with this - black box models, not always human able to intervene/oversee))
     \item Lots of work has been done into XAI techniques to give `trust' in AI.
     \item XAI examples to show off the amount of work been done  - survey papers and specific examples? LIME? FATF?
     \item Issues with XAI - critics (to give some doubt over XAI actually giving trust and telling us how AI works)
-    \item Is the current work in XAI just useful for machine learning practictoners? 
-    \item What is best for the users/ what do users actually want? Has the explaination law confused us of what users actually want/need?
+    \item Is the current work in XAI just useful for machine learning practitioners? 
+    \item What is best for the users/ what do users actually want? Has the explanation law confused us of what users actually want/need?
     \item We want to explore what trust actually is in relation to AI. Is it XAI? Is it performance? Is it counterfactual results? (are they more intuitive/what people would like to know)?
     \item There has been the topic of trust between humans and machines before (1987 paper). Which indicates that there needs to be trust not just performance.
-    \item There is no current user study of is XAI gives more trust or what actually gives trust for user. And how this changes depending on demographic (AI expert, high stakes decision maker, general public) This is what motivates our study.
-
+    \item There is no current user study of how XAI changes trust depending on: demographic (AI expert, high stakes decision maker, general public) or the level of explainablity. 
     % \item medical domain - paper Alex found on simple AI in a medical context out-performing doctors
+\end{itemize}
+Ann's suggestion of structure:
+\begin{itemize}
+    \item Context (how is the world now): Messy, AI and Explainable AI, 
+    \item the problem (drama): loads of research, not many survey on what's needed on trust, does transparency and explainable creates more or less trust
+    \item related work and how it doesn't cover this: GDPR has created a flood of research into Explainable AI, so it's not been questioned much on the motivations. Surveys on trust in generic AI systems. Surveys of perspectives on generic AI system for healthcare work groups.
+    \item our solution, method and results: survey and focus group to find out if trust increases with transparency and if experience with AI or high stakes decision making matters
+    \item what new worlds does our research do: design with all demographics in mind, different branches of explainability. Present information that can be used to design better AI systems for healthcare needs. Encourage more user driven explainable AI with the demographics we find
 \end{itemize}
 
 
 % AI is becoming widespread in multiple domains to automate and aid decision making tasks. (Give some examples).  However, many AI algorithms are inherently black box. This means that the inner workings and reasoning that an AI uses to arrive at a decision is unknown. It is argued that in some application areas[cite], such as ad servers, that black box models are sufficient.
 
+% Attempt on why is it new
+%* there's debate about the value of transparent AI and if it is needed for Trust
+%* some say it is (quote papers), some say it isn't (quote papers)
+%* we want to find out if it is and we expect the answer to be it depends on the audience, especially how much AI experience you have, and if you are used to making decision that could have huge impact on other people like medical diagnosis
 
+
+%New contribution: We focused specifically on medics no medics, and ai experts and no ai experts as well as high stakes decision making
 
 \section{Related Work}
 Literature Review
@@ -245,7 +284,7 @@ There's been a plethora of interpretability and explainability techniques develo
     \item Contrastive explanation: A structural-model approach\cite{Miller2021}
 \end{itemize}
 
-\subsection{Paper that argue the need of XAI}
+\subsection{Papers that argue the need of XAI}
 \begin{itemize}
     \item XAI-Explainable artificial intelligence\cite{Gunning2019} Quote "Explainability is essential for users to effectively understand, trust, and manage powerful artificial intelligence applications."
 \end{itemize}
@@ -278,7 +317,7 @@ An empirically developed measure of trust. The framework developed in this paper
 
 Trust in Automation: Integrating Empirical Evidence on Factors That Influence Trust \cite{Hoff2015} Results: "three layers of variability in human–automation trust (dispositional trust, situational trust, and learned trust), which we organize into a model. We propose design recommendations for creating trustworthy automation and identify environmental conditions that can affect the strength of the relationship between trust and reliance."
 
-A Meta-Analysis of Factors Affecting Trust in Human-Robot Interaction\cite{Hancock2011} Results: "Factors related to the robot itself, specifically, its performance, had the greatest current association with trust, and environmental factors were moderately associated. There was little evidence for effects of human-related factors."
+A Meta-Analysis of Factors Affecting Trust in Human-Robot Interaction\cite{Hancock2011} Results: "Factors related to the robot itself, specifically, its performance, had the greatest current association with trust, and environmental factors were moderately associated. There was little evidence for effects of human-related factors." - this is a contradiction of \cite{Muir1987} and our data also contradicts this. The research was focused on warfare and physical robots not software, which might explain the contradiction?
 
 In AI We Trust Incrementally: a Multi-layer Model of Trust to Analyze Human-Artificial Intelligence Interactions\cite{Ferrario2020}
 
@@ -286,10 +325,439 @@ Trust and Trust-Engineering in Artificial Intelligence Research: Theory and Prax
 
 The relationship between trust in AI and trustworthy machine learning technologies\cite{Toreini2020}
 
+\subsection{Participatory Design}\label{subsec:participatory_design}
+
+\subsection{Why is Explainable AI needed - specifically looking at asking}
+
+%https://www.sciencedirect.com/science/article/pii/S1120179720303124 
+Artificial intelligence in the medical physics community: An international survey - Is AI Needed? This is a survey
+
+%https://link.springer.com/chapter/10.1007/978-3-030-60117-1_33 - 
+Human-Centered Explainable AI: Towards a Reflective Sociotechnical Approach -> Case study investigating the effects of post hoc explanation
+
+%https://ieeexplore.ieee.org/abstract/document/9614151 - 
+A Systematic Review of Human–Computer Interaction and Explainable Artificial Intelligence in Healthcare With Artificial Intelligence Techniques -> Review of the techniques
+
+%https://www.sciencedirect.com/science/article/pii/S1120179720303124 
+What do we need to build explainable AI systems for the medical domain?  - not a survey
+
+%https://www.sciencedirect.com/science/article/pii/S1532046420302835 
+The role of explainability in creating trustworthy artificial intelligence for health care: A comprehensive survey of the terminology, design choices, and evaluation strategies -> 
+
+Measuring trust in AI
+Researchers find public trust in AI varies greatly depending on the application -> %https://www.sciencedaily.com/releases/2022/01/220110103323.htm 
+-> investigated public attitudes toward the ethics of AI.
+
+Transparency you can trust: Transparency requirements for artificial intelligence between legal norms and contextual concerns (not surveys)
+%https://www.sciencedirect.com/science/article/pii/S1532046420302835
 
 \section{Methodology}
-Describe how we did user research
-How are we going to evaluate our findings
+% Describe how we did user research
+% How are we going to evaluate our findings
+
+%The aim of this study is to investigate how the level of transparency that is provided by an AI tool influences the level of trust placed in it when used in high-stakes decision-making. Transparency of an AI tool refers to how well a human can understand why an AI tool has come to the decision that it has made. A high-stakes decision is where someone may be significantly negatively impacted by the result of a decision, for example self-driving cars, medical and legal decisions
+
+The aim of this study is to investigate how the level of transparency that is provided by an AI tool influences the level of trust placed in it when used in high-stakes decision-making. In this context, transparency refers to a characteristic of the AI tool being used, which implies how easily the model outputs can be justified by a user when considering the model inputs.
+
+the ability of a model to be interpeof an AI tool refers to how well a human can understand why an AI tool has come to the decision that it has made. A high-stakes decision is where someone may be significantly negatively impacted by the result of a decision, for example self-driving cars, medical and legal decisions.
+
+% JE
+
+\subsection{Study 1}
+\subsubsection{Intention of Study} 
+\label{study1_intentions}
+
+The intention of this study is to gather quantitative data on the level of trust participants place in computer-aided decision making tools (herein referred to as "the AI tool/model") based on the level of transparency of the AI model.
+
+We consider trustworthiness on a scale where the lowest measure is "not at all" and the highest measure is "completely". We define four levels of model transparency, based on different conceivable scenarios:
+\begin{itemize}
+    \item Transparency Level 1; A human makes the decision with no AI model involved in the process. This is considered to be "fully transparent" as we can ask the human to justify any element of the decision-making process.
+    \item Transparency Level 2; A human makes the decision with the aid of an AI tool which is interpretable. The human can query the tool and might be able to understand why the tool has made the decision. The human can override the decision of the AI tool.
+    \item Transparency Level 3; A human makes the decision with the aid of an AI tool which is not interpretable. The human cannot query the tool and cannot understand why the tool has made the decision. The human can override the decision of the AI tool. 
+    \item Transparency Level 4; An AI tool which is non-interpretable makes the decision. There is no human involvement in the decision-making process, and a human cannot override the decision of the AI tool. 
+\end{itemize}
+
+By gathering data from a group of participants on their level of trust in the decision-making process across these four levels of transparency we hope to establish, through investigation, whether any relationship exists. 
+
+% add details on how we requited participants, how many responded and where from.
+
+\subsubsection{Constraints of Study}
+\label{study1_constraints}
+
+Measuring trust for a population on a unified scale is a well-documented challenge [Sohns. A et al.] [Glaeser. E et al]. Evaluating an individual's level of trust is a multi-dimensional problem which depends on past experience, knowledge and interpretation of terminology regarding levels of trust. To correctly capture variations in trust for different levels of model transparency, we must define appropriate constraints for the data-capturing process.
+
+% Covid Diagnosis
+ Firstly, we assume that an individual's level of trust in an AI tool will vary considerably based on the stake which the user has in the decision. For example, the general public might be passive when AI tools are utilised to suggest the nearby restaurants during the process of ordering food, but could feel some level of concern if a judicial system announced that it would apply an AI tool to determine all criminal sentencing procedures for future convictions. To ensure that any surveyed individual has a high stake in the decision-making process, we establish constraint \#1:
+ \begin{center}
+     \textbf{Constraint 1}; Participants are asked to consider a situation where an AI tool is used to aid the decision of whether or not they have contracted COVID-19.
+ \end{center}
+
+% High-stakes decision making scale
+High-stakes decision making is an ambiguous concept.
+
+To allow for meaningful evaluation, involvement in "high-stakes" decision was investigated in two ways.
+
+The first method was to offer a definition of "high-stakes decision making", and ask study participants to self-rate on an ordinal scale of one to ten. This method allows participants from all backgrounds and professions to identify themselves as individuals involved in high-stakes decision making only if they believe it is appropriate to do so. 
+
+A simple and broad definition was given alongside some examples of relevant professional roles. This was done to be as inclusive as possible, since everyone can make or be involved with high-stakes decisions. The relevance to trust in external decision support systems comes from the individuals perception of the impact of the decisions they are involved with. The following definition was provided:
+\textit{"By "high-stakes decision making" we mean making decisions that are highly impactful. High stakes decisions occur in many settings, such as legal judgements, healthcare, insurance pricing, offering mortgages, stock trading, etc.".}
+
+
+
+% Medics vs non-medics
+As an adjunct, healthcare professional were identified as a professional group implicitly involved in high-stakes decision decision making, and are therefore in important professional group to investigate specifically.
+
+Given the constraint to only consider a high-stakes medical decision, we must consider whether trust is influenced by the experience of the participant in these contexts. For example, a judge who frequently makes life-altering decisions may provide a different response to someone who has never found themselves in such a situation. Similarly, someone who works in a hospital may consider the decision-making process for a medical diagnosis very differently to someone who has worked in a medical setting. This leads to constraints \#2 and \#3:
+ 
+  \begin{center}
+    \textbf{Constraint 2}; Any participant must inform the study of their experience of high-stakes decision making.
+    \textbf{Constraint 3}; Any participant must inform the study whether they work, or have worked, in a healthcare setting.
+\end{center}
+
+%  Level of experience in AI
+Finally, we must consider whether any participants have experience within the field of AI; an AI specialist may exhibit bias towards or against AI tools based on their personal experience. This leads to constraint \#4:
+ 
+  \begin{center}
+    \textbf{Constraint 4}; Any participant must inform the study whether they have worked with, researched or developed AI tools.
+\end{center}
+
+By applying these constraints to our data collection process, we aim to understand whether trust attribution is dependent on factors other than model transparency. This is primarily to prevent any false conclusions from the data but also enables a deeper analysis into human trustworthiness of AI based on application-specific experience and knowledge of AI.
+
+\subsubsection{Data Gathering}
+Data is gathered in the form of a survey. We ask users;
+
+\begin{enumerate}
+    \item Whether they have worked in a healthcare setting
+    \item How often they are involved in making high-stakes decisions
+    \item To rank their level of experience with AI
+\end{enumerate}
+
+
+
+These questions pertain to the constraints defined in Section \ref{study1_constraints}. We then proceed to describe four scenarios to the participant, where transparency in the decision-making process is aligned with each consecutive level defined in \ref{study1_intentions}. For each scenario we ask users to rank their level of trust on a scale from 1-10 where 1 corresponds with "Not at All", and 10 corresponds with "Completely".
+
+\subsubsection{Ethics process}
+
+When surveying a population, several key ethical considerations must be addressed:
+\begin{itemize}
+    \item Appropriate inclusion and exclusion criteria
+    \item Informed Consent
+    \item The safety and well-being of any participants
+    \item The protection of any participants data 
+    \item Compensation
+\end{itemize}
+ 
+
+\subsection{Data Analysis}
+
+% /JE
+
+Highlight the use of covid diagnosis makes people apply the risk to themselves. So we get more thoughtful/emotive responses.
+
+Split into Study one and Study two.
+How did we pick the 5 people from the focus group
+
+
+\subsection{Data}
+
+\subsection{Additional Features}
+
+The survey was closed after XXX days, with XXX participants. We use the two key profile features - AI experience level and whether the participant is a medical professional - to dis-aggregate into three demographic bins:
+
+\begin{itemize}
+    \item Medical professional: Answered "yes" to relevant question
+    \item AI Expert: Not a medical professional, and AI experience level reported as $\geq XXX$
+    \item Public: Neither a medical professional nor an AI expert
+\end{itemize}
+
+We use the results of the first scenario, the trust in the doctor with no AI component $T_D$, as a baseline to assess the impact of AI-cooperation on diagnosis trust levels. We denote the trust level reported in these cooperative scenarios based on the nature of their model. Scenario two, with the interpretable or "glass box'' model is $T_{GB}$, and scenario three with the "black box'' model $T_{BB}$.
+
+We normalise the survey scale of [1,10] to [0,1] for $T_D, T_{BB}, T_{GB}$, via $T_i \rightarrow (T_i - 1) * (10/9)$, then produce two new features based on the percentage factor change in trust:
+
+\begin{equation}
+    f_i = 100 \cdot (T_i / T_D)
+\end{equation}
+
+These features allow analysis of whether participants view the cooperative use of AI as beneficial ($f_i > 0$), neutral ($f_i = 0$), or inhibitory ($f_i < 0$) to the diagnosis. We plot the results in Figure \ref{fig:improvement}, along with an interpretation schema.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{graphics/Doctor_improvements_cooperation_scatter.jpg}
+    \caption{\centering Perceived improvements in trust in scenarios 3 and 4, with Gaussian Kernel Density Estimates for added clarity. Percentages are calculated using $\leq 0$ and $>0$ basis.\hspace{\textwidth} Interpretation schema: \textbf{A}: Black box improves diagnosis, glass box makes diagnosis worse \hspace{\textwidth} \textbf{B}: Both glass box and black box improve diagnosis. \textbf{$B_1$} black box is preferred, \textbf{$B_2$} glass box is preferred, $B_3$ neither is preferred. \textbf{C}: Neither glass box or black box improve diagnosis \textbf{D}: Glass box improves diagnosis, black box makes diagnosis worse}
+    \label{fig:improvement}
+\end{figure}
+
+Through Figure \ref{fig:improvement} we derive how different cohorts view the use of AI in cooperative scenarios. In all cohorts, a significant proportion of participants view the use of AI as beneficial with both models - 46\% of the public, 53\% of medical professionals, and 60\% of AI experts. This can be assumed to match the progression of technical expertise between cohorts.
+
+Only a minority of each cohort view neither AI-cooperative scenario as beneficial. In all cohorts the glass box model is preferred over the black box model, but only by a small margin, with ratios $f_{BB}:f_{GB}$ of 1:1.17, 1:1.125 and 1:1.40 for the public, medical professionals and AI experts respectively. 
+
+\subsection{Correlation Analysis}
+
+\subsection{Clustering}
+
+Insights can be gained into the results of the survey by applying unsupervised methods. These do not rely on any labels or targets, as would be the case in supervised or semi-supervised methods, so avoid many of the biases that such methods would carry. In particular we apply Uniform Manifold Approximation and Projection (UMAP) \cite{McInnes2018} as dimensionality reduction, then Hierachical Density-Based Spatial Clustering And Noise (HDBSCAN) \cite{McInnes2018} as unsupervised clustering on the resulting UMAP embedding. 
+
+UMAP makes the assumption that data is distributed on a uniform manifold, but that the data-space is warped. Using this assumption local distance metrics are learnt, then used to construct a distance graph of the data. A lower-dimensional embedding is then formed, which aims to conserve the form of the high-dimensional space, using a stochastic graph layout. HDBSCAN, similarly, constructs a minimum spanning tree based on distances in the data-space, then applies various sub-algorithms to find clusters. Full explanation of these algorithms is beyond the scope of this work, so the reader should consult the relevant papers for more information.
+
+We apply UMAP, then HDBSCAN to the resulting embedding, and present the results in Figures \ref{fig:embedding}, \ref{fig:cluster_means}.
+
+
+\begin{figure}
+\centering
+\begin{subfigure}{0.4\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{graphics/UMAP_HDBSCAN.jpg}
+  \caption{}
+%   \caption{The UMAP embedding produces four (visually) distinct clusters, which are also identified by HDBSCAN.}
+  \label{fig:embedding}
+\end{subfigure}%
+\begin{subfigure}{0.65\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{graphics/clustering_means.jpg}
+  \caption{Cluster means across all four scenarios, along with profiling features.}
+  \label{fig:cluster_means}
+\end{subfigure}
+\caption{The results of unsupervised clustering with UMAP and HDBSCAN.}
+\label{fig:test}
+\end{figure}
+
+
+\subsection{Brainstorm}
+\begin{itemize}
+    \item Correlation analysis
+    \item Clustering analysis
+\end{itemize}
+
+
+
+
+\subsection{Bit of maths}
+
+In order for the AI to have any impact on the doctor, the doctor has to actually take the AI's diagnosis into account. For an AI diagnosis $A^x, x\in \{+,- \}$ and an original doctor diagnosis $D^x, x\in \{+,- \}$. As shown visually in Fig. \ref{fig:coop_diagram}, we can model a bias factor $f^x_{\textrm{Agree/Disagree}}$. The doctor can be assumed to carry a unique bias towards agreeing or disagreeing with the AI, dependent on the AI's diagnosis, which here we've modelled as a factor change to the doctor's original efficacy.
+
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\tikzstyle{node} = [rectangle, text centered, draw = black, fill = white!255, minimum width = 2.5cm]
+\tikzstyle{correct} = [rectangle, text centered, draw = black, fill = green!50, minimum width = 2.5cm]
+\tikzstyle{incorrect} = [rectangle, text centered, draw = black, fill = red!30, minimum width = 2.5cm]
+
+\begin{figure}[h]
+\centering
+
+\begin{tikzpicture}[node distance=2cm]
+\node (patient) [node] {Patient symptoms};
+
+\node (AI_pos)  [node, right of = patient, xshift = 2cm] {AI positive diagnosis};
+\node (AI_neg)  [node, below of = patient, yshift = -0cm] {AI negative diagnosis};
+
+\node (Pos_pos) [correct, right of = AI_pos, xshift = 4cm] {Doctor agrees, positive diagnosis};
+\node (Pos_neg) [incorrect, above of = AI_pos, yshift = 0cm] {Doctor disagrees, negative diagnosis};
+
+\node (Neg_pos) [incorrect, right of = AI_neg, xshift = 5cm] {Doctor agrees, negative diagnosis};
+\node (Neg_neg) [correct, below of = AI_neg, yshift = -0cm] {Doctor disagrees, positive diagnosis};
+
+\draw [arrow] (patient) -- node[anchor=south] {$A^+$} (AI_pos);
+\draw [arrow] (patient) -- node[anchor=west] {$A^-$} (AI_neg);
+
+\draw [arrow] (AI_pos) -- node[anchor=south] {$f^+_{\textrm{Agree}}D^+$} (Pos_pos);
+\draw [arrow] (AI_pos) -- node[anchor=west] {$f^+_{\textrm{Disagree}}D^-$} (Pos_neg);
+
+\draw [arrow] (AI_neg) -- node[anchor=south] {$f^-_{\textrm{Disagree}}D^+$} (Neg_pos);
+\draw [arrow] (AI_neg) -- node[anchor=west] {$f^-_{\textrm{Agree}}D^-$} (Neg_neg);
+
+\end{tikzpicture}
+
+\caption{The process of AI-cooperative diagnosis}
+\label{fig:coop_diagram}
+\end{figure}
+
+In this model the probability of a correct diagnosis for a patient with COVID is:
+
+\begin{equation}
+    P(\textrm{correct}) = (f^+_{\textrm{A}}A^+ + f^-_{\textrm{D}}A^-) D^+
+\label{eqn:correct_coop}
+\end{equation}
+
+with $f^+_{\textrm{A}}$ shorthand for $f^+_{\textrm{Agree}}$, and the same shortening notation for $f^-_{\textrm{Disagree}}$. We can assume that the probability of a correct diagnosis is limited to $0 \leq P(\textrm{correct}) \leq 1$, which sets limits
+
+\begin{equation}
+    0 \leq f^+_{\textrm{A}}A^+, f^+_{\textrm{D}}A^- \leq 1/D^+
+\end{equation}
+
+
+In this model the patients diagnosis is only improved if $(f^+_{\textrm{A}}A^+ + f^-_{\textrm{D}}A^-) > 1$, otherwise the chance of a COVID positive patient being correctly diagnosed decreases. Important to note is that if $f^+_A \textrm{ and } f^-_D = 1$, ie if the doctor has no interpretation of the AI's diagnosis, then Equation \ref{eqn:correct_coop} becomes
+
+\begin{equation}
+    P(\textrm{correct}) = (A^+ + A^-) D^+ = D^+
+\end{equation}
+
+the effect of which being that the AI has no impact on the doctor's efficacy. 
+
+
+% \begin{figure}[h]
+% \centering
+
+% \begin{tikzpicture}
+
+% \draw[opacity=0.5,fill=green!50] (0pt, 6cm) -- (0pt, 9cm) -- (9cm, 0pt) -- (6cm, 0pt) -- (0pt, 6cm);
+% \draw[opacity=0.5,fill=red!30] (0pt, 0pt) -- (0pt, 6cm) -- (6cm, 0pt) -- (0pt, 0pt);
+
+% \draw[thick,->] (0,0) -- (10,0) node[anchor=north west] {$f^+_{\textrm{A}}A^+$};
+% \draw[thick,->] (0,0) -- (0,10) node[anchor=south east] {$f^-_{\textrm{D}}A^-$};
+
+% \draw (9cm,2pt) -- (9cm,-2pt) node[anchor=north] {$1/D^+$};
+% \draw (2pt, 9cm) -- (-2pt, 9cm) node[anchor=east] {$1/D^+$};
+% \draw (0pt, 9cm) -- (4.5cm, 4.5cm) node[anchor=west] {Upper probability limits};
+% \draw (4.5cm, 4.5cm) -- (9cm, 0pt) node[anchor=west] {};
+
+% \draw (6cm,2pt) -- (6cm,-2pt) node[anchor=north] {$1; f^+_A = 1/A^+$};
+% \draw (2pt, 6cm) -- (-2pt, 6cm) node[anchor=east] {$1; f^-_D = 1/A^-$};
+% \draw (0pt, 6cm) -- (3cm, 3cm) node[anchor=west] {Improved diagnosis};
+% \draw (3cm, 3cm) -- (6cm, 0pt) node[anchor=west] {};
+
+% \draw [dotted] (4.5cm, 1pt) -- (4.5cm, 1.5cm); 
+% \draw [dotted] (4.5cm, 1.5cm) -- (1pt, 1.5cm); 
+% \draw (4.5cm,0pt) -- (4.5cm,-2pt) node[anchor=north] {$A^+$};
+% \draw (0pt,1.5cm) -- (-2pt, 1.5cm) node[anchor=east] {$A^-$};
+
+% \draw [dashed] (3cm, 1pt) -- (3cm, 3cm); 
+% \draw [dashed] (3cm, 3cm) -- (1pt, 3cm); 
+% \draw (3cm,0pt) -- (3cm,-2pt) node[anchor=north] {$D^+$};
+% \draw (0pt,3cm) -- (-2pt, 3cm) node[anchor=east] {$D^-$};
+
+% \draw (1pt,1pt) -- (-1pt, -1pt) node[anchor=north east] {$0,0$};
+
+% \end{tikzpicture}
+
+% \caption{\centering Regions of diagnosis efficacy in a human-AI cooperative scenario, with $f^{+/-}_{A/D}$ bias factors when interpreting the AI diagnosis $A^{+/-}$, and the non-AI doctor diagnosis $D^{+/-}$. Not to scale with the values in the survey scenarios.}
+% \label{fig:my_label}
+% \end{figure}
+
+% \begin{figure}[h]
+% \centering
+
+% \begin{tikzpicture}
+
+% \draw[opacity=0.5,fill=red!50] (0cm, 4cm) -- (4cm, 4cm) -- (4cm, 0cm) -- (0cm, 0cm) -- (0cm, 4cm);
+
+% \draw[opacity=0.5,fill=blue!30] (0cm, 4cm) -- (0cm, 6cm) -- (4cm, 6cm) -- (4cm, 4cm) -- (0cm, 4cm);
+
+% \draw[opacity=0.5,fill=green!30] (4cm, 4cm) -- (4cm, 6cm) -- (6cm, 6cm) -- (6cm, 4cm) -- (4cm, 4cm);
+
+% \draw[pattern=north west lines, pattern color=blue!30, opacity=0.5] (4cm, 0cm) -- (4cm, 4cm) -- (6cm, 4cm) -- (6cm, 0cm) -- (4cm, 0cm);
+
+% \draw (2cm,5cm) -- (2cm,5cm) node[anchor=north] {A};
+% \draw (5cm,5cm) -- (5cm,5cm) node[anchor=north] {B};
+% \draw (2cm,2cm) -- (2cm,2cm) node[anchor=north] {C};
+% \draw (5cm,2cm) -- (5cm,2cm) node[anchor=north] {D};
+
+% \draw (3cm,0pt) -- (3cm,0pt) node[anchor=north] {Glass box trust factor change};
+% \draw (0pt,3cm) -- (0pt,3cm) node[anchor=east, rotate=-90, xshift=2cm, yshift=-7pt]  {Black box trust factor change};
+
+% \end{tikzpicture}
+
+% \caption{\centering Interpretation schema for cooperative improvement plots. \textbf{A}: Black box improves diagnosis, glass box makes diagnosis worse \textbf{B}: Both glass box and black box improve diagnosis \textbf{C}: Neither glass box or black box improve diagnosis \textbf{D}: Glass box improves diagnosis, black box makes diagnosis worse}
+% \label{fig:quadrant explanation}
+% \end{figure}
+
+
+
+From this model we can define some doctor profiles based on how they might interact with an AI tool:
+
+\begin{itemize}
+    \item \textbf{$f^+_A, f^-_D = 1/D^+$:}  A doctor who trusts the AI's positive diagnoses completely, but also catches every single mis-classification by the AI
+    \item \textbf{$f^+_A, f^-_D = 0$:}      A doctor who never agrees with a positive AI diagnosis, and always agrees with a negative AI diagnosis
+    \item ETC, FLESH OUT LATER
+\end{itemize}
+
+\subsection{Focus Group}
+\begin{itemize}
+    \item Goals, how does it follow from survey data? (does trust mean you will be happy to use the AI?)
+    \item Who do we want to talk to? How will we use the information?
+    \item 
+\end{itemize}
+
+A focus group study was devised as a follow-up to the survey study, to gain insight into the reasoning and motivation behind survey responses, and to uncover topics of interest and concern as well as differences in opinion surrounding AI decision support tools.  
+
+
+
+\subsubsection{Recruitment}
+
+Recruitment was performed via the survey from Section [link to section?] - participants were presented with an option to provide an email address if they were interested in being contacted to participate in the focus group. Following the collection and analysis of survey data, a recruitment survey was sent to the participants of the first survey who agreed to be contacted. The recruitment survey was designed to gather a small amount of demographic information so that an appropriate spread of participants were included [change wording].
+
+[What is the requested demographic information? Use questionnaire data or ask for more? Inclusion of BAME and gender?]
+
+Subreddits:
+\begin{itemize}
+    \item r/machinelearning
+    \item r/london - awaiting approval
+    \item r/coronavirusuk - awaiting approval
+\end{itemize}
+
+This demographic information was used to recruit at least one person from the following categories:
+
+\textbf{Category 1: Experienced Senior AI Expert}
+\begin{itemize}
+\item High self-reported rating in AI expertise.
+\item Not a medical professional.
+\item Mid to high self-reported involvement in high-stakes decision making
+\end{itemize}
+(Ideally in a senior role or management position).
+
+\textbf{Category 2: AI Specialist}
+\begin{itemize}
+\item Mid to high self-reported rating in AI expertise.
+\item Not a medical professional.
+\item Low self-reported involvement/responsibility in high-stakes decision making.
+\end{itemize}
+
+Ideally not in a senior role or management position, could be early career or still in education)
+
+\textbf{Category 3: Experienced Senior Healthcare Expert}
+\begin{itemize}
+\item Low to Mid self-reported rating in AI expertise
+\item Is a medical professional, 
+\item High self-reported involvement/responsibility in high-stakes decision making
+\end{itemize}
+
+Ideally in a senior role or management position in a clinical hospital setting.
+
+\textbf{Category 4: Healthcare Specialist}
+\begin{itemize}
+\item Low self-reported rating in AI expertise
+\item Is a medical professional.
+\item Mid to High self-reported involvement/responsibility in high-stakes decision making
+\end{itemize}
+
+Ideally in a role with some responsibility for high-stakes decision making, or a role in which they provide information and evidence which supports others in making high stakes decisions. 
+
+This individual should be employed in a clinical hospital setting (could still be in education and training, but should currently be undertaking practical rotations, or have practical responsibilities in a clinical hospital setting). 
+
+
+\textbf{Category 5: Wildcard}
+Any combination of self-reported traits.
+Could be a member of the public.
+Could be a second member of any previous category. 
+Possibility of being a clinical informatician, or other clinical computer scientist.
+Possibility of being a software engineer who has experience with developing medical devices. 
+
+[Explain why you wanted to recruit people at the end of each spectrum, and avoid people who cross the demographics]
+
+\subsubsection{Topics of Discussion}
+
+
+
+\subsubsection{Data Gathering and Analysis}
+Interviews were conducted via Microsoft Teams [University of Bristol server?]. The audio from the entire session was recorded, and stored temporarily on a secure server. The session audio was used create an anonymised transcript, then promptly deleted. 
+
+Thematic analysis was performed on the focus group transcript using NVivo [cite]. 
+
+[Describe how you will do thematic analysis on the focus group data].
+
+
+
+
+\subsubsection{Results}
+A single focus group comprising five participants was held in April 2022.
 
 \section{Design}
 
@@ -318,6 +786,7 @@ Acknowledgments
 %%
 %% The next two lines define the bibliography style to be used, and
 %% the bibliography file.
+\newpage
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{elf}
 
