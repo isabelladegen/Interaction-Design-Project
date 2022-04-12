@@ -197,7 +197,7 @@ Abstract
 %%
 %% Keywords. The author(s) should pick words that accurately describe
 %% the work being presented. Separate the keywords with commas.
-\keywords{XAI, trustworthiness, AI, computer automation}
+\keywords{XAI, Explainable AI, Trustworthy AI, Interpretable AI, AI, Computer Automation, AI in high risk}
 
 %%
 %% This command processes the author and affiliation and title
@@ -205,56 +205,80 @@ Abstract
 \maketitle
 
 \newpage
-\section{Introduction}
-Motivate the research
-
-give an overview of relevant background literature
-
-describe the research question. 
-
-Possibly signpost the findings
-
+\section{Introduction}\label{sec:introduction}
+%%%%%%%%%%%
+% Keeping notes from previous list making
+%%%%%%%%%%%
+%Motivate the research
+%give an overview of relevant background literature
+%describe the research question.
+%Possibly signpost the findings
 % notes on how to writing
 % go straight to the point
 % don't make it so general that it could be used for an other paper
 % don't slash others works
 % include problem / solution
 
-Initial structure:
-\begin{itemize}
-    \item AI used in many use applications (give examples of high risk etc) - we focused on healthcare
-    \item For successful integration of AI, users and public need to trust it. 
-    \item Law came into that decisions for banks etc needed to be explained to the user, the right to explanation, e.g GDPR %https://www.turing.ac.uk/research/impact-stories/a-right-to-explanation
-    \item this brought about interest in XAI (Why XAI has been seen as important (Issues with this - black box models, not always human able to intervene/oversee))
-    \item Lots of work has been done into XAI techniques to give `trust' in AI.
-    \item XAI examples to show off the amount of work been done  - survey papers and specific examples? LIME? FATF?
-    \item Issues with XAI - critics (to give some doubt over XAI actually giving trust and telling us how AI works)
-    \item Is the current work in XAI just useful for machine learning practitioners? 
-    \item What is best for the users/ what do users actually want? Has the explanation law confused us of what users actually want/need?
-    \item We want to explore what trust actually is in relation to AI. Is it XAI? Is it performance? Is it counterfactual results? (are they more intuitive/what people would like to know)?
-    \item There has been the topic of trust between humans and machines before (1987 paper). Which indicates that there needs to be trust not just performance.
-    \item There is no current user study of how XAI changes trust depending on: demographic (AI expert, high stakes decision maker, general public) or the level of explainablity. 
-    % \item medical domain - paper Alex found on simple AI in a medical context out-performing doctors
-\end{itemize}
-Ann's suggestion of structure:
-\begin{itemize}
-    \item Context (how is the world now): Messy, AI and Explainable AI, 
-    \item the problem (drama): loads of research, not many survey on what's needed on trust, does transparency and explainable creates more or less trust
-    \item related work and how it doesn't cover this: GDPR has created a flood of research into Explainable AI, so it's not been questioned much on the motivations. Surveys on trust in generic AI systems. Surveys of perspectives on generic AI system for healthcare work groups.
-    \item our solution, method and results: survey and focus group to find out if trust increases with transparency and if experience with AI or high stakes decision making matters
-    \item what new worlds does our research do: design with all demographics in mind, different branches of explainability. Present information that can be used to design better AI systems for healthcare needs. Encourage more user driven explainable AI with the demographics we find
-\end{itemize}
+%Initial structure:
+%\begin{itemize}
+%    \item AI used in many use applications (give examples of high risk etc) - we focused on healthcare
+%    \item For successful integration of AI, users and public need to trust it. 
+%    \item Law came into that decisions for banks etc needed to be explained to the user, the right to explanation, e.g GDPR %https://www.turing.ac.uk/research/impact-stories/a-right-to-explanation
+%    \item this brought about interest in XAI (Why XAI has been seen as important (Issues with this - black box models, not always human able to intervene/oversee))
+%    \item Lots of work has been done into XAI techniques to give `trust' in AI.
+%    \item XAI examples to show off the amount of work been done  - survey papers and specific examples? LIME? FATF?
+%    \item Issues with XAI - critics (to give some doubt over XAI actually giving trust and telling us how AI works)
+%    \item Is the current work in XAI just useful for machine learning practitioners? 
+%    \item What is best for the users/ what do users actually want? Has the explanation law confused us of what users actually want/need?
+%    \item We want to explore what trust actually is in relation to AI. Is it XAI? Is it performance? Is it counterfactual results? (are they more intuitive/what people would like to know)?
+%    \item There has been the topic of trust between humans and machines before (1987 paper). Which indicates that there needs to be trust not just performance.
+%    \item There is no current user study of how XAI changes trust depending on: demographic (AI expert, high stakes decision maker, general public) or the level of explainablity. 
+%    % \item medical domain - paper Alex found on simple AI in a medical context out-performing doctors
+%\end{itemize}
+%Ann's suggestion of structure:
+%\begin{itemize}
+%    \item Context (how is the world now): Messy, AI and Explainable AI, 
+%    \item the problem (drama): loads of research, not many survey on what's needed on trust, does transparency and explainable creates more or less trust
+%    \item related work and how it doesn't cover this: GDPR has created a flood of research into Explainable AI, so it's not been questioned much on the motivations. Surveys on trust in generic AI systems. Surveys of perspectives on generic AI system for healthcare work groups.
+%    \item our solution, method and results: survey and focus group to find out if trust increases with transparency and if experience with AI or high stakes decision making matters
+%    \item what new worlds does our research do: design with all demographics in mind, different branches of explainability. Present information that can be used to design better AI systems for healthcare needs. Encourage more user driven explainable AI with the demographics we find
+%\end{itemize}
 
+% Why Context - how is the world now
+AI being used in many application and more and more in high risk application like self-driving cars, healthcare which we focused on\\
+With laws like the GDPR having clauses of “Right to explanation” companies are forced to be able to explain their models and this has triggered XAI\\ %https://www.turing.ac.uk/research/impact-stories/a-right-to-explanation
+Explosion of research into Explainable AI, Trustworthy AI, Interpretable AI (short definition of these terms)\\
+New techniques are being developed for being able to interpret and explain the outcomes of glass and black black box models\\
 
-% AI is becoming widespread in multiple domains to automate and aid decision making tasks. (Give some examples).  However, many AI algorithms are inherently black box. This means that the inner workings and reasoning that an AI uses to arrive at a decision is unknown. It is argued that in some application areas[cite], such as ad servers, that black box models are sufficient.
+%Why new
+%The problem (drama): loads of research, not many survey on what's needed on trust, does transparency and explainable creates more or less trust
+There is an increasing body of work that critiques the current approach for explainable and trustworthy AI. But are the interpretations possible and explanations given by these techniques helpful to increase trust in AI? Are the explanations what people need and what the law intended to achieve?\\
+It’s a mythos\\
+The current techniques don’t explain the models in a way that it would increase trust\\
+The explanations are not trustworthy, they might not even be correct\\
+Is the push for interpretable AI that can deliver explanation being made at the cost of using less capable AI\\
+Discuss the trade of between performance of the model and interpretability\\
+There is a lack of research around what the end users affected by such systems wants/needs and if the current techniques give them what they want and how this changes by demographic\\
 
-% Attempt on why is it new
-%* there's debate about the value of transparent AI and if it is needed for Trust
-%* some say it is (quote papers), some say it isn't (quote papers)
-%* we want to find out if it is and we expect the answer to be it depends on the audience, especially how much AI experience you have, and if you are used to making decision that could have huge impact on other people like medical diagnosis
+% more related work and how it doesn't cover this: Surveys on trust in generic AI systems. Surveys of perspectives on generic AI systems for healthcare work groups.
+There has been the topic of trust between humans and machines before (1987 paper). Which indicates that there needs to be trust not just performance.\\
+medical domain - paper Alex found on simple AI in a medical context out-performing doctors\\
+Before this wave of explainability there was a lot of research going on around trust in machines and automation, and how trust in machines is needed for automation to be accepted\\
+While social science are critiquing the techniques, and ML researchers are working on better techniques, and everybody is writing surveys around explainability, there’s nobody doing surveys of if interpretation &  transparency indeed increases the trust and willingness of the end user wanting such AI systems to be used e.g in a health care setting and if this changes based on the end users experience & knowledge with AI, experience and knowledge with healthcare, and if they are used to making decisions that could potentially significantly impact people's lives (high-stakes decisions)\\
+There is no current user study of how XAI changes trust depending on: demographic (AI expert, high stakes decision maker, general public) or the level of explainability.\\  
 
+%What & How: our solution, method and results: survey and focus group to find out if trust increases with transparency and if experience with AI or high stakes decision making matters
+We picked a high-stakes application area of health where AI is being used to help a health diagnosis but we put everybody in the shoes of the end user (imagine you’re being diagnosed)\\
+We asked xxx people with various different backgrounds to share how much they would trust an AI system to make a diagnosis in four different scenarios: 	(see Appendix for questionnaire)\\
+We then analysed which scenario people trust the most as well as if this changes depending on if they have experience with AI, working in health care or not and are making decisions that can significantly impact other people, we call these high-stakes decisions.\\
+Results: we’ve found that\ldots\\
+We followed up with a focus group of 6 people inviting demographics (x) to discuss and reflect further on their thoughts about AI and the need for interpretability/explanations as well as if black box models just never will be accepted\\
+We found that the dislike of the black box has not so much to do with it not being interpretable, but more with the lack of empathy that a machine can give\\
 
-%New contribution: We focused specifically on medics no medics, and ai experts and no ai experts as well as high stakes decision making
+%Why relevant: what new worlds does our research do: design with all demographics in mind, different branches of explainability. Present information that can be used to design better AI systems for healthcare needs. Encourage more user driven explainable AI with the demographics we find
+We believe that for an AI system to be adapted in a critical decision scenario such as diagnosis in health care it’s not sufficient to just make the system transparent and explainable. Far more important is the complete user experience and an understanding that the AI system is only a part of that experience and more research is needed in this\\
+The current techniques are useful for the operators of the systems, however the law is to protect the end user that is affected by an AI having been used. It’s clear that the needs for these groups change and more research needs to be done to consider the end users of those systems and what their needs are and how they differ from the operators\\
+
 
 \section{Related Work}
 Literature Review
