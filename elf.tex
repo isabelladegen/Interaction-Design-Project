@@ -363,9 +363,66 @@ the ability of a model to be interpeof an AI tool refers to how well a human can
 
 % JE
 
-\subsection{Study 1}
-\subsubsection{Intention of Study} 
+% Brief overview/ intro to methods (survey & focus group) before going into more detail
+% Brief discussion of why the methods were chosen
+
+\begin{itemize}
+\item To evaluate.../ address the aims of this work... We conducted a two-part investigation.
+\item First, we collected qualitative survey data using a scenario-based questionnaire. Different AI-assisted decision making processes were described and presented, and participants rated their attitude towards them.
+\item (Brief reason why we chose to survey)
+\end{itemize}
+\begin{itemize}
+\item The survey was designed to identify whether there were trends in the attitudes of different groups of participants towards the presented AI systems. 
+\item To gain insight into the possible reasoning behind participants attitudes, and to help identify any issues with the survey itself, we conducted a follow-up study comprising group interviews in the style of a focus-group.
+\item The design of this focus group was influenced by the results of the survey, so that we could specifically interrogate key findings. 
+\item Details of these methods are outlined in this section. 
+\item For full details on the ethical considerations and approval for this work, please see Appendix.
+\end{itemize}
+
+% Could also discuss why we chose to do survey + focus group, and not design workshops, interviews etc.
+% DC
+
+\subsection{Study 1 - Scenario-based Survey }
+\subsubsection{Intention of Study (and Study Design)} 
 \label{study1_intentions}
+
+% It might make sense to separate some of these bullet points into a design section following the recruitment section.
+
+\begin{itemize}
+\item The intention of the survey study
+\item Groups of interest, how and why they were chosen
+\item Defining key terminology and concepts
+\end{itemize}
+\begin{itemize}
+\item High-stakes decision making (what it could mean, what we are interested in, how we could investigate it, the relevance of healthcare professionals)
+\item Trustworthiness and Trust
+\item Transparency and Interpretability
+\end{itemize}
+\begin{itemize}
+\item The difficulty of discussing and conveying these concepts (not precisely defined, not well understood, ongoing area of research)
+\item We decided to focus on some key concepts:
+\end{itemize}
+\begin{enumerate}
+\item A black-box AI system...
+\item A glass-box AI system... an idealised interpretable system... The mechanisms of which are well understood, and the system provides some level of explanation or information about how it came to a decision, or which aspects of the data were most important in the output decision.
+\item Presence or absence of Human-AI interaction... presented in the simplest case: A human decision maker who is capable of analysing the data and coming to their own decision also has access to the above AI systems. Since it is not specified otherwise, it may be assumed that the human and AI system analyse the data and come to a decision independently, at which point the human makes an executive decision to agree with or override the output of the AI system.  
+\end{enumerate}
+\begin{itemize}
+\item By leaving the concepts open to interpretation, we allow the participants to specify their attitudes relative to their knowledge, understanding, preconceptions or biases about AI systems. 
+\end{itemize}
+ 
+\begin{itemize}
+\item Defining scenarios which capture the aspects of AI systems we are interested in describing.
+\end{itemize}
+\begin{itemize}
+\item Participants will include AI/ML experts as well individuals with no working knowledge of AI/ML. 
+\begin{itemize}
+\item We wanted to keep the scenarios relatable and understandable for all participants. 
+\item We chose a healthcare scenario that we considered to be well understood by the public.
+\item We chose to describe the AI systems such as to only convey the core concepts relevant to transparency and interpretability, without discussion of the practicalities and efficacy of the methods in real world scenarios. 
+\end{itemize}
+\end{itemize}
+
 
 The intention of this study is to gather quantitative data on the level of trust participants place in computer-aided decision making tools (herein referred to as "the AI tool/model") based on the level of transparency of the AI model.
 
@@ -378,6 +435,30 @@ We consider trustworthiness on a scale where the lowest measure is "not at all" 
 \end{itemize}
 
 By gathering data from a group of participants on their level of trust in the decision-making process across these four levels of transparency we hope to establish, through investigation, whether any relationship exists. 
+
+\subsubsection{Recruitment and Ethics} 
+\label{study1_recruitment}
+\begin{itemize}
+\item Ethics considerations for recruitment
+\begin{itemize}
+\item All participants over the age of 18
+\item 
+\end{itemize}
+\item Groups of interest
+\item Specifying and Collecting Demographic Information
+\begin{itemize}
+\item No personal identifiable 
+\end{itemize}
+\item Method of recruitment (how were participants recruited, and where were they recruited from)
+\item Limitations of recruitment method
+\begin{itemize}
+\item Limited demographic data collection (anonymity of participants was prioritised)
+\item 
+\end{itemize}
+\end{itemize}
+
+
+
 
 % add details on how we requited participants, how many responded and where from.
 
@@ -457,10 +538,11 @@ Highlight the use of covid diagnosis makes people apply the risk to themselves. 
 Split into Study one and Study two.
 How did we pick the 5 people from the focus group
 
+\section{Survey Results}
 
-\subsection{Data}
+%\subsection{Data}
 
-\subsection{Additional Features}
+
 
 The survey was closed after XXX days, with XXX participants. We use the two key profile features - AI experience level and whether the participant is a medical professional - to dis-aggregate into three demographic bins:
 
@@ -469,6 +551,8 @@ The survey was closed after XXX days, with XXX participants. We use the two key 
     \item AI Expert: Not a medical professional, and AI experience level reported as $\geq XXX$
     \item Public: Neither a medical professional nor an AI expert
 \end{itemize}
+
+\subsection{Additional Features}
 
 We use the results of the first scenario, the trust in the doctor with no AI component $T_D$, as a baseline to assess the impact of AI-cooperation on diagnosis trust levels. We denote the trust level reported in these cooperative scenarios based on the nature of their model. Scenario two, with the interpretable or "glass box'' model is $T_{GB}$, and scenario three with the "black box'' model $T_{BB}$.
 
@@ -483,7 +567,7 @@ These features allow analysis of whether participants view the cooperative use o
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{graphics/Doctor_improvements_cooperation_scatter.jpg}
-    \caption{\centering Perceived improvements in trust in scenarios 3 and 4, with Gaussian Kernel Density Estimates for added clarity. Percentages are calculated using $\leq 0$ and $>0$ basis.\hspace{\textwidth} Interpretation schema: \textbf{A}: Black box improves diagnosis, glass box makes diagnosis worse \hspace{\textwidth} \textbf{B}: Both glass box and black box improve diagnosis. \textbf{$B_1$} black box is preferred, \textbf{$B_2$} glass box is preferred, $B_3$ neither is preferred. \textbf{C}: Neither glass box or black box improve diagnosis \textbf{D}: Glass box improves diagnosis, black box makes diagnosis worse}
+    \caption{\centering Perceived improvements in trust in scenarios 3 and 4. Gaussian Kernel Density Estimates of the samples are included for visualisation clarity. Percentages are calculated using $\leq 0$ and $>0$ basis.\hspace{\textwidth} Interpretation schema: \textbf{A}: Black box improves diagnosis, glass box makes diagnosis worse \hspace{\textwidth} \textbf{B}: Both glass box and black box improve diagnosis. \textbf{$B_1$} black box is preferred, \textbf{$B_2$} glass box is preferred, $B_3$ neither is preferred. \textbf{C}: Neither glass box nor black box improve diagnosis \textbf{D}: Glass box improves diagnosis, black box makes diagnosis worse}
     \label{fig:improvement}
 \end{figure}
 
@@ -491,35 +575,72 @@ Through Figure \ref{fig:improvement} we derive how different cohorts view the us
 
 Only a minority of each cohort view neither AI-cooperative scenario as beneficial. In all cohorts the glass box model is preferred over the black box model, but only by a small margin, with ratios $f_{BB}:f_{GB}$ of 1:1.17, 1:1.125 and 1:1.40 for the public, medical professionals and AI experts respectively. 
 
-\subsection{Correlation Analysis}
+%\subsection{Correlation Analysis}
 
 \subsection{Clustering}
 
-Insights can be gained into the results of the survey by applying unsupervised methods. These do not rely on any labels or targets, as would be the case in supervised or semi-supervised methods, so avoid many of the biases that such methods would carry. In particular we apply Uniform Manifold Approximation and Projection (UMAP) \cite{McInnes2018} as dimensionality reduction, then Hierachical Density-Based Spatial Clustering And Noise (HDBSCAN) \cite{McInnes2018} as unsupervised clustering on the resulting UMAP embedding. 
+Having disaggregated into profiling features, then analysed the trust levels of these cohorts, we can instead do the opposite. By starting with trust levels and finding distinct groups of how they are distributed, we can construct cohorts based on trust levels, then use profiling features to find the characteristics of these groups.
+
+Insights can be gained into the results of the survey by applying unsupervised methods. These do not rely on any labels or targets, as would be the case in supervised or semi-supervised methods, so avoid many of the biases that such methods would carry. In particular we apply Uniform Manifold Approximation and Projection (UMAP) \cite{McInnes2018} as dimensionality reduction, then Hierachical Density-Based Spatial Clustering And Noise (HDBSCAN) \cite{McInnes2017} as unsupervised clustering on the resulting UMAP embedding. 
 
 UMAP makes the assumption that data is distributed on a uniform manifold, but that the data-space is warped. Using this assumption local distance metrics are learnt, then used to construct a distance graph of the data. A lower-dimensional embedding is then formed, which aims to conserve the form of the high-dimensional space, using a stochastic graph layout. HDBSCAN, similarly, constructs a minimum spanning tree based on distances in the data-space, then applies various sub-algorithms to find clusters. Full explanation of these algorithms is beyond the scope of this work, so the reader should consult the relevant papers for more information.
 
-We apply UMAP, then HDBSCAN to the resulting embedding, and present the results in Figures \ref{fig:embedding}, \ref{fig:cluster_means}.
-
+We apply UMAP, then HDBSCAN to the resulting embedding, and present the results in Figures \ref{fig:embedding}, \ref{fig:cluster_means}. UMAP produces four distinct clusters, which are recognised by HDBSCAN. 
 
 \begin{figure}
 \centering
-\begin{subfigure}{0.4\textwidth}
+\begin{subfigure}{0.5\textwidth}
   \centering
   \includegraphics[width=\linewidth]{graphics/UMAP_HDBSCAN.jpg}
   \caption{}
 %   \caption{The UMAP embedding produces four (visually) distinct clusters, which are also identified by HDBSCAN.}
   \label{fig:embedding}
 \end{subfigure}%
-\begin{subfigure}{0.65\textwidth}
+\begin{subfigure}{0.55\textwidth}
   \centering
   \includegraphics[width=\linewidth]{graphics/clustering_means.jpg}
   \caption{Cluster means across all four scenarios, along with profiling features.}
   \label{fig:cluster_means}
 \end{subfigure}
-\caption{The results of unsupervised clustering with UMAP and HDBSCAN.}
+\caption{The results of unsupervised clustering with UMAP and HDBSCAN. In Figure \ref{fig:cluster_means} profile features (AI, Medical, Stakes) are normalised by the whole population. Scenario trust levels are moved to a scale [0-1] for greater clarity in the heatmapping.}
 \label{fig:test}
 \end{figure}
+
+The clusters identified by this process are distinct in how the participants within them rated trust in the different scenarios. Clusters 1 and 3 follow the same trend, with the highest trust in the glass-box cooperative scenario, and lowest in the solo black-box. However, cluster 3 has significantly lower trusts across all scenarios. Cluster 3 is significantly larger than the other clusters, representing 64\% of the participant pool.
+
+Clusters 0 and 2 have the lowest level of trust placed in the doctor, with the solo black-box scenario scoring higher, in contrast to the opposite relationship in clusters 1 and 3. In both cluster 0 and 2 the highest trust is in the black-box cooperative scenario. Cluster 2 is the only cluster in which the glass-box cooperative scores lower than the solo doctor.
+
+This analysis of only prescribed trusts leads to an intuitive split: In evaluating the compromise between transparency and efficacy, those in clusters 0 and 2 prescribe more weight to efficacy, and those in clusters 1 and 3 weight transparency over efficacy. Those in cluster 0 are perhaps closer to even balancing of transparency and efficacy than those in cluster 2, as shown by their higher trust levels in the glass-box scenario.
+
+Cluster 1 probably represents our population of AI researchers - high average AI knowledge, but low stakes decision making and a small medical proportion. These participants rate any doctor-lead scenario highly, and only show a significant decrease in trust when a doctor is not presented as making the final decision, as in scenario 4.
+
+Cluster 2, which leans the most towards following efficacy statistics, has the highest proportion of both medics and high-stakes decision makers. This might indicate that the cluster is composed principally of medical professionals, who are likely to rate themselves as more frequently making high-stakes decisions. This would also explain why this cluster has the lowest average self-reported AI knowledge compared to the whole survey population.
+
+Clusters 0 and 3 are less easily identified, but might represent different subsets of the general population. Cluster 0 has a higher self-reported stake level, but a lower than average medic proportion, so might represent high-stakes decision makers from outside the medical field. Cluster 3 is very close to the average in all three of our profiling features, and is the largest, so could be said to represent the public, or the equivalent for our participant pool.
+
+\subsection{Notes on results for discussions:}
+
+\subsubsection{Cooperation:}
+\begin{itemize}
+    \item AI experts like the AI cooperation scenarios most - 60\% have higher trust than in doctor
+    \item If you like the black box, you also like the glass box, and very few in any population only like the black box
+    \item AI experts have the smallest proportion liking the glass box and disliking the black box
+    \item Disliking both glass box and black box follows AI technical level: Public $\rightarrow$ Medics $\rightarrow$ AI
+\end{itemize}
+
+\subsubsection{Clustering:}
+\begin{itemize}
+    \item Clustering isolates medics and AI researchers
+    \item AI researchers follow what we'd expect: they trust AI the most, but weight towards transparency over efficacy, and don't like the black-box working solo
+    \item Medics weight heavily towards efficacy, but still rate a doctor having the final decision higher than the black box by itself
+    \item General population is split into low/high stakes
+    \item High-stakes genpop are less scared of AI, and seem to weight efficacy and transparency equally important, but still want a human final decision
+    \item Low-stakes genpop (the actual public?) are scared of AI, especially when its not transparent. They don't like the Terminator doctor, sorry Arnold.
+\end{itemize}
+
+
+
+
 
 
 \subsection{Brainstorm}
@@ -796,9 +917,134 @@ Acknowledgments
 
 \section{Optional Supplementary Material}
 
-\subsection{Part One}
+\subsection{Study Ethics}
 
-\subsection{Part Two}
+% DC - Need to go through and format, I've been working in a google doc
+% How do I add line space after subsubheading?
+\subsubsection{Organisation and Funding}
+
+
+This work was organised and funded by The University of Bristol School of Computer Science, Electrical and Electronic Engineering, and Engineering Maths.
+
+Investigators are students enrolled on the “Interactive Artificial Intelligence CDT” at the University of Bristol, and are funded by UKRI Studentships.
+
+This work was completed as part of a University course “Interaction Design COMSM0087”, led by Dr Paul Marshall.
+
+
+\subsubsection{Ethical Approval} 
+
+
+Ethical approval for study methods described in Section [?] of the report was granted by University of Bristol Faculty of Engineering Research Ethics committee prior to study recruitment.
+
+The study has been reviewed by the unit director, Dr Paul Marshall.
+
+The risks associated with participating in the study were assessed as low likelihood and low severity. 
+
+\subsubsection{Incentive}  
+
+
+At the recruitment stage, prospective participants were told that there would be a monetary incentive for participation.
+
+For participation in the survey, this was the option to be entered into a raffle to win one of four Amazon gift vouchers worth £25 each.
+
+To facilitate this, participants could opt in to the raffle by providing an email address, which was stored securely on a University server. 
+
+Email addresses were stored separately from survey responses to prevent any reassociated. 
+
+At the time that the survey was closed to new participants, four email addresses were selected at random to receive the vouchers.
+
+Once the selected participants had confirmed they received the vouchers, all email addresses were promptly deleted. 
+
+
+
+\subsubsection{Privacy and Data Management}  
+
+
+Survey:
+No personal identifiable information was collected during the survey phase of this work.
+
+Survey data was collected via Microsoft Forms, and stored on a secure server hosted by the University of Bristol.
+
+Participants had the option of providing an email address to opt into a raffle to win a monetary prize. 
+This email address was not associated with their survey response, and was used only to send the prize to the relevant participants. 
+Email addresses were stored on a secure University of Bristol server and deleted after prizes were allocated.  
+
+Focus Group:
+The focus-group was conducted remotely via Zoom online video conferencing. 
+
+The focus-group was recorded for the purpose of transcribing the discussion, and was deleted when the audio had been transcribed. 
+
+All audio transcriptions were pseudonymised prior to analysis.
+
+All data gathered for this work (survey responses, email addresses, focus-group audio, transcript) was stored on a secure University of Bristol server. 
+
+\subsubsection{Recruitment:}  
+
+
+The total number of survey participants was [XXXX] at the time of closing.
+Survey participants were recruited by:
+Direct contact
+Sharing the survey with personal contacts
+Mailbases 
+Survey was sent to the directors of the following University programs to be  distributed to the students:
+[Which programmes?]
+The survey was posted in a medical physics and engineering special interest mailing group: JISCMAIL Medical-Physics-Engineering 
+Social media
+The survey was distributed through personal Twitter accounts.
+Participation was open to all members of the public, however recruitment was targeted towards three groups: healthcare professionals, AI/ML specialists, and general public. The studies population is not therefore reflective of a cross-section of the general public or specific demographic groups. 
+No demographic information relating to protected characteristics was collected. 
+The only objective information requested from participants was whether or not they work as a healthcare professional. 
+Six focus-group participants were recruited from personal contacts. 
+
+\subsubsection{Informed Consent Survey}  
+
+
+Written consent was obtained for the survey study…
+A participant information sheet was presented at the start of the survey. Participants were required to confirm that they have read the information sheet before progressing with the survey to ensure informed consent as much as was reasonably practicable. 
+I.e. “By clicking "Next" you confirm that you've read the full information about this study and consent to participate.”
+The participant information sheet included:
+Background about the project and project organisers.
+The purpose of the study
+Reason participants have been recruited. 
+Eligibility criteria
+Details of participation:
+Emphasis that participation is voluntary
+Emphasis that participant can choose to withdraw from the study (relevant to focus group).
+Description of how data will be managed and used.
+Details of incentive.
+Details of confidentiality. 
+Emphasis that no personally identifiable information is recorded in the survey. 
+Right to withdrawal.
+Contact details for asking questions. 
+Intended outcomes of the research project.
+Eligibility criteria i.e. requirements for participation as specified in the information sheet include:
+Participant is over 18 years old
+Participant has internet access to participate in online data collection
+
+ 
+\subsubsection{Informed Consent Focus-Group}  
+
+
+Participants were sent an information sheet directly, and asked to confirm they had read and understood the provided information prior to the event.
+
+At the start of the focus group session, participants were given the opportunity to say if they had not read or understood the provided information, or if they had any concerns they wanted to raise. 
+
+\subsubsection{Other}  
+
+
+
+%Check notes from other group
+%Check any other comments/document related to ethics
+%So far, I've mostly just looked at the ethical approval document and the details from our information sheet.
+
+
+% DC - Need to go through and format, I've been working in a google doc
+% How do I add line space after subsubheading?
+
+
+\subsection{Part Two}  
+
+
 
 
 \end{document}
