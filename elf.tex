@@ -281,12 +281,18 @@ The current techniques are useful for the operators of the systems, however, the
 
 
 \section{Related Work}\label{sec:related-work}
+%Outline:
+%
+% What is Explainable AI
+% What is interpretable AI
+% What is transparency AI
+% What is trustwortiness in AI
+% Why is Explainable AI needed
+% How is XAI different in Healtcare
+% Shortfalls and critique of XAI, how XAI is not needed, include critics of HCI, difficulties of too many stakehoders
+%
+% Where do the methods go? Do they fit here
 
-Rough overview
-\begin{itemize}
-    \item critics of XAI - is it what we really need for trust?, does it really given an explanation for a non AI expert? 
-    \item trustworthiness? does XAI make us trust? Lipton paper (Mythos) is trustworthiness resolved XAI or is it performance?
-\end{itemize}
 
 \subsection{Explainability and Interpretability of AI}\label{subsec:explainability-and-interpretability}
 Explainable AI experienced a huge surge since 2016 an there is no shortage of surveys of the research being done in
@@ -322,6 +328,16 @@ We believe GA$^2$Ms represent a significant step forward in the tradeoff between
 as healthcare where model verification and debuggability are as important as accuracy.\cite{Caruana2015}
 
 There has been a previous wave of explainability in control systems as well as AI in the late 80ies: Explaining Control Strategies in Problem Solving\cite{Chandrasekaran1989}
+
+\subsection{Explainability}\label{subsec:explainability}
+Explanations can be seen as adding a form of post-hoc interpretability to an AI system.
+Ehsan and co argue that explanations need to be more human centered.
+Building on their case study they stress that more focus on the human is needed and that technical advancements and the understanding of human factors co-evolve together.\cite{Ehsan2020}
+
+Bansal and co studied if explanations increase the performance of the human-AI team and found that this was not the case.
+Instead they found that the explanations increased the chance that the human will accept the AI's recommendation regardless of
+the correctness thereof.
+Their findings suggest that explanations increase trust in AI.\cite{Bansal2020}
 
 \subsection{Papers that argue the need of XAI}
 \begin{itemize}
@@ -457,15 +473,7 @@ The patients' view on the implementation of artificial intelligence (AI) in radi
 They found the following 5 factors mattered the most: (1) distrust and accountability (overall, patients were moderately negative on this subject), (2) procedural knowledge (patients generally indicated the need for their active engagement), (3) personal interaction (overall, patients preferred personal interaction), (4) efficiency (overall, patients were ambiguous on this subject), and (5) being informed (overall, scores on these items were not outspoken within this factor).
 Internal consistency was good for three factors (1, 2, and 3), and acceptable for two (4 and 5)\cite{Ongena2020}.
 
-\subsection{Explainability}\label{subsec:explainability}
-Explanations can be seen as adding a form of post-hoc interpretability to an AI system.
-Ehsan and co argue that explanations need to be more human centered.
-Building on their case study they stress that more focus on the human is needed and that technical advancements and the understanding of human factors co-evolve together.\cite{Ehsan2020}
 
-Bansal and co studied if explanations increase the performance of the human-AI team and found that this was not the case.
-Instead they found that the explanations increased the chance that the human will accept the AI's recommendation regardless of
-the correctness thereof.
-Their findings suggest that explanations increase trust in AI.\cite{Bansal2020}
 
 \section{Methodology}\label{sec:methodology}
 % Describe how we did user research
