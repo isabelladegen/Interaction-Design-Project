@@ -281,7 +281,6 @@ The current techniques are useful for the operators of the systems, however, the
 
 
 \section{Related Work}\label{sec:related-work}
-Literature Review
 
 Rough overview
 \begin{itemize}
@@ -289,24 +288,40 @@ Rough overview
     \item trustworthiness? does XAI make us trust? Lipton paper (Mythos) is trustworthiness resolved XAI or is it performance?
 \end{itemize}
 
-\subsection{Available Techniques for Explainability and Interpretability}
-There has been a previous wave of explainability in control systems as well as AI in the late 80ies: Explaining Control Strategies in Problem Solving\cite{Chandrasekaran1989}
-
-There's been a plethora of interpretability and explainability techniques developed in recent years - surge since 2016. There are many survey papers that describe the different techniques and try to come up with a framework to organise them:
+\subsection{Explainability and Interpretability of AI}\label{subsec:explainability-and-interpretability}
+Explainable AI experienced a huge surge since 2016 an there is no shortage of surveys of the research being done in
+explainable AI.
+Most of them give an overview of techniques available, try to group them and with that attempt to create a taxonomy of the field:
 \begin{itemize}
+    \item A Comprehensive Taxonomy for Explainable Artificial Intelligence: A Systematic Survey of Surveys on Methods and Concepts\cite{Schwalbe2021}
     \item Explainable AI: A Review of Machine Learning Interpretability Methods\cite{Linardatos2021}
     \item Notions of explainability and evaluation approaches for explainable artificial intelligence\cite{Vilone2021}
-    \item A Comprehensive Taxonomy for Explainable Artificial Intelligence: A Systematic Survey of Surveys on Methods and Concepts\cite{Schwalbe2021}
     \item Explainable Artificial Intelligence: a Systematic Review\cite{Vilone2020}
-    \item A Survey of Methods for Explaining Black Box Models\cite{Guidotti2018a}
-    \item Peeking Inside the Black-Box: A Survey on Explainable Artificial Intelligence (XAI)\cite{Adadi2018}
     \item A Multidisciplinary Survey and Framework for Design and Evaluation of Explainable AI Systems\cite{Mohseni2021}
     \item Explainable Deep Learning: A Field Guide for the Uninitiated\cite{Ras2020}
     \item How Case-Based Reasoning Explains Neural Networks: A Theoretical Analysis of XAI Using Post-Hoc Explanation-by-Example from a Survey of ANN-CBR Twin-Systems\cite{Keane2019}
     \item Improving fairness in machine learning systems: What do industry practitioners need?\cite{Holstein2019}
-    \item Good Counterfactuals and Where to Find Them: A Case-Based Technique for Generating Counterfactuals for Explainable AI (XAI)\cite{Keane2020} 
     \item Contrastive explanation: A structural-model approach\cite{Miller2021}
+    \item A Survey of Methods for Explaining Black Box Models\cite{Guidotti2018a}
+    \item Peeking Inside the Black-Box: A Survey on Explainable Artificial Intelligence (XAI)\cite{Adadi2018}
+    \item Contrastive explanation: A structural-model approach\cite{Miller2021}  \item "Why Should I Trust You?": Explaining the Predictions of Any Classifier\cite{Ribeiro2016}
+    \item A Survey of Methods for Explaining Black Box Models\cite{Guidotti2018a}
+    \item Good Counterfactuals and Where to Find Them: A Case-Based Technique for Generating Counterfactuals for Explainable AI (XAI)\cite{Keane2020}
+    \item Contrastive explanation: A structural-model approach\cite{Miller2021}
+    \item "Why Should I Trust You?": Explaining the Predictions of Any Classifier\cite{Ribeiro2016}
+    \item Conversational Explanations of Machine Learning Predictions Through Class-contrastive Counterfactual Statements\cite{Sokol2018}
+    \item Local Rule-Based Explanations of Black Box Decision Systems\cite{Guidotti2018}
+    \item Understanding black-box predictions via influence functions\cite{Koh2017}
+    \item FACE: Feasible and actionable counterfactual explanations\cite{Poyiadzi2020}
+    \item bLIMEy: Surrogate Prediction Explanations Beyond LIME\cite{Sokol2019}
+    \item Counterfactual Explanations for Machine Learning: A Review\cite{Verma2020}
 \end{itemize}
+
+%Tradeoff between accuracy and interpretability, healtcare needs verification
+We believe GA$^2$Ms represent a significant step forward in the tradeoff between model accuracy and intelligibility that should make it easier to deploy high-accuracy learned models in applications such
+as healthcare where model verification and debuggability are as important as accuracy.\cite{Caruana2015}
+
+There has been a previous wave of explainability in control systems as well as AI in the late 80ies: Explaining Control Strategies in Problem Solving\cite{Chandrasekaran1989}
 
 \subsection{Papers that argue the need of XAI}
 \begin{itemize}
@@ -324,9 +339,37 @@ Explanation in Artificial Intelligence: Insights from the Social Sciences\cite{M
 
 Towards A Rigorous Science of Interpretable Machine Learning\cite{Doshi-Velez2017}
 
+\subsection{Human Computer Interaction focused XAI}\label{subsec:human-computer-interaction-focused-xai}
+
+Wang and co created a framework based on decision making and reasoning theory for AI explanation techniques.
+They aim to help developers build human-centric explainable AI-based systems with targeted XAI features\cite{Wang2019}
+
+While researchers in the ML and AI communities are working on making their algorithms explainable, their focus is not on usable, practical and effective transparency that works for and
+benefits people.
+Given HCI’s core interest in technology that empowers people, this is a gap that we as a community can
+help to address, to ensure that these new and powerful technologies are designed with intelligibility from the ground up.
+While this is only a first step, we argue that true progress
+towards explainable systems can only be made through interdisciplinary collaborations, where expertise from different
+fields (e.g., machine learning, cognitive psychology, human computer interaction) is combined and concepts and techniques are further developed from multiple perspectives to
+move research forward.\cite{Abdul2018}
+
+%what makes explanations understandable
+However, exactly what kinds of explanation are truly human-interpretable remains poorly understood.
+This work advances our understanding of what makes explanations interpretable in the specific context of verification.
+In general, greater complexity results in higher response times and lower satisfaction\cite{Narayanan2018}
+
+% more human-centric AI systems
+We proposed and evaluated 18 generally applicable design
+guidelines for human-AI interaction.
+We distilled the guidelines from over 150 AI-related design recommendations and
+validated them through three rounds of evaluation.
+We are hopeful that application of these guidelines will result in
+better, more human-centric AI-infused systems.
+These guidelines include "Make clear why the system did what it did" as well as "Make clear how well the system can do what it can
+do"\cite{Amershi2019}.
 
 \subsection{Trust in automated decision making}\label{subsec:trust}
-Trust has long been recognised as an important factor in facilitating Human Computer Interaction.
+Trust has long been recognised as an important factor in facilitating Human Computer Interaction\cite{Lee2008}.
 In the social sciences trust is studied between humans.
 It's that body of work that the study of trust of humans in machines relies on.
 Long before the recent AI summer, research has been done into understanding the nature of trust between humans and machines
@@ -338,7 +381,7 @@ the algorithms trustworthiness.\\
 Despite extensive research, trust remains hard to define and there are contradicting findings and suggestions.
 Many researchers agree that the performance of the decision making machine alone is not sufficient to build trust.
 Muir suggests that while the machine needs to be designed well the human using it might need to recalibrate their
-trust in the machine's decison too\cite{Muir1987}.
+trust in the machine's decision too\cite{Muir1987}.
 Hoff and co identify three layers of variability in human–automation trust: dispositional trust, situational trust, and learned trust.
 Additionally they identify also environmental conditions that can affect the strength of the relationship between trust and reliance\cite{Hoff2015}.
 On the other hand Hancock and co found that a robot's performance and attributes were the largest contributors to the development of trust in human robot interaction and that environmental factors played only a moderate role.
@@ -351,9 +394,6 @@ Chen argues that for trust to exist a set of conditions need to be satisfied.
 He suggests that trust needs to be engineered either through involving a certain reliance on a set of physiognomic biases or by relying on a set of esteem-seeking psychological mechanisms.
 While this "Trust-Engineering" will not fully achieve trustworthy AI he argues it will ensure that reliance-without-trust can be avoided\cite{Chen2021}.
 Finally Ferrario and co developed a multi-layer model of trust for human AI interaction\cite{Ferrario2020}.
-
-
-\subsection{Participatory Design}\label{subsec:participatory_design}
 
 \subsection{Why is Explainable AI needed - specifically looking at asking}
 
@@ -376,6 +416,13 @@ Measuring trust in AI
 Researchers find public trust in AI varies greatly depending on the application -> %https://www.sciencedaily.com/releases/2022/01/220110103323.htm 
 -> investigated public attitudes toward the ethics of AI.
 
+%Is accuracy important?
+We find that people's trust in a model is affected by both its stated accuracy and its observed accuracy, and that the effect of stated accuracy can change depending on the observed accuracy\cite{Yin2019}.
+
+%intellegibility is needed
+To trust their behavior, we must make AI intelligible, either by using inherently interpretable models or by developing new methods for explaining and controlling otherwise overwhelmingly complex decisions using local approximation, vocabulary alignment, and interactive explanation.
+This paper argues that intelligibility is essential, surveys recent work on building such systems, and highlights key directions for research\cite{Weld2019}.
+
 \subsection{Transparency}\label{subsec:transparency}
 Felzmann and co explore what the requirement of transparency in the GDPR entails for AI and automated decision-making systems integrating integrating legal, social, and ethical aspects.
 They highlight how human–computer interaction and human-robot interaction literature do not provide clear results with respect to the benefits of transparency for users of artificial intelligence technologies
@@ -394,6 +441,21 @@ In their literature survey Nazar and co make the point of how Explainable AI con
 They also stress that more research is needed into AI and XAI in healthcare.
 The hope is that explanations can be compared and validated with clinical knowledge and through that either create new
 clinical knowledge or correct wrong AI decisions.\cite{Nazar2021}
+
+DeGrave found how Using state-of-the-art techniques in explainable AI, we demonstrate that recent deep learning systems to detect COVID-19 from chest radiographs rely on confounding factors rather than medical pathology, creating an alarming situation in which the systems appear accurate.
+These findings demonstrate that explainable AI should be seen as a prerequisite to clinical deployment of machine-learning healthcare models\cite{DeGrave2021}.
+
+%Paper that shows AI can be used for Covid diagnosis
+Guefrechi and co show that transfer learning is proven to be effective, showing strong performance and easy-to-deploy COVID-19 detection methods.
+This enables automatizing the process of analyzing X-ray images with high accuracy and it can also be used in cases where the materials and RT-PCR tests are limited\cite{Guefrechi2021}
+
+%Explainablity is needed in the healtcare sector
+We argue that research in explainable-AI would generally help to facilitate the implementation of AI/ML in the medical domain, and specifically help to facilitate transparency and trust.\cite{Holzinger2017}
+
+%Patients view remains ignored - a study on what factors matter to patients in radiology
+The patients' view on the implementation of artificial intelligence (AI) in radiology is still mainly unexplored territory.
+They found the following 5 factors mattered the most: (1) distrust and accountability (overall, patients were moderately negative on this subject), (2) procedural knowledge (patients generally indicated the need for their active engagement), (3) personal interaction (overall, patients preferred personal interaction), (4) efficiency (overall, patients were ambiguous on this subject), and (5) being informed (overall, scores on these items were not outspoken within this factor).
+Internal consistency was good for three factors (1, 2, and 3), and acceptable for two (4 and 5)\cite{Ongena2020}.
 
 \subsection{Explainability}\label{subsec:explainability}
 Explanations can be seen as adding a form of post-hoc interpretability to an AI system.
