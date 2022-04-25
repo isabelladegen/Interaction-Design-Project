@@ -295,59 +295,65 @@ The current techniques are useful for the operators of the systems, however, the
 %
 % Where do the methods go? Do they fit here
 
+\subsection{An overview of transparent, interpretable and explainable AI}\label{subsec:an-overview-of-transparent-interpretable-and-explainable-ai}
+The field of explainable AI (XAI) experienced a huge surge since 2016 an there is no shortage of surveys of the research.
 
-\subsection{Explainability and Interpretability of AI}\label{subsec:explainability-and-interpretability}
-Explainable AI experienced a huge surge since 2016 an there is no shortage of surveys of the research being done in
-explainable AI.
-Most of them give an overview of techniques available, try to group them and with that attempt to create a taxonomy of the field:
-\begin{itemize}
-    \item A Comprehensive Taxonomy for Explainable Artificial Intelligence: A Systematic Survey of Surveys on Methods and Concepts\cite{Schwalbe2021}
-    \item Explainable AI: A Review of Machine Learning Interpretability Methods\cite{Linardatos2021}
-    \item Notions of explainability and evaluation approaches for explainable artificial intelligence\cite{Vilone2021}
-    \item Explainable Artificial Intelligence: a Systematic Review\cite{Vilone2020}
-    \item A Multidisciplinary Survey and Framework for Design and Evaluation of Explainable AI Systems\cite{Mohseni2021}
-    \item Explainable Deep Learning: A Field Guide for the Uninitiated\cite{Ras2020}
-    \item How Case-Based Reasoning Explains Neural Networks: A Theoretical Analysis of XAI Using Post-Hoc Explanation-by-Example from a Survey of ANN-CBR Twin-Systems\cite{Keane2019}
-    \item Improving fairness in machine learning systems: What do industry practitioners need?\cite{Holstein2019}
-    \item Contrastive explanation: A structural-model approach\cite{Miller2021}
-    \item A Survey of Methods for Explaining Black Box Models\cite{Guidotti2018a}
-    \item Peeking Inside the Black-Box: A Survey on Explainable Artificial Intelligence (XAI)\cite{Adadi2018}
-    \item Contrastive explanation: A structural-model approach\cite{Miller2021}  \item "Why Should I Trust You?": Explaining the Predictions of Any Classifier\cite{Ribeiro2016}
-    \item A Survey of Methods for Explaining Black Box Models\cite{Guidotti2018a}
-    \item Good Counterfactuals and Where to Find Them: A Case-Based Technique for Generating Counterfactuals for Explainable AI (XAI)\cite{Keane2020}
-    \item Contrastive explanation: A structural-model approach\cite{Miller2021}
-    \item "Why Should I Trust You?": Explaining the Predictions of Any Classifier\cite{Ribeiro2016}
-    \item Conversational Explanations of Machine Learning Predictions Through Class-contrastive Counterfactual Statements\cite{Sokol2018}
-    \item Local Rule-Based Explanations of Black Box Decision Systems\cite{Guidotti2018}
-    \item Understanding black-box predictions via influence functions\cite{Koh2017}
-    \item FACE: Feasible and actionable counterfactual explanations\cite{Poyiadzi2020}
-    \item bLIMEy: Surrogate Prediction Explanations Beyond LIME\cite{Sokol2019}
-    \item Counterfactual Explanations for Machine Learning: A Review\cite{Verma2020}
-\end{itemize}
+The literature speaks of black and glass boxes (also called white box) system.
+Black box models are complex systems that are not transparent.
+It is not clear to a human how and why the system makes a decision.
+On the other hand glass boxes (frequently also called white box) models are systems that are interpretable and transparent by default.
+Explanations can be seen as adding a form of post-hoc interpretability to an AI system and with that make AI models more transparent with regards to how they make decisions.
+There's a wide variety of terminologies, motivations, approaches and evaluation criteria for XAI methods.
+Many researchers have create surveys of these methods and attempted to create a unified taxonomy of these methods\cite{Linardatos2021} and\cite{Schwalbe2021}.
+However, despite the vast body of knowledge developed around the concept of explainability, there is not a general consensus among scholars on how an explanation should be defined, and how its validity and reliability assessed\cite{Vilone2021}.
 
-%Tradeoff between accuracy and interpretability, healtcare needs verification
-We believe GA$^2$Ms represent a significant step forward in the tradeoff between model accuracy and intelligibility that should make it easier to deploy high-accuracy learned models in applications such
-as healthcare where model verification and debuggability are as important as accuracy.\cite{Caruana2015}
+There are also many surveys that focus on summarizing the available explanation methods such as\cite{Vilone2020},
+a field guide of explainable AI for Deep Learning\cite{Ras2020}, a survey of methods for explaining black box models\cite{Guidotti2018a} \&\cite{Adadi2018},
+a survey of post-hoc explanation by example methods\cite{Keane2019}, contrastive explanations\cite{Miller2021},
+explanations using counterfactuals\cite{Verma2020} \&\cite{Keane2020}, rule based explanations\cite{Guidotti2018} as well
+as conversational explanations\cite{Sokol2018}.
 
-There has been a previous wave of explainability in control systems as well as AI in the late 1980s: Explaining Control Strategies in Problem Solving\cite{Chandrasekaran1989}
+Note that this recent wave of explanations of automated decision making is not the first wave. 
+An earlier wave happened around automated decision making in control systems as well as AI in the late 80ies see\cite{Chandrasekaran1989}.
 
-\subsection{Explainability}\label{subsec:explainability}
-Explanations can be seen as adding a form of post-hoc interpretability to an AI system.
-Ehsan and co argue that explanations need to be more human centered.
-Building on their case study they stress that more focus on the human is needed and that technical advancements and the understanding of human factors co-evolve together.\cite{Ehsan2020}
+\subsection{Why is Explainable AI needed}
+XAI-Explainable artificial intelligence\cite{Gunning2019} Quote "Explainability is essential for users to effectively understand, trust, and manage powerful artificial intelligence applications."
 
 Bansal and co studied if explanations increase the performance of the human-AI team and found that this was not the case.
 Instead they found that the explanations increased the chance that the human will accept the AI's recommendation regardless of
 the correctness thereof.
 Their findings suggest that explanations increase trust in AI.\cite{Bansal2020}
 
-\subsection{Papers that argue the need of XAI}
-\begin{itemize}
-    \item XAI-Explainable artificial intelligence\cite{Gunning2019} Quote "Explainability is essential for users to effectively understand, trust, and manage powerful artificial intelligence applications."
-\end{itemize}
+%https://www.sciencedirect.com/science/article/pii/S1120179720303124 
+Artificial intelligence in the medical physics community: An international survey - Is AI Needed? This is a survey
 
+%https://link.springer.com/chapter/10.1007/978-3-030-60117-1_33 - 
+Human-Centered Explainable AI: Towards a Reflective Sociotechnical Approach -> Case study investigating the effects of post hoc explanation
 
-\subsection{Shortfalls and Critics of current XAI}
+%https://ieeexplore.ieee.org/abstract/document/9614151 - 
+A Systematic Review of Human–Computer Interaction and Explainable Artificial Intelligence in Healthcare With Artificial Intelligence Techniques -> Review of the techniques
+
+%https://www.sciencedirect.com/science/article/pii/S1120179720303124 
+What do we need to build explainable AI systems for the medical domain?  - not a survey
+
+%https://www.sciencedirect.com/science/article/pii/S1532046420302835 
+The role of explainability in creating trustworthy artificial intelligence for health care: A comprehensive survey of the terminology, design choices, and evaluation strategies -> 
+
+Measuring trust in AI
+Researchers find public trust in AI varies greatly depending on the application -> %https://www.sciencedaily.com/releases/2022/01/220110103323.htm 
+-> investigated public attitudes toward the ethics of AI.
+
+%Is accuracy important?
+We find that people's trust in a model is affected by both its stated accuracy and its observed accuracy, and that the effect of stated accuracy can change depending on the observed accuracy\cite{Yin2019}.
+
+%intellegibility is needed
+To trust their behavior, we must make AI intelligible, either by using inherently interpretable models or by developing new methods for explaining and controlling otherwise overwhelmingly complex decisions using local approximation, vocabulary alignment, and interactive explanation.
+This paper argues that intelligibility is essential, surveys recent work on building such systems, and highlights key directions for research\cite{Weld2019}.
+
+Improving fairness in machine learning systems: What do industry practitioners need?\cite{Holstein2019}
+
+\subsection{Shortfalls and Critics of current XAI}\label{subsec:shortfalls-and-critics-of-current-xai}
+%maybe the HCI research falls into critique
 The Mythos of model interpretability\cite{Lipton2018}: critic on if explainability and interpretability can be achieved and does it lead to trust or not? Critics of the vague definition of the terms used.
 
 Do interpretable models achieve their intended effects: Manipulating and Measuring Model Interpretability\cite{Goldstein2021}
@@ -357,7 +363,17 @@ Explanation in Artificial Intelligence: Insights from the Social Sciences\cite{M
 
 Towards A Rigorous Science of Interpretable Machine Learning\cite{Doshi-Velez2017}
 
+Ehsan and co argue that explanations need to be more human centered.
+Building on their case study they stress that more focus on the human is needed and that technical advancements and the understanding of human factors co-evolve together.\cite{Ehsan2020}
+
+Felzmann and co explore what the requirement of transparency in the GDPR entails for AI and automated decision-making systems integrating integrating legal, social, and ethical aspects.
+They highlight how human–computer interaction and human-robot interaction literature do not provide clear results with respect to the benefits of transparency for users of artificial intelligence technologies
+and propose a relational concept of transparency. They suggest attention needs to be paid to factors that make transparency meaningful and trustworthy in the users’ eyes.\cite{Felzmann2019}
+
+
 \subsection{Human Computer Interaction focused XAI}\label{subsec:human-computer-interaction-focused-xai}
+Mohsensi and co's research created a framework to support diverse design goals and evaluation methods in XAI research\cite{Mohseni2021}
+
 
 Wang and co created a framework based on decision making and reasoning theory for AI explanation techniques.
 They aim to help developers build human-centric explainable AI-based systems with targeted XAI features\cite{Wang2019}
@@ -413,43 +429,7 @@ He suggests that trust needs to be engineered either through involving a certain
 While this "Trust-Engineering" will not fully achieve trustworthy AI he argues it will ensure that reliance-without-trust can be avoided\cite{Chen2021}.
 Finally Ferrario and co developed a multi-layer model of trust for human AI interaction\cite{Ferrario2020}.
 
-\subsection{Why is Explainable AI needed - specifically looking at asking}
-
-%https://www.sciencedirect.com/science/article/pii/S1120179720303124 
-Artificial intelligence in the medical physics community: An international survey - Is AI Needed? This is a survey
-
-%https://link.springer.com/chapter/10.1007/978-3-030-60117-1_33 - 
-Human-Centered Explainable AI: Towards a Reflective Sociotechnical Approach -> Case study investigating the effects of post hoc explanation
-
-%https://ieeexplore.ieee.org/abstract/document/9614151 - 
-A Systematic Review of Human–Computer Interaction and Explainable Artificial Intelligence in Healthcare With Artificial Intelligence Techniques -> Review of the techniques
-
-%https://www.sciencedirect.com/science/article/pii/S1120179720303124 
-What do we need to build explainable AI systems for the medical domain?  - not a survey
-
-%https://www.sciencedirect.com/science/article/pii/S1532046420302835 
-The role of explainability in creating trustworthy artificial intelligence for health care: A comprehensive survey of the terminology, design choices, and evaluation strategies -> 
-
-Measuring trust in AI
-Researchers find public trust in AI varies greatly depending on the application -> %https://www.sciencedaily.com/releases/2022/01/220110103323.htm 
--> investigated public attitudes toward the ethics of AI.
-
-%Is accuracy important?
-We find that people's trust in a model is affected by both its stated accuracy and its observed accuracy, and that the effect of stated accuracy can change depending on the observed accuracy\cite{Yin2019}.
-
-%intellegibility is needed
-To trust their behavior, we must make AI intelligible, either by using inherently interpretable models or by developing new methods for explaining and controlling otherwise overwhelmingly complex decisions using local approximation, vocabulary alignment, and interactive explanation.
-This paper argues that intelligibility is essential, surveys recent work on building such systems, and highlights key directions for research\cite{Weld2019}.
-
-\subsection{Transparency}\label{subsec:transparency}
-Felzmann and co explore what the requirement of transparency in the GDPR entails for AI and automated decision-making systems integrating integrating legal, social, and ethical aspects.
-They highlight how human–computer interaction and human-robot interaction literature do not provide clear results with respect to the benefits of transparency for users of artificial intelligence technologies
-and propose a relational concept of transparency. They suggest attention needs to be paid to factors that make transparency meaningful and trustworthy in the users’ eyes.\cite{Felzmann2019}
-
-%sum the following paper - used in intro too so maybe not required
-Transparency you can trust: Transparency requirements for artificial intelligence between legal norms and contextual concerns (not surveys)\cite{Markus2021}
-
-\subsection{AI in healthcare}\label{subsec:ai-in-healthcare}
+\subsection{AI and XAI in healthcare}\label{subsec:ai-in-healthcare}
 %views from end-users - medical physisists, no investigation into transparency or explainability, just AI on a top level
 Diaz and co investigate current perceptions, practices and education needs pertaining to artificial intelligence (AI) in the medical physics field as seen by medical physicists.
 They find that the value of AI is recognised, more training is needed and that medical physicists should be more included in AI projects.\cite{Diaz2021}
@@ -475,6 +455,10 @@ The patients' view on the implementation of artificial intelligence (AI) in radi
 They found the following 5 factors mattered the most: (1) distrust and accountability (overall, patients were moderately negative on this subject), (2) procedural knowledge (patients generally indicated the need for their active engagement), (3) personal interaction (overall, patients preferred personal interaction), (4) efficiency (overall, patients were ambiguous on this subject), and (5) being informed (overall, scores on these items were not outspoken within this factor).
 Internal consistency was good for three factors (1, 2, and 3), and acceptable for two (4 and 5)\cite{Ongena2020}.
 
+%IS this needed? Tradeoff between accuracy and interpretability, healtcare needs verification
+We believe GA$^2$Ms represent a significant step forward in the tradeoff between model accuracy and intelligibility that should make it easier to deploy high-accuracy learned models in applications such
+as healthcare where model verification and debuggability are as important as accuracy.\cite{Caruana2015}
+
 
 
 \section{Methodology}\label{sec:methodology}
@@ -483,7 +467,7 @@ Internal consistency was good for three factors (1, 2, and 3), and acceptable fo
 
 %The aim of this study is to investigate how the level of transparency that is provided by an AI tool influences the level of trust placed in it when used in high-stakes decision-making. Transparency of an AI tool refers to how well a human can understand why an AI tool has come to the decision that it has made. A high-stakes decision is where someone may be significantly negatively impacted by the result of a decision, for example self-driving cars, medical and legal decisions
 
-The aim of this study is to investigate how the level of transparency that is provided by an AI tool influences a users' level of trust when applied in the context of high-stakes decision-making. In this context, transparency refers to a characteristic of the AI tool being used, which implies how easily the model outputs can be justified by a user when considering the model inputs. A high-stakes decision is where someone may be significantly negatively impacted by the result of a decision, for example self-driving cars, medical and legal decisions.
+The aim of this study is to investigate how the level of transparency that is provided by an AI tool influences a users' level of trust when applied in the context of high-stakes decision-making. In this context, transparency refers to a characteristic of the AI tool being used, which implies how easily the model outputs can be justified by a user when considering the model inputs. A high-stakes decision is one where someone may be significantly negatively impacted by the outcome of the decision e.g. self-driving cars, medical and legal decisions.
 
 % JE
 
@@ -492,7 +476,7 @@ The aim of this study is to investigate how the level of transparency that is pr
 % Brief discussion of why the methods were chosen
 
 \begin{itemize}
-\item To understand the relationship between trust, transparency and experience  - insert figure here
+\item To understand the relationship between trust, transparency and experience  - insert figure here?
 \item To evaluate.../ address the aims of this work... We conducted a two-part investigation.
 \item First, we collected qualitative survey data using a scenario-based questionnaire. Different AI-assisted decision making processes were described and presented, and participants rated their attitude towards them.
 \item (Brief reason why we chose to survey) -  to allow us to create tabular datasets of trust vs transparency per demographic
@@ -612,9 +596,9 @@ A simple and broad definition was given alongside some examples of relevant prof
 
 
 % Medics vs non-medics
-As an adjunct, healthcare professional were identified as a professional group implicitly involved in high-stakes decision decision making, and are therefore in important professional group to investigate specifically.
+As an adjunct, healthcare workers were identified as a professional group implicitly involved in high-stakes decision decision making, and are therefore in important professional group to investigate specifically.
 
-Given the constraint to only consider a high-stakes medical decision, we must consider whether trust is influenced by the experience of the participant in these contexts. For example, a judge who frequently makes life-altering decisions may provide a different response to someone who has never found themselves in such a situation. Similarly, someone who works in a hospital may consider the decision-making process for a medical diagnosis very differently to someone who has worked in a medical setting. This leads to constraints \#2 and \#3:
+Given the constraint to only consider a high-stakes medical decision, we must consider whether trust is influenced by the experience of the participant in these contexts. For example, a judge who frequently makes life-altering decisions may provide a different response to someone who has never found themselves in such a situation. Similarly, someone who works in a hospital may consider the decision-making process for a medical diagnosis very differently to someone who has never worked in a medical setting. This leads to constraints \#2 and \#3:
  
   \begin{center}
     \textbf{Constraint 2}; Any participant must inform the study of their experience of high-stakes decision making.
@@ -666,7 +650,7 @@ How did we pick the 5 people from the focus group
 
 \subsubsection{Scenario Ranking}
 
-Each participants number of trust for each of the four scenarios was ranked from 1-4 with 1 being the lowest and 4 being the highest ranking. This was done overall as well as split into the different demographics: Low, medium and high AI experience; low, medium and high high-stakes decision making as well as working in health care or not. The ranking was calculated using panda's rank function. Ties in ranking were resolved using panda's 'average' method\cite{mckinney-proc-scipy-2010}. In total there were 9 participants who have given each scenario the same number of trust, 49 who have given each scenario a different number of trust, 105 who have given two scenarios the same trust and 115 who have given three scenario the same trust. For AI experience and frequency of high-stakes decision making the rating from 1-10 was binned into three bins: Low, Medium, High using panda's cut function\cite{mckinney-proc-scipy-2010}. The resulting bins are both were low $(0.991, 4.0] <$ medium $(4.0, 7.0] <$ high (7.0, 10.0]]. To be able to compare the charts across demographics regardless of how many people are in which demographic the number of answers were normalised: number of answers/(total number of answers)*100.
+Each participants number of trust for each of the four scenarios was ranked from 1-4 with 1 being the lowest and 4 being the highest ranking. This was done overall as well as split into the different demographics: Low, medium and high AI experience; low, medium and high high-stakes decision making as well as working in health care or not. The ranking was calculated using panda's rank function. Ties in ranking were resolved using panda's 'average' method\cite{mckinney-proc-scipy-2010}. In total there were 9 participants who have given each scenario the same number of trust, 49 who have given each scenario a different number of trust, 105 who have given two scenarios the same trust and 115 who have given three scenario the same trust. For AI experience and frequency of high-stakes decision making the rating from 1-10 was binned into three bins: Low, Medium, High using panda's cut function\cite{mckinney-proc-scipy-2010}. The resulting bins are both were low $(0.991, 4.0] <$ medium $(4.0, 7.0] <$ high (7.0, 10.0]. To be able to compare the charts across demographics regardless of how many people are in which demographic the number of answers were normalised: number of answers/(total number of answers)*100.
 
 
 %\subsection{Data}
@@ -1107,6 +1091,32 @@ Contribution we've made
     \item second opinion from AI seen as useful over doctor on own
     \item trust issues around data privacy
 \end{itemize}
+
+\textbf{AI as a second opinion} (DC)
+
+Survey findings show that in general, participants ranked scenario (3/C) [black-box with human] higher than scenario D/4 [blackbox alone]. 
+Participants of the focus-group discussed why they agreed or disagreed with this trend.One participant explained why they did not perceive that the human in scenario (3/C) improved the trustworthiness with respect to scenario 4/D without the human. 
+
+56 (P6) “I definitely put [black-box] above black box with human”... 
+“the human has no way of knowing whether what the black box did was right so why would it disagree with it, so it seems pointless having the human element in there”
+
+Participant 5 responded to this point, and explained their reasoning for thinking that scenario C/3 was more trustworthy than scenario D/4. 
+
+58 (P5) “a black box and human should be better just a black box because... [it's similar to] who wants to be a millionaire where you ask the audience... you get a bunch of statistics, and you can confirm your belief or not”. 
+The participant makes the point that the doctor has their own assessment of the situation in addition to the assessment provided by the black-box.
+The doctor could use the black-box output as a way of confirming their belief (a kind of second opinion), or to indicate where they may need to review their assessment. Further the participant suggests that the doctor may over time develop an intuition for the kinds of mistakes the black-box will make:
+“if they have had past results and background then they’ll know roughly whether it’s accurate or not”.
+
+Participant 6 clarifies the reasoning behind their decision by raising valid questions which highlight the ambiguity surrounding the relationship between the  human and AI system within the decision making process.
+
+60-62 (P6)
+“is it that the human and the black box makes a decision and they collate? The way I saw it was that the black box makes the decision and the human without any additional information makes a decision separately decided to accept it or not. “
+“I guess in an ideal work you'd know that black box was taking in all the different information that it needed to. Especially I think in terms of minorities which have a history of not having that much data. So, I think that’s one element of having the human there that they could take that sort of information into account when maybe the black box doesn’t. “
+The human and AI could fit into the wider decision making process in different places and in different ways, which could result in or address different biases. 
+
+
+
+
 \section{Conclusion}
 
 
