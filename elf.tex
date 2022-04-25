@@ -313,94 +313,59 @@ a survey of post-hoc explanation by example methods\cite{Keane2019}, contrastive
 explanations using counterfactuals\cite{Verma2020} \&\cite{Keane2020}, rule based explanations\cite{Guidotti2018} as well
 as conversational explanations\cite{Sokol2018}.
 
-Note that this recent wave of explanations of automated decision making is not the first wave. 
+Note that this recent wave of explanations of automated decision making is not the first wave.
 An earlier wave happened around automated decision making in control systems as well as AI in the late 80ies see\cite{Chandrasekaran1989}.
 
-\subsection{Why is Explainable AI needed}
-XAI-Explainable artificial intelligence\cite{Gunning2019} Quote "Explainability is essential for users to effectively understand, trust, and manage powerful artificial intelligence applications."
+\subsection{Why Explainable AI is needed}\label{subsec:why-explainable-ai-is-needed}
+Gunning states "Explainability is essential for users to effectively understand, trust, and manage powerful artificial intelligence applications."\cite{Gunning2019}
 
 Bansal and co studied if explanations increase the performance of the human-AI team and found that this was not the case.
 Instead they found that the explanations increased the chance that the human will accept the AI's recommendation regardless of
 the correctness thereof.
-Their findings suggest that explanations increase trust in AI.\cite{Bansal2020}
+Their findings suggest that explanations increase trust in AI\cite{Bansal2020}.
 
-%https://www.sciencedirect.com/science/article/pii/S1120179720303124 
-Artificial intelligence in the medical physics community: An international survey - Is AI Needed? This is a survey
+Weld and co found that to trust an AI system's behavior, it must be intelligible, either by using inherently interpretable models or by developing new methods for explaining and controlling otherwise overwhelmingly complex decisions using local approximation, vocabulary alignment, and interactive explanation\cite{Weld2019}.
 
-%https://link.springer.com/chapter/10.1007/978-3-030-60117-1_33 - 
-Human-Centered Explainable AI: Towards a Reflective Sociotechnical Approach -> Case study investigating the effects of post hoc explanation
-
-%https://ieeexplore.ieee.org/abstract/document/9614151 - 
-A Systematic Review of Human–Computer Interaction and Explainable Artificial Intelligence in Healthcare With Artificial Intelligence Techniques -> Review of the techniques
-
-%https://www.sciencedirect.com/science/article/pii/S1120179720303124 
-What do we need to build explainable AI systems for the medical domain?  - not a survey
-
-%https://www.sciencedirect.com/science/article/pii/S1532046420302835 
-The role of explainability in creating trustworthy artificial intelligence for health care: A comprehensive survey of the terminology, design choices, and evaluation strategies -> 
-
-Measuring trust in AI
-Researchers find public trust in AI varies greatly depending on the application -> %https://www.sciencedaily.com/releases/2022/01/220110103323.htm 
--> investigated public attitudes toward the ethics of AI.
-
-%Is accuracy important?
-We find that people's trust in a model is affected by both its stated accuracy and its observed accuracy, and that the effect of stated accuracy can change depending on the observed accuracy\cite{Yin2019}.
-
-%intellegibility is needed
-To trust their behavior, we must make AI intelligible, either by using inherently interpretable models or by developing new methods for explaining and controlling otherwise overwhelmingly complex decisions using local approximation, vocabulary alignment, and interactive explanation.
-This paper argues that intelligibility is essential, surveys recent work on building such systems, and highlights key directions for research\cite{Weld2019}.
-
-Improving fairness in machine learning systems: What do industry practitioners need?\cite{Holstein2019}
 
 \subsection{Shortfalls and Critics of current XAI}\label{subsec:shortfalls-and-critics-of-current-xai}
-%maybe the HCI research falls into critique
-The Mythos of model interpretability\cite{Lipton2018}: critic on if explainability and interpretability can be achieved and does it lead to trust or not? Critics of the vague definition of the terms used.
+XAI has also received a fair amount of critique.
+From questioning if explainability and interpretability can be achieved to the vague definitions of the terms used\cite{Lipton2018}.
 
-Do interpretable models achieve their intended effects: Manipulating and Measuring Model Interpretability\cite{Goldstein2021}
-
-Explanation in Artificial Intelligence: Insights from the Social Sciences\cite{Miller2019}
-%https://www.connectedpapers.com/main/e89dfa306723e8ef031765e9c44e5f6f94fd8fda/Explanation-in-Artificial-Intelligence%3A-Insights-from-the-Social-Sciences/graph
-
-Towards A Rigorous Science of Interpretable Machine Learning\cite{Doshi-Velez2017}
+Researchers have also been starting to investigate if supposedly interpretable models achieve their intended effects, such as making people more closely follow a model's predictions when it is beneficial for them to do so or enabling them to detect when a model has made a mistake.
+They however did not find that participants more closely followed its predictions\cite{Goldstein2021}.
 
 Ehsan and co argue that explanations need to be more human centered.
 Building on their case study they stress that more focus on the human is needed and that technical advancements and the understanding of human factors co-evolve together.\cite{Ehsan2020}
 
-Felzmann and co explore what the requirement of transparency in the GDPR entails for AI and automated decision-making systems integrating integrating legal, social, and ethical aspects.
-They highlight how human–computer interaction and human-robot interaction literature do not provide clear results with respect to the benefits of transparency for users of artificial intelligence technologies
-and propose a relational concept of transparency. They suggest attention needs to be paid to factors that make transparency meaningful and trustworthy in the users’ eyes.\cite{Felzmann2019}
-
-
-\subsection{Human Computer Interaction focused XAI}\label{subsec:human-computer-interaction-focused-xai}
-Mohsensi and co's research created a framework to support diverse design goals and evaluation methods in XAI research\cite{Mohseni2021}
-
-
-Wang and co created a framework based on decision making and reasoning theory for AI explanation techniques.
-They aim to help developers build human-centric explainable AI-based systems with targeted XAI features\cite{Wang2019}
-
-While researchers in the ML and AI communities are working on making their algorithms explainable, their focus is not on usable, practical and effective transparency that works for and
-benefits people.
-Given HCI’s core interest in technology that empowers people, this is a gap that we as a community can
-help to address, to ensure that these new and powerful technologies are designed with intelligibility from the ground up.
-While this is only a first step, we argue that true progress
-towards explainable systems can only be made through interdisciplinary collaborations, where expertise from different
-fields (e.g., machine learning, cognitive psychology, human computer interaction) is combined and concepts and techniques are further developed from multiple perspectives to
-move research forward.\cite{Abdul2018}
-
-%what makes explanations understandable
 However, exactly what kinds of explanation are truly human-interpretable remains poorly understood.
 This work advances our understanding of what makes explanations interpretable in the specific context of verification.
 In general, greater complexity results in higher response times and lower satisfaction\cite{Narayanan2018}
 
-% more human-centric AI systems
-We proposed and evaluated 18 generally applicable design
-guidelines for human-AI interaction.
-We distilled the guidelines from over 150 AI-related design recommendations and
-validated them through three rounds of evaluation.
-We are hopeful that application of these guidelines will result in
-better, more human-centric AI-infused systems.
-These guidelines include "Make clear why the system did what it did" as well as "Make clear how well the system can do what it can
+Felzmann and co explore what the requirement of transparency in the GDPR entails for AI and automated decision-making systems integrating integrating legal, social, and ethical aspects.
+They highlight how human–computer interaction and human-robot interaction literature do not provide clear results with respect to the benefits of transparency for users of artificial intelligence technologies
+and propose a relational concept of transparency. 
+They suggest attention needs to be paid to factors that make transparency meaningful and trustworthy in the users’ eyes.\cite{Felzmann2019}
+
+Markus and co find that evidence of the usefulness of explainability is still lacking in practice and recognize that complementary measures might be needed to create trustworthy AI\cite{Markus2021}
+
+
+\subsection{Connecting Human Computer Interaction and XAI}\label{subsec:human-computer-interaction-focused-xai}
+Mohsensi and co's research created a framework to support diverse design goals and evaluation methods in XAI research\cite{Mohseni2021}
+
+Wang and co created a framework based on decision making and reasoning theory for AI explanation techniques.
+They aim to help developers build human-centric explainable AI-based systems with targeted XAI features\cite{Wang2019}
+
+Amershi and co proposed and evaluated 18 generally applicable design guidelines for human-AI interaction that they hope will result in
+better, more human-centric AI-infused systems. 
+These guidelines include principles relevant to our study such as "Make clear why the system did what it did" as well as "Make clear how well the system can do what it can
 do"\cite{Amershi2019}.
+
+Researchers from the HCI communities are interested to empower people and to ensure that new and powerful AI technologies are designed with intelligibility from the ground up.
+They highlight that while researchers in the ML and AI communities are working on making their algorithms explainable, their focus is not on usable, practical and effective transparency that works for and
+benefits people.
+And stress that explainable systems can only be created through interdisciplinary collaborations, where expertise from different
+fields (e.g., machine learning, cognitive psychology, human computer interaction) is combined and concepts and techniques are further developed from multiple perspectives to
+move research forward.\cite{Abdul2018}
 
 \subsection{Trust in automated decision making}\label{subsec:trust}
 Trust has long been recognised as an important factor in facilitating Human Computer Interaction\cite{Lee2008}.
@@ -430,34 +395,32 @@ While this "Trust-Engineering" will not fully achieve trustworthy AI he argues i
 Finally Ferrario and co developed a multi-layer model of trust for human AI interaction\cite{Ferrario2020}.
 
 \subsection{AI and XAI in healthcare}\label{subsec:ai-in-healthcare}
-%views from end-users - medical physisists, no investigation into transparency or explainability, just AI on a top level
-Diaz and co investigate current perceptions, practices and education needs pertaining to artificial intelligence (AI) in the medical physics field as seen by medical physicists.
-They find that the value of AI is recognised, more training is needed and that medical physicists should be more included in AI projects.\cite{Diaz2021}
+For this study we focused on diagnosis decision in a healthcare settings.There's evidence that public disagreement/agreement with using AI varied depending on the application area\cite{Ikkatai2022}.
+Holzinger and co argue that research in explainable-AI helps to facilitate the implementation of AI/ML in the medical domain, and specifically helps to facilitate transparency and trust\cite{Holzinger2017}.
+As we've mentioned earlier explanation are useful to find out if the system has learned something about medical pathology or not.
+This has been demonstrated by DeGrave, they found a deep learning system used to detect COVID-19 from chest radiographs relied on confounding factors rather than medical pathology, creating an alarming situation in which the system appear accurate despite not having learned anything about medical pathology.
+They conclude that their findings demonstrate that explainable AI should be seen as a prerequisite to clinical deployment of machine-learning healthcare models\cite{DeGrave2021}.
 
-%why is explainability needed
-In their literature survey Nazar and co make the point of how Explainable AI connects AI with Human Computer Interaction (HCI).
+In their literature survey Nazar and co make the point of how explainable AI connects AI with Human Computer Interaction (HCI).
 They also stress that more research is needed into AI and XAI in healthcare.
-The hope is that explanations can be compared and validated with clinical knowledge and through that either create new
-clinical knowledge or correct wrong AI decisions.\cite{Nazar2021}
+The hope is that explanations can be compared and validated with clinical knowledge and through that new
+clinical knowledge can be created or AI decisions corrected\cite{Nazar2021}.
 
-DeGrave found how Using state-of-the-art techniques in explainable AI, we demonstrate that recent deep learning systems to detect COVID-19 from chest radiographs rely on confounding factors rather than medical pathology, creating an alarming situation in which the systems appear accurate.
-These findings demonstrate that explainable AI should be seen as a prerequisite to clinical deployment of machine-learning healthcare models\cite{DeGrave2021}.
+There is also research showing that AI can be used for diagnosing Covid.
+Guefrechi and co show transfer learning proves to be effective, showing strong performance and easy-to-deploy COVID-19 detection methods.
+This enables automatizing the process of analyzing X-ray images with high accuracy and it can also be used in cases where the materials and RT-PCR tests are limited\cite{Guefrechi2021}.
 
-%Paper that shows AI can be used for Covid diagnosis
-Guefrechi and co show that transfer learning is proven to be effective, showing strong performance and easy-to-deploy COVID-19 detection methods.
-This enables automatizing the process of analyzing X-ray images with high accuracy and it can also be used in cases where the materials and RT-PCR tests are limited\cite{Guefrechi2021}
+The needs depending on the stakeholders in healthcare also change.
+Medical physicist are the end-users.
+Diaz and co investigated their current perceptions, practices and education needs and found that while the value of AI is recognised by medical physicists, more training of the operators of the system is needed.
+They also conclude that medical physicists should be more included in AI projects\cite{Diaz2021}.
 
-%Explainablity is needed in the healtcare sector
-We argue that research in explainable-AI would generally help to facilitate the implementation of AI/ML in the medical domain, and specifically help to facilitate transparency and trust.\cite{Holzinger2017}
+%we could move these papers to the dissusion:
+The patients' view on the implementation of artificial intelligence in radiology is still mainly unexplored territory.
+Ongena and co found the following 5 factors mattered the most: (1) distrust and accountability (overall, patients were moderately negative on this subject), (2) procedural knowledge (patients generally indicated the need for their active engagement), (3) personal interaction (overall, patients preferred personal interaction), (4) efficiency (overall, patients were ambiguous on this subject), and (5) being informed (overall, scores on these items were not outspoken within this factor)\cite{Ongena2020}.
 
-%Patients view remains ignored - a study on what factors matter to patients in radiology
-The patients' view on the implementation of artificial intelligence (AI) in radiology is still mainly unexplored territory.
-They found the following 5 factors mattered the most: (1) distrust and accountability (overall, patients were moderately negative on this subject), (2) procedural knowledge (patients generally indicated the need for their active engagement), (3) personal interaction (overall, patients preferred personal interaction), (4) efficiency (overall, patients were ambiguous on this subject), and (5) being informed (overall, scores on these items were not outspoken within this factor).
-Internal consistency was good for three factors (1, 2, and 3), and acceptable for two (4 and 5)\cite{Ongena2020}.
-
-%IS this needed? Tradeoff between accuracy and interpretability, healtcare needs verification
-We believe GA$^2$Ms represent a significant step forward in the tradeoff between model accuracy and intelligibility that should make it easier to deploy high-accuracy learned models in applications such
-as healthcare where model verification and debuggability are as important as accuracy.\cite{Caruana2015}
+%Is accuracy important?
+Yin and co found that people's trust in a model is affected by both its stated accuracy and its observed accuracy, and that the effect of stated accuracy can change depending on the observed accuracy\cite{Yin2019}.
 
 
 
@@ -467,28 +430,31 @@ as healthcare where model verification and debuggability are as important as acc
 
 %The aim of this study is to investigate how the level of transparency that is provided by an AI tool influences the level of trust placed in it when used in high-stakes decision-making. Transparency of an AI tool refers to how well a human can understand why an AI tool has come to the decision that it has made. A high-stakes decision is where someone may be significantly negatively impacted by the result of a decision, for example self-driving cars, medical and legal decisions
 
-The aim of this study is to investigate how the level of transparency that is provided by an AI tool influences a users' level of trust when applied in the context of high-stakes decision-making. In this context, transparency refers to a characteristic of the AI tool being used, which implies how easily the model outputs can be justified by a user when considering the model inputs. A high-stakes decision is one where someone may be significantly negatively impacted by the outcome of the decision e.g. self-driving cars, medical and legal decisions.
+The aim of this study is to investigate how the level of transparency that is provided by an AI tool influences a users' level of trust when applied in the context of high-stakes decision-making. In this context, transparency refers to a characteristic of the AI tool being used, which implies how easily the model outputs can be justified by a user when considering the model inputs. A high-stakes decision is one where someone may be significantly negatively impacted by the outcome of the decision e.g. self-driving cars, medical and legal decisions.\\
 
-To address the aims of this study, we conducted a two-part investigation. First, we collected qualitative survey data using a scenario-based questionnaire. Different AI-assisted decision making processes were described and presented, and participants rated their attitude towards them. Participants also provided some relevant demographic information
+To address the aims of this study, we conducted a two-part investigation. First, we collected qualitative survey data using a scenario-based questionnaire. Different AI-assisted decision making processes were described and presented, and participants rated their attitude towards them. Participants also provided information regarding proficiency with AI tools and career which allowed their responses to be categorised.\\
 
-% Brief overview/ intro to methods (survey & focus group) before going into more detail
-% Brief discussion of why the methods were chosen
+Secondly, we hosted a focus group where participants discussed their sentiment towards AI, rated their attitude to different scenarios and responded to statements made by the hosts relating to trustworthiness in high-stakes applications.\\
 
-\begin{itemize}
-\item To evaluate.../ address the aims of this work... We conducted a two-part investigation.
-\item First, we collected qualitative survey data using a scenario-based questionnaire. Different AI-assisted decision making processes were described and presented, and participants rated their attitude towards them.
-\item (Brief reason why we chose to survey) -  to allow us to create tabular datasets of trust vs transparency per demographic
-\end{itemize}
-\begin{itemize}
-\item The survey was designed to identify whether there were trends in the attitudes of different groups of participants towards the presented AI systems. 
-\item To gain insight into the possible reasoning behind participants attitudes, and to help identify any issues with the survey itself, we conducted a follow-up study comprising group interviews in the style of a focus-group.
-\item The design of this focus group was influenced by the results of the survey, so that we could specifically interrogate key findings. 
-\item Details of these methods are outlined in this section. 
-\item For full details on the ethical considerations and approval for this work, please see Appendix.
-\end{itemize}
+details of these
+% % Brief overview/ intro to methods (survey & focus group) before going into more detail
+% % Brief discussion of why the methods were chosen
 
-% Could also discuss why we chose to do survey + focus group, and not design workshops, interviews etc.
-% DC
+% \begin{itemize}
+% \item To evaluate.../ address the aims of this work... We conducted a two-part investigation.
+% \item First, we collected qualitative survey data using a scenario-based questionnaire. Different AI-assisted decision making processes were described and presented, and participants rated their attitude towards them.
+% \item (Brief reason why we chose to survey) -  to allow us to create tabular datasets of trust vs transparency per demographic
+% \end{itemize}
+% \begin{itemize}
+% \item The survey was designed to identify whether there were trends in the attitudes of different groups of participants towards the presented AI systems. 
+% \item To gain insight into the possible reasoning behind participants attitudes, and to help identify any issues with the survey itself, we conducted a follow-up study comprising group interviews in the style of a focus-group.
+% \item The design of this focus group was influenced by the results of the survey, so that we could specifically interrogate key findings. 
+% \item Details of these methods are outlined in this section. 
+% \item For full details on the ethical considerations and approval for this work, please see Appendix.
+% \end{itemize}
+
+% % Could also discuss why we chose to do survey + focus group, and not design workshops, interviews etc.
+% % DC
 
 \subsection{Study 1 - Scenario-based Survey }
 \subsubsection{Intention of Study (and Study Design)} 
@@ -633,6 +599,10 @@ When surveying a population, several key ethical considerations must be addresse
     \item The protection of any participants data 
     \item Compensation
 \end{itemize}
+ 
+
+A similar questionnaire to the survey was used to gather data from the focus group participants. Participants were given the opportunity to express any reactions to the results of the questionnaire, and the focus group also served as a platform for discussion of our findings from the survey results. allowed us to query the participant any results from the questionnaire and to clarify their  investigated our findings.
+
  
 
 
