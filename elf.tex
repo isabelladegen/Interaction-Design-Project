@@ -469,14 +469,12 @@ as healthcare where model verification and debuggability are as important as acc
 
 The aim of this study is to investigate how the level of transparency that is provided by an AI tool influences a users' level of trust when applied in the context of high-stakes decision-making. In this context, transparency refers to a characteristic of the AI tool being used, which implies how easily the model outputs can be justified by a user when considering the model inputs. A high-stakes decision is one where someone may be significantly negatively impacted by the outcome of the decision e.g. self-driving cars, medical and legal decisions.
 
-% JE
-
+To address the aims of this study, we conducted a two-part investigation. First, we collected qualitative survey data using a scenario-based questionnaire. Different AI-assisted decision making processes were described and presented, and participants rated their attitude towards them. Participants also provided some relevant demographic information
 
 % Brief overview/ intro to methods (survey & focus group) before going into more detail
 % Brief discussion of why the methods were chosen
 
 \begin{itemize}
-\item To understand the relationship between trust, transparency and experience  - insert figure here?
 \item To evaluate.../ address the aims of this work... We conducted a two-part investigation.
 \item First, we collected qualitative survey data using a scenario-based questionnaire. Different AI-assisted decision making processes were described and presented, and participants rated their attitude towards them.
 \item (Brief reason why we chose to survey) -  to allow us to create tabular datasets of trust vs transparency per demographic
@@ -584,9 +582,7 @@ Measuring trust for a population on a unified scale is a well-documented challen
  \end{center}
 
 % High-stakes decision making scale
-High-stakes decision making is an ambiguous concept.
-
-To allow for meaningful evaluation, involvement in "high-stakes" decision was investigated in two ways.
+High-stakes decision making is an ambiguous concept. To allow for meaningful evaluation, involvement in "high-stakes" decision was investigated in two ways. \\
 
 The first method was to offer a definition of "high-stakes decision making", and ask study participants to self-rate on an ordinal scale of one to ten. This method allows participants from all backgrounds and professions to identify themselves as individuals involved in high-stakes decision making only if they believe it is appropriate to do so. 
 
@@ -639,111 +635,7 @@ When surveying a population, several key ethical considerations must be addresse
 \end{itemize}
  
 
-\subsection{Data Analysis Survey}
 
-% /JE
-
-Highlight the use of covid diagnosis makes people apply the risk to themselves. So we get more thoughtful/emotive responses.
-
-Split into Study one and Study two.
-How did we pick the 5 people from the focus group
-
-\subsubsection{Scenario Ranking}
-
-Each participants number of trust for each of the four scenarios was ranked from 1-4 with 1 being the lowest and 4 being the highest ranking. This was done overall as well as split into the different demographics: Low, medium and high AI experience; low, medium and high high-stakes decision making as well as working in health care or not. The ranking was calculated using panda's rank function. Ties in ranking were resolved using panda's 'average' method\cite{mckinney-proc-scipy-2010}. In total there were 9 participants who have given each scenario the same number of trust, 49 who have given each scenario a different number of trust, 105 who have given two scenarios the same trust and 115 who have given three scenario the same trust. For AI experience and frequency of high-stakes decision making the rating from 1-10 was binned into three bins: Low, Medium, High using panda's cut function\cite{mckinney-proc-scipy-2010}. The resulting bins are both were low $(0.991, 4.0] <$ medium $(4.0, 7.0] <$ high (7.0, 10.0]. To be able to compare the charts across demographics regardless of how many people are in which demographic the number of answers were normalised: number of answers/(total number of answers)*100.
-
-
-%\subsection{Data}
-
-
-
-The survey was closed after XXX days, with XXX participants. We use the two key profile features - AI experience level and whether the participant is a medical professional - to dis-aggregate into three demographic bins:
-
-\begin{itemize}
-    \item Medical professional: Answered "yes" to relevant question
-    \item AI Expert: Not a medical professional, and AI experience level reported as $\geq XXX$
-    \item Public: Neither a medical professional nor an AI expert
-\end{itemize}
-
-\subsubsection{Additional Features}
-
-We use the results of the first scenario, the trust in the doctor with no AI component $T_D$, as a baseline to assess the impact of AI-cooperation on diagnosis trust levels. We denote the trust level reported in these cooperative scenarios based on the nature of their model. Scenario two, with the interpretable or "glass box'' model is $T_{GB}$, and scenario three with the "black box'' model $T_{BB}$.
-
-We normalise the survey scale of [1,10] to [0,1] for $T_D, T_{BB}, T_{GB}$, via $T_i \rightarrow (T_i - 1) * (10/9)$, then produce two new features based on the percentage factor change in trust:
-
-\begin{equation}
-    f_i = 100 \cdot (T_i / T_D)
-\end{equation}
-
-These features allow analysis of whether participants view the cooperative use of AI as beneficial ($f_i > 0$), neutral ($f_i = 0$), or inhibitory ($f_i < 0$) to the diagnosis. We plot the results in Figure \ref{fig:improvement}, along with an interpretation schema.
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.75\textwidth]{graphics/Doctor_improvements_cooperation_scatter.jpg}
-    \caption{\centering Perceived improvements in trust in scenarios 3 and 4. Percentages are calculated using $\leq 0$ and $>0$ basis.\hspace{\textwidth} Interpretation schema: \textbf{A}: Black box improves diagnosis, glass box makes diagnosis worse \hspace{\textwidth} \textbf{B}: Both glass box and black box improve diagnosis. \textbf{$B_1$} black box is preferred, \textbf{$B_2$} glass box is preferred, $B_3$ neither is preferred. \textbf{C}: Neither glass box nor black box improve diagnosis \textbf{D}: Glass box improves diagnosis, black box makes diagnosis worse}
-    \label{fig:improvement}
-\end{figure}
-
-Through Figure \ref{fig:improvement} we derive how different cohorts view the use of AI in cooperative scenarios. In all cohorts, a significant proportion of participants view the use of AI as beneficial with both models - 46\% of the public, 53\% of medical professionals, and 60\% of AI experts. This can be assumed to match the progression of technical expertise between cohorts.
-
-Only a minority of each cohort view neither AI-cooperative scenario as beneficial. In all cohorts the glass box model is preferred over the black box model, but only by a small margin, with ratios $f_{BB}:f_{GB}$ of 1:1.17, 1:1.125 and 1:1.40 for the public, medical professionals and AI experts respectively. 
-
-\begin{table}[h]
-\begin{tabular}{c||c|c|c}
-     & Public & Medics & AI Experts \\
-     \hline \hline
-    GB and BB inhibit (C)            & 29\% & 23\% & 16\%\\ \hline
-    GB inhibits, BB improves (A)     & 5\%  & 2\%  & 5\% \\
-    GB improves, BB inhibits (D)     & 21\% & 21\% & 19\%\\  \hline
-    GB and BB improve (B)      & 46\% & 53\% & 60\%\\ \hline
-    GB and BB improve (equal)    & 17\% & 19\% & 31\%\\
-    GB and BB improve (GB better)& 10\% & 15\% & 17\%\\
-    GB and BB improve (BB better)& 19\% & 19\% & 12\%\\ 
-\end{tabular}
-\caption{\label{tab:demographic_trust_change}Perceived changes in trust of a diagnosis from an AI/doctor cooperation, dis-aggregated into previously described demographics. Note: Relevant percentages may not sum to 100\% due to rounding errors.}
-\end{table}
-%\subsection{Correlation Analysis}
-
-\subsubsection{Clustering}
-
-Having disaggregated into profiling features, then analysed the trust levels of these cohorts, we can instead do the opposite. By starting with trust levels and finding distinct groups of how they are distributed, we can construct cohorts based on trust levels, then use profiling features to find the characteristics of these groups.
-
-Insights can be gained into the results of the survey by applying unsupervised methods. These do not rely on any labels or targets, as would be the case in supervised or semi-supervised methods, so avoid many of the biases that such methods would carry. In particular we apply Uniform Manifold Approximation and Projection (UMAP) \cite{McInnes2018} as dimensionality reduction, then Hierachical Density-Based Spatial Clustering And Noise (HDBSCAN) \cite{McInnes2017} as unsupervised clustering on the resulting UMAP embedding. 
-
-UMAP makes the assumption that data is distributed on a uniform manifold, but that the data-space is warped. Using this assumption local distance metrics are learnt, then used to construct a distance graph of the data. A lower-dimensional embedding is then formed, which aims to conserve the form of the high-dimensional space, using a stochastic graph layout. HDBSCAN, similarly, constructs a minimum spanning tree based on distances in the data-space, then applies various sub-algorithms to find clusters. Full explanation of these algorithms is beyond the scope of this work, so the reader should consult the relevant papers for more information.
-
-We apply UMAP, then HDBSCAN to the resulting embedding, and present the results in Figures \ref{fig:embedding}, \ref{fig:cluster_means}. UMAP produces four distinct clusters, which are recognised by HDBSCAN. 
-
-\begin{figure}
-\centering
-\begin{subfigure}{0.5\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{graphics/UMAP_HDBSCAN.jpg}
-  \caption{}
-%   \caption{The UMAP embedding produces four (visually) distinct clusters, which are also identified by HDBSCAN.}
-  \label{fig:embedding}
-\end{subfigure}%
-\begin{subfigure}{0.55\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{graphics/clustering_means.jpg}
-  \caption{Cluster means across all four scenarios, along with profiling features.}
-  \label{fig:cluster_means}
-\end{subfigure}
-\caption{The results of unsupervised clustering with UMAP and HDBSCAN. In Figure \ref{fig:cluster_means} profile features (AI, Medical, Stakes) are normalised by the whole population. Scenario trust levels are moved to a scale [0-1] for greater clarity in the heatmapping.}
-\label{fig:test}
-\end{figure}
-
-The clusters identified by this process are distinct in how the participants within them rated trust in the different scenarios. Clusters 1 and 3 follow the same trend, with the highest trust in the glass-box cooperative scenario, and lowest in the solo black-box. However, cluster 3 has significantly lower trusts across all scenarios. Cluster 3 is significantly larger than the other clusters, representing 64\% of the participant pool.
-
-Clusters 0 and 2 have the lowest level of trust placed in the doctor, with the solo black-box scenario scoring higher, in contrast to the opposite relationship in clusters 1 and 3. In both cluster 0 and 2 the highest trust is in the black-box cooperative scenario. Cluster 2 is the only cluster in which the glass-box cooperative scores lower than the solo doctor.
-
-This analysis of only prescribed trusts leads to an intuitive split: In evaluating the compromise between transparency and efficacy, those in clusters 0 and 2 prescribe more weight to efficacy, and those in clusters 1 and 3 weight transparency over efficacy. Those in cluster 0 are perhaps closer to even balancing of transparency and efficacy than those in cluster 2, as shown by their higher trust levels in the glass-box scenario.
-
-Cluster 1 probably represents our population of AI researchers - high average AI knowledge, but low stakes decision making and a small medical proportion. These participants rate any doctor-lead scenario highly, and only show a significant decrease in trust when a doctor is not presented as making the final decision, as in scenario 4.
-
-Cluster 2, which leans the most towards following efficacy statistics, has the highest proportion of both medics and high-stakes decision makers. This might indicate that the cluster is composed principally of medical professionals, who are likely to rate themselves as more frequently making high-stakes decisions. This would also explain why this cluster has the lowest average self-reported AI knowledge compared to the whole survey population.
-
-Clusters 0 and 3 are less easily identified, but might represent different subsets of the general population. Cluster 0 has a higher self-reported stake level, but a lower than average medic proportion, so might represent high-stakes decision makers from outside the medical field. Cluster 3 is very close to the average in all three of our profiling features, and is the largest, so could be said to represent the public, or the equivalent for our participant pool.
 
 \subsubsection{Notes on results for discussions:}
 
@@ -1003,11 +895,11 @@ From the \ref{fig:overall-ranking} we can see that the black box (BB) was most f
 
 While the actual percentage of ranking has to be taken with a pinch of salt given that only 49 participants have given each scenario a different trust level and with it a different rank. The average method used to resolve such ties impacts the number of participants e.g ranking the BB lowest but it does not impact that no matter what the tie resolution strategy is the BB gets the lowest rank.
 
-It is interesting to look at each of the rank an the oder in which the different scenarios are appearing:
+It is interesting to look at each of the ranks 1-4 and the order in which the different scenarios are appearing in that rank:
 
-For the lowest rank - a ranking of 1 - the BB was by far the lowest ranking scenario followed by the Dr on their own, then the black box with the doctor. The glass box with the doctor was the least frequent ranked the lowest.
+For the lowest rank - a ranking of 1 - the BB was by far the lowest ranking scenario followed by the Dr on their own, then the black box with the doctor. The glass box with the doctor was the least frequent ranked the lowest.\ref{fig:overall-ranking}
 
-For the highest rank - ranking of 4 - the glass box with the dr was ranked most often the highest, the Dr on their own second most often, the black box with the Dr third most often and the black box on it's own was ranked least often the highest.
+For the highest rank - ranking of 4 - the glass box with the dr was ranked most often the highest, the Dr on their own second most often, the black box with the Dr third most often and the black box on it's own was ranked least often the highest.\ref{fig:overall-ranking}
 
 \begin{figure}[h]
     \centering{\includegraphics[width=0.8\textwidth]{graphics/ranking/rankingOverallNormalisedAvarageTies.png}}
@@ -1015,29 +907,148 @@ For the highest rank - ranking of 4 - the glass box with the dr was ranked most 
     \label{fig:overall-ranking}
 \end{figure}
 
-Looking at how the ranking changes based on if the participant works in healthcare or not we can see that the order for the highest rank (4) and lowest rank (1) stay the same as for the overall chart. However we can also see that people who work in healthcare more frequently rate the Dr on their own as the second lowest scenario that gets a rank 1.
+Looking at how the ranking changes based on if the participant works in healthcare or not we can see that the order for the highest rank (4) and lowest rank (1) stay the same as for the overall chart. However we can also see that people who work in healthcare more frequently rate the Dr on their own as the second lowest scenario that gets a rank 1\ref{fig:ranking-healthcare}..
 
 \begin{figure}[h]
     \centering{\includegraphics[width=0.8\textwidth]{graphics/ranking/ranking-healthcare-vs-notNormalised-average-ties.png}}
     \caption{Ranking based on participants working in healthcare or not for each of the four scenarios. Rank 1 is the lowest, rank 4 the highest ranking.}
-    \label{fig:overall-ranking}
+    \label{fig:ranking-healthcare}
 \end{figure}
 
-If we look at how the ranking changes with regards to how much AI experience the participants have we again see no change compared to the overall ranking for the highest and lowest rank. We can however see that black box together with the doctor is more frequently ranked in rank 3 for participants with medium and high AI experience and that the black box on it's own is more frequently getting a rank 3 then the Dr on it's own does.
+If we look at how the ranking changes with regards to how much AI experience the participants have we again see no change compared to the overall ranking for the highest and lowest rank. We can however see that black box together with the doctor is more frequently ranked in rank 3 for participants with medium and high AI experience and that the black box on it's own is more frequently getting a rank 3 then the Dr on it's own does\ref{fig:ranking-ai}.
 
 \begin{figure}[h]
     \centering{\includegraphics[width=0.8\textwidth]{graphics/ranking/ranking-ai-experience-normalised-average-ties.png}}
     \caption{Ranking based on participant's AI experience of low, medium or high experience for each of the four scenarios. Rank 1 is the lowest, rank 4 the highest ranking.}
-    \label{fig:overall-ranking}
+    \label{fig:ranking-ai}
 \end{figure}
 
-Finally if we look at how the frequency how often a participants makes high-stakes decision changes which scenario gets ranked lowest or highest we can see a change in the high high-stakes decision maker compared to the overall ranking. High high-stakes decision maker rank the Dr on their own as the lowest trust scenario and the black box on its own as the second lowest lowest trust scenario.
+Finally if we look at how the frequency how often a participants makes high-stakes decision changes which scenario gets ranked lowest or highest we can see a change in the high high-stakes decision maker compared to the overall ranking. High high-stakes decision maker rank the Dr on their own as the lowest trust scenario and the black box on its own as the second lowest lowest trust scenario\ref{fig:ranking-highstakes-decision}..
 
 \begin{figure}[h]
     \centering{\includegraphics[width=0.8\textwidth]{graphics/ranking/ranking-high-stakes-decisions-normalised-average-ties.png}}
     \caption{Ranking based on participant's frequency of high-stakes decision making of low, medium or high frequency for each of the four scenarios. Rank 1 is the lowest, rank 4 the highest ranking.}
-    \label{fig:overall-ranking}
+    \label{fig:ranking-highstakes-decision}
 \end{figure}
+
+\subsection{Data Analysis Survey}
+
+% /JE
+
+Highlight the use of covid diagnosis makes people apply the risk to themselves. So we get more thoughtful/emotive responses.
+
+Split into Study one and Study two.
+How did we pick the 5 people from the focus group
+
+\subsubsection{Scenario Ranking}
+
+Each participants number of trust for each of the four scenarios was ranked from 1-4 with 1 being the lowest and 4 being the highest ranking. This was done overall as well as split into the different demographics: Low, medium and high AI experience; low, medium and high high-stakes decision making as well as working in health care or not. The ranking was calculated using panda's rank function. Ties in ranking were resolved using panda's 'average' method\cite{mckinney-proc-scipy-2010}. In total there were 9 participants who have given each scenario the same number of trust, 49 who have given each scenario a different number of trust, 105 who have given two scenarios the same trust and 115 who have given three scenario the same trust. For AI experience and frequency of high-stakes decision making the rating from 1-10 was binned into three bins: Low, Medium, High using panda's cut function\cite{mckinney-proc-scipy-2010}. The resulting bins are both were low $(0.991, 4.0] <$ medium $(4.0, 7.0] <$ high (7.0, 10.0]. To be able to compare the charts across demographics regardless of how many people are in which demographic the number of answers were normalised: number of answers/(total number of answers)*100.
+
+
+
+
+%AD
+
+
+
+\subsubsection{Additional Features}
+
+We use the results of the first scenario, the trust in the doctor with no AI component $T_D$, as a baseline to assess the impact of AI-cooperation on diagnosis trust levels. We denote the trust level reported in these cooperative scenarios based on the nature of their model. Scenario two, with the interpretable or "glass box'' model is $T_{GB}$, and scenario three with the "black box'' model $T_{BB}$.
+
+We normalise the survey scale of [1,10] to [0,1] for $T_D, T_{BB}, T_{GB}$, via $T_i \rightarrow (T_i - 1) * (10/9)$, then produce two new features based on the percentage factor change in trust:
+
+\begin{equation} \label{eqn:change_vs_doctor}
+    f_i = 100 \cdot (T_i / T_D)
+\end{equation}
+
+These features allow analysis of whether participants view the cooperative use of AI as beneficial ($f_i > 0$), neutral ($f_i = 0$), or inhibitory ($f_i < 0$) to the diagnosis. 
+
+\subsubsection{Demographic Motivated Change in Trust}
+
+% We plot the results in Figure \ref{fig:improvement}, along with an interpretation schema, with participants dis-aggregated into three cohorts given the following criteria:
+
+
+
+% The survey was closed after XXX days, with XXX participants. We use the two key profile features - AI experience level and whether the participant is a medical professional - to dis-aggregate into three demographic bins:
+
+We dis-aggregate the survey participants into three distinct cohorts: 
+
+\begin{itemize}
+    \item Medical professional: Answered "yes" to relevant question
+    \item AI Expert: Not a medical professional, and AI experience level reported as $\geq XXX$
+    \item Public: Neither a medical professional nor an AI expert
+\end{itemize}
+
+
+We then apply Equation \ref{eqn:change_vs_doctor} and analyse the changes in participant trust in the two doctor/AI cooperative scenarios using Figure \ref{fig:improvement}.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.85\textwidth]{graphics/Doctor_improvements_cooperation_scatter.jpg}
+    \caption{\centering Perceived improvements in trust in scenarios 3 and 4. Percentages are calculated using $\leq 0$ and $>0$ basis.\hspace{\textwidth} Interpretation schema: \textbf{A}: Black box improves diagnosis, glass box makes diagnosis worse \hspace{\textwidth} \textbf{B}: Both glass box and black box improve diagnosis. \textbf{$B_1$} black box is preferred, \textbf{$B_2$} glass box is preferred, $B_3$ neither is preferred. \textbf{C}: Neither glass box nor black box improve diagnosis \textbf{D}: Glass box improves diagnosis, black box makes diagnosis worse}
+    \label{fig:improvement}
+\end{figure}
+
+Through Figure \ref{fig:improvement} we derive how different cohorts view the use of AI in cooperative scenarios. In all cohorts, a significant proportion of participants view the use of AI as beneficial with both models - 46\% of the public, 53\% of medical professionals, and 60\% of AI experts. This can be assumed to match the progression of technical expertise between cohorts.
+
+Only a minority of each cohort view neither AI-cooperative scenario as beneficial. In all cohorts the glass box model is preferred over the black box model, but only by a small margin, with ratios $f_{BB}:f_{GB}$ of 1:1.17, 1:1.125 and 1:1.40 for the public, medical professionals and AI experts respectively. 
+
+\begin{table}[h]
+\begin{tabular}{c||c|c|c}
+     & Public & Medics & AI Experts \\
+     \hline \hline
+    GB and BB inhibit (C)            & 29\% & 23\% & 16\%\\ \hline
+    GB inhibits, BB improves (A)     & 5\%  & 2\%  & 5\% \\
+    GB improves, BB inhibits (D)     & 21\% & 21\% & 19\%\\  \hline
+    GB and BB improve (B)            & 46\% & 53\% & 60\%\\ \hline
+    GB and BB improve (equal)        & 17\% & 19\% & 31\%\\
+    GB and BB improve (GB better)    & 10\% & 15\% & 17\%\\
+    GB and BB improve (BB better)    & 19\% & 19\% & 12\%\\ 
+\end{tabular}
+\caption{\label{tab:demographic_trust_change}Perceived changes in trust of a diagnosis from an AI/doctor cooperation, dis-aggregated into previously described demographics. Note: Relevant percentages may not sum to 100\% due to rounding errors.}
+\end{table}
+%\subsection{Correlation Analysis}
+
+\subsubsection{Trust Motivated Clustering}
+
+Having disaggregated into profiling features, then analysed the trust levels of these cohorts, we can instead do the opposite. By starting with trust levels and finding distinct groups of how they are distributed, we can construct cohorts based on trust levels, then use profiling features to find the characteristics of these groups.
+
+Insights can be gained into the results of the survey by applying unsupervised methods. These do not rely on any labels or targets, as would be the case in supervised or semi-supervised methods, so avoid many of the biases that such methods would carry. In particular we apply Uniform Manifold Approximation and Projection (UMAP) \cite{McInnes2018} as dimensionality reduction, then Hierachical Density-Based Spatial Clustering And Noise (HDBSCAN) \cite{McInnes2017} as unsupervised clustering on the resulting UMAP embedding. 
+
+UMAP makes the assumption that data is distributed on a uniform manifold, but that the data-space is warped. Using this assumption local distance metrics are learnt, then used to construct a distance graph of the data. A lower-dimensional embedding is then formed, which aims to conserve the form of the high-dimensional space, using a stochastic graph layout. HDBSCAN, similarly, constructs a minimum spanning tree based on distances in the data-space, then applies various sub-algorithms to find clusters. Full explanation of these algorithms is beyond the scope of this work, so the reader should consult the relevant papers for more information.
+
+We apply UMAP, then HDBSCAN to the resulting embedding, and present the results in Figures \ref{fig:embedding}, \ref{fig:cluster_means}. UMAP produces four distinct clusters, which are recognised by HDBSCAN. 
+
+\begin{figure}
+\centering
+\begin{subfigure}{0.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{graphics/UMAP_HDBSCAN.jpg}
+  \caption{}
+%   \caption{The UMAP embedding produces four (visually) distinct clusters, which are also identified by HDBSCAN.}
+  \label{fig:embedding}
+\end{subfigure}%
+\begin{subfigure}{0.55\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{graphics/clustering_means.jpg}
+  \caption{Cluster means across all four scenarios, along with profiling features.}
+  \label{fig:cluster_means}
+\end{subfigure}
+\caption{The results of unsupervised clustering with UMAP and HDBSCAN. In Figure \ref{fig:cluster_means} profile features (AI, Medical, Stakes) are normalised by the whole population. Scenario trust levels are moved to a scale [0-1] for greater clarity in the heatmapping.}
+\label{fig:test}
+\end{figure}
+
+The clusters identified by this process are distinct in how the participants within them rated trust in the different scenarios. Clusters 1 and 3 follow the same trend, with the highest trust in the glass-box cooperative scenario, and lowest in the solo black-box. However, cluster 3 has significantly lower trusts across all scenarios. Cluster 3 is significantly larger than the other clusters, representing 64\% of the participant pool.
+
+Clusters 0 and 2 have the lowest level of trust placed in the doctor, with the solo black-box scenario scoring higher, in contrast to the opposite relationship in clusters 1 and 3. In both cluster 0 and 2 the highest trust is in the black-box cooperative scenario. Cluster 2 is the only cluster in which the glass-box cooperative scores lower than the solo doctor.
+
+This analysis of only prescribed trusts leads to an intuitive split: In evaluating the compromise between transparency and efficacy, those in clusters 0 and 2 prescribe more weight to efficacy, and those in clusters 1 and 3 weight transparency over efficacy. Those in cluster 0 are perhaps closer to even balancing of transparency and efficacy than those in cluster 2, as shown by their higher trust levels in the glass-box scenario.
+
+Cluster 1 probably represents a population of AI researchers - high average AI knowledge, but low stakes decision making and a small medical proportion. These participants rate any doctor-lead scenario highly, and only show a significant decrease in trust when a doctor is not presented as making the final decision, as in scenario 4.
+
+Cluster 2, which leans the most towards following efficacy statistics, has the highest proportion of both medics and high-stakes decision makers. This might indicate that the cluster is composed principally of medical professionals, who are likely to rate themselves as more frequently making high-stakes decisions. This would also explain why this cluster has the lowest average self-reported AI knowledge compared to the whole survey population.
+
+Clusters 0 and 3 are less easily identified, but might represent different subsets of the general population. Cluster 0 has a higher self-reported stake level, but a lower than average medic proportion, so might represent high-stakes decision makers from outside the medical field. Cluster 3 is very close to the average in all three of our profiling features, and is the largest, so could be said to represent the public, or the equivalent for our participant pool.
 
 \subsection{Focus Group}
 
@@ -1095,7 +1106,7 @@ Contribution we've made
 \textbf{AI as a second opinion} (DC)
 
 Survey findings show that in general, participants ranked scenario (3/C) [black-box with human] higher than scenario D/4 [blackbox alone]. 
-Participants of the focus-group discussed why they agreed or disagreed with this trend.One participant explained why they did not perceive that the human in scenario (3/C) improved the trustworthiness with respect to scenario 4/D without the human. 
+Participants of the focus-group discussed why they agreed or disagreed with this trend. One participant explained why they did not perceive that the human in scenario (3/C) improved the trustworthiness with respect to scenario 4/D without the human. 
 
 56 (P6) “I definitely put [black-box] above black box with human”... 
 “the human has no way of knowing whether what the black box did was right so why would it disagree with it, so it seems pointless having the human element in there”
