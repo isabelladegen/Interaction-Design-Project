@@ -89,7 +89,7 @@
 %% citations and references.
 %% Uncommenting
 %% the next command will enable that style.
-%%\citestyle{acmauthoryear}
+\citestyle{acmauthoryear}
 
 %%
 %% end of the preamble, start of the body of the document source.
@@ -98,7 +98,7 @@
 %%
 %% The "title" command has an optional parameter,
 %% allowing the author to define a "short title" to be used in page headers.
-\title{Trustworthiness of AI decision making tools in high-risk applications.}
+\title{Trustworthiness of AI decision making tools in high-risk applications.} % Impact of model transparency on stakeholder trust in high-stakes scenarios
 
 %%
 %% The "author" command and its associated commands are used to define
@@ -149,15 +149,13 @@
 %% The abstract is a short summary of the work to be presented in the
 %% article.
 \begin{abstract}
-Abstract
- Include motivation and Contribution
- what's our contribution - first sentence
- why are we doing this research -> one sentence
- mention survey of x people and focus group -> one sentence on what we did
- what have we done - why is it new - how have we done it - what are our findings (short)
+%Include motivation and Contribution
+%what's our contribution - first sentence
+%why are we doing this research -> one sentence
+%mention survey of x people and focus group -> one sentence on what we did
+%what have we done - why is it new - how have we done it - what are our findings (short)
  
- 
- 
+An abundance of new methods explaining how Artificial Intelligence has made a decision have been created in the last few years. These explanations endeavour to make AI decision making more transparent and increase the trust humans place into AI decision making. There's a lack of research into how well explainable AI serves the needs of people who are affected by the decisions of an AI system and if it indeed increases their trust. In this study we asked $n=278$ people in an online survey how much they would trust a diagnosis of having COVID or not made in four different scenarios: (1) a doctor on their own, (2) a interpretable AI system (Glass box) with the Dr, (3) an AI system that's not interpretable (Black Box) with the Dr and (4) a Black Box AI system on its own. The survey participants also specified their expertise in AI, if their working in health care or not as well as how frequent they are making high-stakes decisions (decisions that could impact the lives of others). We followed the survey up with a focus group of 6 participants to discuss the topic further. We found that people impacted by an AI system making a medical diagnosis trust a glass box AI system working with a doctor the most and a black box AI system working by itself the least. People who make frequent high-stakes decisions trust a doctor on their own the least. People who report having medium or high AI experience trust the black box working with the Dr more and people who don't work in healthcare trust the black box less than other demographics. Surprisingly when ranked the Dr working on their own was across the demographics second most frequently ranked the lowest while at the same time being second most frequently ranked the highest in trust. Finally we found that the dislike of the black box has less to do with the lack of interpretablity and more to do with the lack of empathy when a machine diagnoses someone with a potential severe illness.
 \end{abstract}
 
 %%
@@ -197,7 +195,7 @@ Abstract
 %%
 %% Keywords. The author(s) should pick words that accurately describe
 %% the work being presented. Separate the keywords with commas.
-\keywords{XAI, Explainable AI, Trustworthy AI, Interpretable AI, AI, Computer Automation, AI in high risk}
+\keywords{XAI, Explainable AI, Trustworthy AI, Interpretable AI, attitudes towards AI, automated decision making, AI in healthcare}
 
 %%
 %% This command processes the author and affiliation and title
@@ -249,19 +247,25 @@ Abstract
 
 
 % Why Context - how is the world now
-AI is being deployed in a variety of different domains, including high-risk application areas where algorithms are potentially making life-altering decisions; from insurance to criminal justice to healthcare systems \cite{Bohr2020}, \cite{Chen2018}. It is widely believed that new laws like the EU General Data Protection Regulation (GDPR) mandate a ‘right to explanation’ as a mechanism to enhance the accountability and transparency of automated decision-making \cite{Wachter2017}. While that right does not explicitly exist \cite{Wachter2017}, the approval of the GDPR in 2016 created an explosion of research in Explainable AI (XAI) and closely related research areas such as: Transparent AI, Interpretable AI and Trustworthy AI. The desired outcome of these research areas is to create responsible and ethical AI systems that are fair and allow for accountability \cite{Mohseni2021}, often referred to as Responsible AI. This has led to a surge of new methods that explain the decisions of different AI algorithms, see \cite{Linardatos2021} and \cite{Guidotti2018a} for an overview. There are endeavours to standardise and asses explanations \cite{Gilpin2019}; as well as countless literature surveys aiming to create an unified and standardised taxonomy and definitions for explainable, transparent, interpretable and trustworthy AI \cite{Schwalbe2021} and \cite{Arrieta2020}.\\\\
+AI is being deployed in a variety of different domains, including high-risk application areas where algorithms are potentially making life-altering decisions; including applications in insurance, criminal justice and healthcare \cite{Bohr2020}, \cite{Chen2018}. It is widely believed that new laws like the EU General Data Protection Regulation (GDPR) mandate a ‘right to explanation’ as a mechanism to enhance the accountability and transparency of automated decision-making \cite{Wachter2017}. While that right does not explicitly exist \cite{Wachter2017}, the approval of the GDPR in 2016 created an explosion of research in Explainable AI (XAI) and closely related research areas such as: Transparent AI, Interpretable AI and Trustworthy AI. The desired outcome of these research areas is to create responsible and ethical AI systems that are fair and allow for accountability \cite{Mohseni2021}, often referred to as Responsible AI. This has led to a surge of new methods that explain the decisions of different AI algorithms, see \cite{Linardatos2021} and \cite{Guidotti2018a} for an overview. This abundance of new methods has given rise to endeavours to standardise and asses the quality of explanations see \cite{Gilpin2019}. Other works have attempted to create an unified and standardised taxonomy and definitions for explainable, transparent, interpretable and trustworthy AI \cite{Schwalbe2021} and \cite{Arrieta2020}.
 
 %Why new - The problem (drama)
-The huge increase in the popularity of explainable, interpretable and trustworthy AI has given rise to critical views. The motivations behind explainable AI, the quality \cite{Doshi-Velez2017} and usefulness of the explanations given \cite{Miller2019} as well as whether explainable AI achieves its objective of higher trust in AI \cite{Lipton2018} have been studied. Research into explainable AI recognises that there are many different stakeholders of AI systems such as: developers, end-users and lawmakers. The needs of each of these stakeholders vary greatly. For the developers of AI systems the explanations are useful for evaluating, testing and debugging purposes. They have a deep and technical understanding of the concepts and mathematics behind the algorithms and are therefore able to interpret mathematical explanations of those systems. These are the people who are creating new explainability methods and we refer to them as AI experts \cite{Carvalho2019}. The end users of the AI systems are people who use these systems in their work e.g clinicians. They are domain experts in the problem that the AI system solves. These end users are interested in explanations to help them assess the model’s decision and decide on the actions to be taken. Examples of research into how well their needs are served with interpretable and explainable AI can be found in \cite{Goldstein2021}, \cite{Liao2020}, \cite{Salimiparsa2021}. However, there is a lack of research into whether people who are affected by the decisions of an AI system, for example patients that are being diagnosed by an AI system, are asking for more transparent and explainable AI systems.\\\\
+The huge increase in the popularity of explainable, interpretable and trustworthy AI has in turn given rise to debate. The motivations behind explainable AI, the quality \cite{Doshi-Velez2017} and usefulness of the explanations given \cite{Miller2019}, as well as whether explainable AI achieves its objective of higher trust in AI \cite{Lipton2018}, are ongoing areas of research. Research into explainable AI recognises that there are many different stakeholders of AI systems, including developers, end-users and lawmakers. The needs of each of these stakeholders vary greatly. 
+
+For the developers of AI systems the explanations are useful for evaluating, testing and debugging purposes. They have a deep and technical understanding of the concepts and mathematics behind the algorithms and are therefore able to interpret mathematical explanations of those systems. These are the people who are creating new explainability methods and we refer to them as AI experts \cite{Carvalho2019}.
+
+The end users of the AI systems are people who use these systems in their work e.g clinicians. They are domain experts in the problem that the AI system solves. These end users are interested in explanations to help them assess the model’s decision and decide on the actions to be taken. Examples of research into how well their needs are served with interpretable and explainable AI can be found in \cite{Goldstein2021}, \cite{Liao2020}, and \cite{Salimiparsa2021}.
+
+The final stakeholders are the people who are affected by the decision of an AI system, for example for example patients that are being diagnosed by an AI system. However, there is a lack of research into how well their needs are being served by explainable AI and if they need more transparent and explainable AI systems to better trust AI.
 
 %more related work
-A study surveyed 922 women’s attitude toward AI in mammography screening. They found that they preferred a combination of radiologist and AI system \cite{Ongena2021}. Another study surveyed 216 fracture patients on their perceptions towards AI used to assist in interpretation of their radiographs and found that participant’s held the clinician’s assessment in the highest regard \cite{York2020}. A further study found that patients are apprehensive about the use of AI \cite{Richardson2021} and highlighted the need for early patient involvement in the AI systems being used in healthcare. These studies did not investigate the role that transparency and performance of the AI system played in the patients attitudes.\\\\
+A study surveyed 922 women’s attitude toward AI in mammography screening. They found that they preferred a combination of radiologist and AI system \cite{Ongena2021}. Another study surveyed 216 fracture patients on their perceptions towards AI used to assist in interpretation of their radiographs and found that participant’s held the clinician’s assessment in the highest regard \cite{York2020}. A further study found that patients are apprehensive about the use of AI \cite{Richardson2021} and highlighted the need for early patient involvement in the AI systems being used in healthcare. These studies did not investigate the role that transparency and performance of the AI system played in the patients attitudes.
 
 % more related work and how it doesn't cover this: Surveys on trust in generic AI systems. Surveys of perspectives on generic AI systems for healthcare work groups.
-There is no current user study of how XAI changes trust depending on: demographic (AI expert, high stakes decision maker, general public) nor the level of explainability.\\  
+There is no current user study of how XAI changes trust depending on: demographic (AI expert, high stakes decision maker, general public) nor the level of explainability.  
 
 %What & How: our solution, method and results: survey and focus group to find out if trust increases with transparency and if experience with AI or high stakes decision making matters
-In this study we are focusing on the opinions of people who are affected by the decision of an AI system. We created a survey of $n=277$ people who were asked to imagine being diagnosed in a hospital whether to have treatment for COVID or not in four different scenarios:
+In this study we are focusing on the opinions of people who are affected by the decision of an AI system. We created a survey of $n=278$ people who were asked to imagine being diagnosed in a hospital whether they have COVID or not in four different scenarios:
 
 \begin{enumerate}
     \item A doctor makes the diagnosis.
@@ -272,16 +276,17 @@ In this study we are focusing on the opinions of people who are affected by the 
 
 For each of these scenarios the participants were told how often the doctor and AI system make the correct diagnosis (the performance) and how much the doctor knew about why the AI system made its decision (the interpretability of the system). The participants were asked to express how much they would trust to be diagnosed by that setup by selecting a number from 1-10. We furthermore collected demographic information about the participants, namely if they are working in healthcare or not, how much experience and knowledge they have about AI as well as how frequently they are making high-stakes decisions (life-altering decisions). The scenarios were designed in such a way that of the patients who have Covid the doctor and glass box both correctly diagnose 85 out of 100 while the black box had a significantly better performance of 95 correct diagnoses out of 100. This is an equivalent to a "true positive rate" in information science, or "sensitivity" in medicine, which are accepted measures of performance in both fields.
 
-We analysed the responses with regards to which scenario was trusted the most respectively least and how this changed depending on the participants demographic. We found that overall scenario 4 (the black box on its own) was the least trusted scenario and scenario 2 (the doctor working together with the glass box) was the most trusted scenario. Scenario 1 (the doctor on their own) surprisingly was the second most frequent lowest ranked scenario, while it was at the same time the second most frequent highest ranked scenario. Scenario 3 (the doctor working with the black box) gained significantly more trust than scenario 4 (the black box on its own). The three demographic aspects did not change this other than for the participants that reported making frequent high stakes decisions, they gave the doctor by themselves the least trust. Furthermore, participants with medium and high AI expertise trust scenario 3 (the doctor with the black box) more. Participants who work in healthcare either trust the doctor by itself a lot or not at all, while participants who don’t work in healthcare trust the black box by itself significantly less.
+We analysed the responses with regards to which scenario was trusted the most respectively least and how this changed depending on the participants demographic. We found that the black box on its own was the least trusted scenario and the doctor working together with the glass box was the most trusted scenario. Surprisingly and contradictory to what other research has found when ranking the four different scenarios, the Dr on their own was the second most frequent lowest ranked scenario, and also the second most frequent highest ranked scenario. The doctor working with the black box gained  more trust than the black box on its own. The demographic of the participants did not change this ranking with the exceptions of participants that reported making frequent high stakes decisions, they ranked the doctor by themselves the lowest. Furthermore, participants with medium and high AI expertise trust the doctor with the black box more than participants with low AI expertise. Finally, participants who work in healthcare either trust the doctor by itself a lot or not at all, while participants who don’t work in healthcare trust the black box by itself less.
 
-We followed the survey up with a focus group of 6 people with demographics <?> to discuss and reflect further on their thoughts about AI and the need for interpretability and explanations as well as exploring if black box models will ever be accepted. We found that the dislike of the black box has less to do with the lack of interpretablity, but more to do with the lack of empathy that a machine can give compared to a human when diagnosing someone with a potential critical illness. However, the focus group rated the black box higher than the survey participant did under the conditions that it had high performance and that the patient had full disclosure of a black box being used or that it was used in a low-stakes application area.
+We followed the survey up with a focus group of 6 people to discuss and reflect further on their thoughts about AI and the need for interpretability and explanations as well as exploring if black box models will ever be accepted. We found that the dislike of the black box has less to do with the lack of interpretablity, but more to do with the lack of empathy that a machine can give compared to a human when diagnosing someone with a potential critical illness. However, the focus group rated the black box higher than the survey participant did under the conditions that it had high performance and that the patient had full disclosure of a black box being used or that it was used in a low-stakes application area.
 
 
 %Why relevant: what new worlds does our research do: design with all demographics in mind, different branches of explainability. Present information that can be used to design better AI systems for healthcare needs. Encourage more user driven explainable AI with the demographics we find
 <todo> We believe that for an AI system to be adapted in a critical decision scenario, such as diagnosis in health care, it is not sufficient to just make the system transparent and explainable. It is far more important to complete the user experience and give an understanding that the AI system is only a part of that experience. We believe that more research is needed to understand this area fully.\\
+
 The current techniques are useful for the operators of the systems, however, the law is to protect the end user that is affected by an AI having been used. It is clear that the needs for these groups are different and more research needs to be done to consider the end users of those systems and what their needs are and how they differ from the operators.\\
 
-
+\newpage
 \section{Related Work}\label{sec:related-work}
 %Outline:
 %
@@ -298,14 +303,14 @@ The current techniques are useful for the operators of the systems, however, the
 \subsection{An overview of transparent, interpretable and explainable AI}\label{subsec:an-overview-of-transparent-interpretable-and-explainable-ai}
 The field of explainable AI (XAI) experienced a huge surge since 2016 an there is no shortage of surveys of the research.
 
-The literature speaks of black and glass boxes (also called white box) system.
+The literature speaks of black and glass box (also called white box) systems.
 Black box models are complex systems that are not transparent.
 It is not clear to a human how and why the system makes a decision.
-On the other hand glass boxes (frequently also called white box) models are systems that are interpretable and transparent by default.
+On the other hand glass boxes models are systems that are interpretable and transparent by default.
 Explanations can be seen as adding a form of post-hoc interpretability to an AI system and with that make AI models more transparent with regards to how they make decisions.
 There's a wide variety of terminologies, motivations, approaches and evaluation criteria for XAI methods.
-Many researchers have create surveys of these methods and attempted to create a unified taxonomy of these methods\cite{Linardatos2021} and\cite{Schwalbe2021}.
-However, despite the vast body of knowledge developed around the concept of explainability, there is not a general consensus among scholars on how an explanation should be defined, and how its validity and reliability assessed\cite{Vilone2021}.
+Many researchers have created surveys of these methods and attempted to create a unified taxonomies \cite{Linardatos2021} and\cite{Schwalbe2021}.
+However, despite the vast body of knowledge developed around the concept of explainability, there is not a general consensus among scholars on how an explanation should be defined, or how its validity and reliability should be assessed\cite{Vilone2021}.
 
 There are also many surveys that focus on summarizing the available explanation methods such as\cite{Vilone2020},
 a field guide of explainable AI for Deep Learning\cite{Ras2020}, a survey of methods for explaining black box models\cite{Guidotti2018a} \&\cite{Adadi2018},
@@ -314,22 +319,26 @@ explanations using counterfactuals\cite{Verma2020} \&\cite{Keane2020}, rule base
 as conversational explanations\cite{Sokol2018}.
 
 Note that this recent wave of explanations of automated decision making is not the first wave.
-An earlier wave happened around automated decision making in control systems as well as AI in the late 80ies see\cite{Chandrasekaran1989}.
+An earlier wave happened around automated decision making in control systems as well as AI in the late 1980s see\cite{Chandrasekaran1989}.
 
 \subsection{Why Explainable AI is needed}\label{subsec:why-explainable-ai-is-needed}
-Gunning states "Explainability is essential for users to effectively understand, trust, and manage powerful artificial intelligence applications."\cite{Gunning2019}
+
+Gunning 2018 states:
+\begin{quote}
+    \textit{"Explainability is essential for users to effectively understand, trust, and manage powerful artificial intelligence applications."}  \cite{Gunning2019}
+\end{quote}
 
 Bansal and co studied if explanations increase the performance of the human-AI team and found that this was not the case.
-Instead they found that the explanations increased the chance that the human will accept the AI's recommendation regardless of
-the correctness thereof.
+Instead they found that the explanations increased the chance that the human will accept the AI's recommendation regardless of the correctness thereof.
 Their findings suggest that explanations increase trust in AI\cite{Bansal2020}.
 
-Weld and co found that to trust an AI system's behavior, it must be intelligible, either by using inherently interpretable models or by developing new methods for explaining and controlling otherwise overwhelmingly complex decisions using local approximation, vocabulary alignment, and interactive explanation\cite{Weld2019}.
+Weld and co found that to trust an AI system's behavior, it must be intelligible, either by using inherently interpretable models or by developing new methods for explaining and controlling otherwise overwhelmingly complex decisions using local approximation, vocabulary alignment, and interactive explanation \cite{Weld2019}.
 
 
 \subsection{Shortfalls and Critics of current XAI}\label{subsec:shortfalls-and-critics-of-current-xai}
+
 XAI has also received a fair amount of critique.
-From questioning if explainability and interpretability can be achieved to the vague definitions of the terms used\cite{Lipton2018}.
+From questioning if explainability and interpretability can be achieved to the vague definitions of the terms used \cite{Lipton2018}.
 
 Researchers have also been starting to investigate if supposedly interpretable models achieve their intended effects, such as making people more closely follow a model's predictions when it is beneficial for them to do so or enabling them to detect when a model has made a mistake.
 They however did not find that participants more closely followed its predictions\cite{Goldstein2021}.
@@ -339,72 +348,66 @@ Building on their case study they stress that more focus on the human is needed 
 
 However, exactly what kinds of explanation are truly human-interpretable remains poorly understood.
 This work advances our understanding of what makes explanations interpretable in the specific context of verification.
-In general, greater complexity results in higher response times and lower satisfaction\cite{Narayanan2018}
+In general, greater complexity results in higher response times and lower satisfaction \cite{Narayanan2018}.
 
 Felzmann and co explore what the requirement of transparency in the GDPR entails for AI and automated decision-making systems integrating integrating legal, social, and ethical aspects.
 They highlight how human–computer interaction and human-robot interaction literature do not provide clear results with respect to the benefits of transparency for users of artificial intelligence technologies
 and propose a relational concept of transparency. 
-They suggest attention needs to be paid to factors that make transparency meaningful and trustworthy in the users’ eyes.\cite{Felzmann2019}
+They suggest attention needs to be paid to factors that make transparency meaningful and trustworthy in the users’ eyes \cite{Felzmann2019}.
 
-Markus and co find that evidence of the usefulness of explainability is still lacking in practice and recognize that complementary measures might be needed to create trustworthy AI\cite{Markus2021}
+Markus et. al. 2021 find that evidence of the usefulness of explainability is still lacking in practice and recognize that complementary measures might be needed to create trustworthy AI \cite{Markus2021}.
 
 
 \subsection{Connecting Human Computer Interaction and XAI}\label{subsec:human-computer-interaction-focused-xai}
-Mohsensi and co's research created a framework to support diverse design goals and evaluation methods in XAI research\cite{Mohseni2021}
+
+Mohsensi and co's research created a framework to support diverse design goals and evaluation methods in XAI research \cite{Mohseni2021}.
 
 Wang and co created a framework based on decision making and reasoning theory for AI explanation techniques.
-They aim to help developers build human-centric explainable AI-based systems with targeted XAI features\cite{Wang2019}
+They aim to help developers build human-centric explainable AI-based systems with targeted XAI features \cite{Wang2019}.
 
-Amershi and co proposed and evaluated 18 generally applicable design guidelines for human-AI interaction that they hope will result in
-better, more human-centric AI-infused systems. 
+Amershi and co proposed and evaluated 18 generally applicable design guidelines for human-AI interaction that they hope will result in better, more human-centric AI-infused systems. 
 These guidelines include principles relevant to our study such as "Make clear why the system did what it did" as well as "Make clear how well the system can do what it can
-do"\cite{Amershi2019}.
+do" \cite{Amershi2019}.
 
-Researchers from the HCI communities are interested to empower people and to ensure that new and powerful AI technologies are designed with intelligibility from the ground up.
-They highlight that while researchers in the ML and AI communities are working on making their algorithms explainable, their focus is not on usable, practical and effective transparency that works for and
-benefits people.
-And stress that explainable systems can only be created through interdisciplinary collaborations, where expertise from different
-fields (e.g., machine learning, cognitive psychology, human computer interaction) is combined and concepts and techniques are further developed from multiple perspectives to
-move research forward.\cite{Abdul2018}
+Researchers from the HCI communities are interested in how to empower people and ensure that new and powerful AI technologies are designed with intelligibility from the ground up.
+They highlight that while researchers in the ML and AI communities are working on making their algorithms explainable, their focus is not on usable, practical and effective transparency that works for and benefits people.
+And stress that explainable systems can only be created through interdisciplinary collaborations, where expertise from different fields (e.g., machine learning, cognitive psychology, human computer interaction) is combined and concepts and techniques are further developed from multiple perspectives to move research forward.\cite{Abdul2018}
 
 \subsection{Trust in automated decision making}\label{subsec:trust}
+
 Trust has long been recognised as an important factor in facilitating Human Computer Interaction\cite{Lee2008}.
 In the social sciences trust is studied between humans.
 It's that body of work that the study of trust of humans in machines relies on.
-Long before the recent AI summer, research has been done into understanding the nature of trust between humans and machines
-and how its important to consider what grows and diminishes trust when designing decision aids to avoid the machine's
-decision being rejected regardless from how sophisticated or "intelligent" it is.\cite{Muir1987}
+Long before the recent AI summer, research has been done into understanding the nature of trust between humans and machines and how its important to consider what grows and diminishes trust when designing decision aids to avoid the machine's decision being rejected regardless from how sophisticated or "intelligent" it is \cite{Muir1987}.
 In her research Muir also discusses that a machine needs to be designed in such a way that the user can perceive it's trustworthiness\cite{Muir1987}.
-Building AI systems that are interpretable and or can explain their decision is perhaps away for a user to be able to perceive
-the algorithms trustworthiness.\\
+Building AI systems that are interpretable and or can explain their decision is perhaps away for a user to be able to perceive the algorithms' trustworthiness.
 Despite extensive research, trust remains hard to define and there are contradicting findings and suggestions.
+
 Many researchers agree that the performance of the decision making machine alone is not sufficient to build trust.
-Muir suggests that while the machine needs to be designed well the human using it might need to recalibrate their
-trust in the machine's decision too\cite{Muir1987}.
+Muir suggests that while the machine needs to be designed well the human using it might need to recalibrate their trust in the machine's decision too \cite{Muir1987}.
 Hoff and co identify three layers of variability in human–automation trust: dispositional trust, situational trust, and learned trust.
 Additionally they identify also environmental conditions that can affect the strength of the relationship between trust and reliance\cite{Hoff2015}.
 On the other hand Hancock and co found that a robot's performance and attributes were the largest contributors to the development of trust in human robot interaction and that environmental factors played only a moderate role.
-They also state that there is little evidence for effects of human-related factors\cite{Hancock2011}.\\
+They also state that there is little evidence for effects of human-related factors\cite{Hancock2011}.
+
 More recently researcher have specifically looked at trust and AI.
-Toreini and co and they to rely on trust as a notion within the social sciences.
-They show that Fair, Explainable, Auditable and Safe technologies need to be considered in the
-various stages of an AI system's life cycle and with that form a Chain of Trust required for trustworthy machinelearning\cite{Toreini2020}.
+Toreini and co and they to rely on trust as a notion within the social sciences. They show that Fair, Explainable, Auditable and Safe technologies need to be considered in the various stages of an AI system's life cycle and with that form a Chain of Trust required for trustworthy machine-learning \cite{Toreini2020}.
+
 Chen argues that for trust to exist a set of conditions need to be satisfied.
-He suggests that trust needs to be engineered either through involving a certain reliance on a set of physiognomic biases or by relying on a set of esteem-seeking psychological mechanisms.
-While this "Trust-Engineering" will not fully achieve trustworthy AI he argues it will ensure that reliance-without-trust can be avoided\cite{Chen2021}.
+He suggests that trust needs to be engineered either through involving a certain reliance on a set of physiognomic biases or by relying on a set of esteem-seeking psychological mechanisms. While this "Trust-Engineering" will not fully achieve trustworthy AI he argues it will ensure that reliance-without-trust can be avoided\cite{Chen2021}.
 Finally Ferrario and co developed a multi-layer model of trust for human AI interaction\cite{Ferrario2020}.
 
 \subsection{AI and XAI in healthcare}\label{subsec:ai-in-healthcare}
-For this study we focused on diagnosis decision in a healthcare settings.There's evidence that public disagreement/agreement with using AI varied depending on the application area\cite{Ikkatai2022}.
+
+For this study we focus on diagnostic decisions in healthcare settings. There's evidence that public disagreement/agreement with using AI varied depending on the application area\cite{Ikkatai2022}.
 Holzinger and co argue that research in explainable-AI helps to facilitate the implementation of AI/ML in the medical domain, and specifically helps to facilitate transparency and trust\cite{Holzinger2017}.
 As we've mentioned earlier explanation are useful to find out if the system has learned something about medical pathology or not.
 This has been demonstrated by DeGrave, they found a deep learning system used to detect COVID-19 from chest radiographs relied on confounding factors rather than medical pathology, creating an alarming situation in which the system appear accurate despite not having learned anything about medical pathology.
-They conclude that their findings demonstrate that explainable AI should be seen as a prerequisite to clinical deployment of machine-learning healthcare models\cite{DeGrave2021}.
+They conclude that their findings demonstrate that explainable AI should be seen as a prerequisite to clinical deployment of machine-learning healthcare models \cite{DeGrave2021}.
 
 In their literature survey Nazar and co make the point of how explainable AI connects AI with Human Computer Interaction (HCI).
 They also stress that more research is needed into AI and XAI in healthcare.
-The hope is that explanations can be compared and validated with clinical knowledge and through that new
-clinical knowledge can be created or AI decisions corrected\cite{Nazar2021}.
+The hope is that explanations can be compared and validated with clinical knowledge and through that new clinical knowledge can be created or AI decisions corrected \cite{Nazar2021}.
 
 There is also research showing that AI can be used for diagnosing Covid.
 Guefrechi and co show transfer learning proves to be effective, showing strong performance and easy-to-deploy COVID-19 detection methods.
@@ -423,7 +426,7 @@ Ongena and co found the following 5 factors mattered the most: (1) distrust and 
 Yin and co found that people's trust in a model is affected by both its stated accuracy and its observed accuracy, and that the effect of stated accuracy can change depending on the observed accuracy\cite{Yin2019}.
 
 
-
+\newpage
 \section{Methodology}\label{sec:methodology}
 % Describe how we did user research
 % How are we going to evaluate our findings
@@ -496,7 +499,7 @@ This section provides details of each phase of the investigation, including stud
 
 
 
-\subsection{Study 1 - Scenario-based Survey }
+\subsection{Study 1 - Scenario-based Survey Design}
 In this section we discuss the collection of survey data used as the basis for our analysis on the relationship between trust and transparency. Section \ref{study1_intentions} outlines the intended outcomes of this study. Section \ref{study1_design} provides definitions of trust and transparency for the reader and discusses potential biases in participant feedback, and the subsequent requirement to record demographic data alongside participants trust levels when considering AI tools.\\
 
 We also hold a level of responsibility to ensure integrity in our findings and the protection of those involved in the study with regards their personal views, and any possible identifiable information. Section \ref{study1_recruitment_datacollection} details the efforts made to reduce and/or monitor potential biases in the survey data, while Section \ref{study1_ethics} outlines any risks to participants and the associated mitigating steps taken during this investigation.
@@ -572,7 +575,7 @@ Constraint 3 & Any participant must inform the study whether they work, or have 
 Section \ref{table:study1_constraints} identifies potential sources of bias in the data due to experience with AI, in healthcare, or due to environments wherein high-stakes decisions are frequent or uncommon. We therefore not only asked participants to provide information about any potential bias, but also aimed to recruit from varied sources with the objective of equal representation across all axis. We justify each recruitment stream as follows:
 
 \begin{itemize}
-    \item Quasi-random sampling of the public through Twitter, LinkedIn, and personal networks; While not truly random, as all study organisers (and consequently our networks) are somewhat linked by experience, we believed we could reach participants with largely low experience working with AI and/or in healthcare, and varied experience with high-stakes decisions. (We received approximately 100 responses from one study organisers' secondary anonymised twitter account which is believed to be a truly random collection of people from around the world).
+    \item Quasi-random sampling of the public through Twitter, LinkedIn, Facebook and personal networks; While not truly random, as all study organisers (and consequently our networks) are somewhat linked by experience, we believed we could reach participants with largely low experience working with AI and/or in healthcare, and varied experience with high-stakes decisions. (We received approximately 100 responses from one study organisers' secondary anonymised twitter account which is believed to be a truly random collection of people from around the world).
     \item Other AI-focused Centres for Doctoral Training (CDTs); By targeting AI researchers in other CDT's we hoped to collect responses from a demographic of proportionately high experience with AI tools.
     \item Healthcare-related mailing lists; This recruitment strategy aimed to provide a significant number of participants with experience in a healthcare setting, where high-stakes decisions can be common.
     \item Reddit communities; Additional participants were recruited from reddit communities [r/london, r/machinelearning, r/coronavirusrisk] to bolster specific demographic participation.
@@ -586,10 +589,10 @@ Data is gathered in the form of a survey. We ask participants;
     \item To rank their level of experience with AI
 \end{enumerate}
 
-These questions pertain to the constraints defined in Table \ref{table:study1_constraints}. We then proceed to describe four scenarios to the participant, where transparency in the decision-making process is aligned with each consecutive level defined in \ref{study1_design}. For each scenario we ask users to rank their level of trust on a scale from 1-10 where 1 corresponds with "Not at All", and 10 corresponds with "Completely". An example of this question format is presented in Figure \ref{fig:example_survey_question}.
+These questions pertain to the constraints defined in Table \ref{table:study1_constraints}. We then proceed to describe four scenarios to the participant, where transparency in the decision-making process is aligned with each consecutive level defined in Section \ref{study1_design}. For each scenario we ask users to rank their level of trust on a scale from 1-10 where 1 corresponds with "Not at All", and 10 corresponds with "Completely". An example of this question format is presented in Figure \ref{fig:example_survey_question}.
 
 \begin{figure}[h]
-    \fbox{\includegraphics[width=\linewidth]{graphics/example_survey_question.png}}
+    \fbox{\includegraphics[width=0.75\textwidth]{graphics/Example_survey.png}}
     \caption{Study 1 - Survey Example Question}
   \label{fig:example_survey_question}
 \end{figure}
@@ -606,9 +609,9 @@ When surveying a population, several key ethical considerations must be addresse
  Ethical Consideration & Action \\
  \hline
  \hline
- Appropriate inclusion and exclusion criteria & The research team excluded minors and anyone who may be mentally or emotionally vulnerable when recruiting from personal networks. Due to the anonymity of participant submissions, recruitment from online platforms (Twitter, LinkedIn) could not be monitored and we therefore performed recruitment with the assumption that these organisations have acceptable use policies and appropriate restrictions on age within their terms of service.\\
+ Appropriate inclusion and exclusion criteria & The research team excluded minors and anyone who may be mentally or emotionally vulnerable when recruiting from personal networks. Due to the anonymity of participant submissions, recruitment from online platforms (Twitter, LinkedIn, Facebook) could not be monitored and we therefore performed recruitment with the assumption that these organisations have acceptable use policies and appropriate restrictions on age within their terms of service.\\
  \hline
-Informed Consent & An information sheet ###appendix? was provided to each participant, detailing the research and any potential risks. Participants were presented with a choice to proceed accompanied with the following message:
+Informed Consent & An information sheet (which can be accessed here: \href{https://sway.office.com/czpQAaqDZiPdpGrB?ref=Link}{https://sway.office.com/czpQAaqDZiPdpGrB?ref=Link} was provided to each participant, detailing the research and any potential risks. To begin the survey, participants were presented with the following message:
 
 \begin{quote}
     By clicking "Next" you confirm that you've read the full information about this study and consent to participate.
@@ -654,292 +657,121 @@ Social: Risk of being identified through combining multiple quasi-identifiers. &
 
 % add details on how we requited participants, how many responded and where from.
 
-\subsubsection{Data Analysis}
-% ALEX TO PULL STUFF IN?
 
 \subsection{Study 2 - Focus Group}
 
-This section details the focus group which was carried out subsequent to collection of survey data in Study 1. Section ### outlines the intended outcomes of his study. Section ### details pros and cons?.
+This section details the focus group which was carried out subsequent to collection of survey data in Study 1. Section \ref{study1_intentions} outlines the intended outcomes of his study.
 
-Section ### details the recruitment and data gathering process and Section ### outlines any ethical considerations which were to be addressed prior to hosting the focus group session.
+Section \ref{study1_recruitment_datacollection} details the recruitment and data gathering process and Section \ref{study2_ethical_considerations} outlines any ethical considerations which were to be addressed prior to hosting the focus group session.
 
 \subsubsection{Intention of Study}
 \label{study2_intentions}
-The intention of this study was to gather qualitative data on participants sentiments towards AI, and to test any hypotheses drawn from the data gathered in Study 1. Study 1 identified semi-distinct preferences for specific demographics concerning levels of trust for varied levels of transparency; the focus group format was used to investigate whether any unified reasoning existed within these demographics.\\
+The intention of this study was to gather qualitative data on participants sentiments towards AI, and to test any hypotheses drawn from the data gathered in Study 1. Study 1 identified semi-distinct preferences for specific demographics within survey participants concerning levels of trust for varied levels of transparency; the focus group format was used to investigate these demographic-specific preferences to ascertain whether any unified reasoning existed within these demographics.
 
 \subsubsection{Study Design}
 \label{study2_design}
-The focus grouped aimed to bring together a range to demographics to explore any similarities or differences between each. 
+ 
+A focus group study followed from the Study 1, to gain insight into the reasoning and motivation behind survey responses, and to uncover topics of interest and concern as well as differences in opinion surrounding AI decision support tools.\\ 
+
+The focus group format was chosen for this phase of research as a suitable means of analysing the maximum number of viewpoints within the scope of the research project time frame. In contrast to individual interviews, where we would be limited to sequentially updating our hypotheses between interviews, the focus group format enables conflicting opinions or theories to be scrutinised in real-time, allowing us to assess the cohesion between different demographics. Additionally, a focus group is an efficient means of maximising researcher contact time for the largest number of participants. We divided the focus group into four distinct segments:
+\begin{enumerate}
+    \item Introductions and Overview
+    \item Sentiment towards AI
+    \item Performance vs Transparency
+    \item Application Context
+\end{enumerate}
+
+The focus group utilised the interactive audience participation tool, Mentimeter, to present the slides in an effort to improve participant engagement and expand interactive functionality \cite{Mayhew2020}. Segment 1 provided us an opportunity to ensure all participants were familiar with the purpose of the focus group and had consented to participate. Segment 2 was designed to allow for a largely unstructured conversation regarding sentiment towards AI. We utilised some interactive elements such as a live word cloud (Figure \ref{fig:word_cloud}) to enable people to present their initial thoughts when considering the term "AI". We used a "conversation wheel" (Figure \ref{fig:conversation_wheel}) to create new topics for discussion and to steer the direction of the conversation when discussion veered off topic or became stagnant.\\
+
+Segment 3 asked participants to rank the four levels of transparency defined in Table \ref{table:transparency_levels} by order of preference, after which the results were presented and used as a prompt for discussion. Finally, Segment 4 asked participants to consider different contexts for application of AI tools and to communicate where any contexts would or would not necessitate higher levels of transparency.
+
+\begin{figure}[h]
+       \centering
+     \begin{subfigure}[c]{0.48\textwidth}
+         \centering
+        %  \fbox{%
+         \includegraphics[width=\textwidth]{graphics/word_cloud.png}
+        %  }
+         \caption{Word Cloud}
+         \label{fig:word_cloud}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[c]{0.48\textwidth}
+         \centering
+        %  \fbox{
+         \includegraphics[width=\textwidth]{graphics/conversation_wheel.png}
+        %  }
+         \caption{Conversation Wheel}
+         \label{fig:conversation_wheel}
+     \end{subfigure}
+     \caption{Study 2 - Mentimeter Interactive Functionality}
+     \hfill
+\end{figure}
 
 \subsubsection{Recruitment and Data Collection}
 \label{study2_recruitment_datacollection}
+Recruitment for the focus group was driven by the hypothesis that experience with AI tools, high-stakes decisions or medical contexts may shift a participants' viewpoint on the relationship between trust and transparency. To test this theory, we recruited across the entire spectrum. Having identified eight unique profiles, we leveraged our personal networks to match each profile to suitable candidates. Figure \ref{fig:personality_profiles} details each profile and the associated participant pseudonym.
+
+The focus group was conducted via Zoom. The session was recorded, transcribed and anonymised before being analysed.
+
+\begin{figure}[h]
+    \includegraphics[width=\linewidth]{graphics/personality_profiles.png}
+    \caption{Study 2 - Participant Profiles}
+  \label{fig:personality_profiles}
+\end{figure}
 
 \subsubsection{Ethical Considerations}
 \label{study2_ethical_considerations}
-
-\subsubsection{Data Analysis}
-\label{study2_data_analysis}
-
-A similar questionnaire to the survey was used to gather data from the focus group participants. Participants were given the opportunity to express any reactions to the results of the questionnaire, and the focus group also served as a platform for discussion of our findings from the survey results. allowed us to query the participant any results from the questionnaire and to clarify their  investigated our findings.
-
- 
-
-
-
-\subsubsection{Notes on results for discussions:}
-
-
-
-
-
-
-
-
-\subsubsection{Brainstorm}
-\begin{itemize}
-    \item Correlation analysis
-    \item Clustering analysis
-\end{itemize}
-
-
-
-
-% \subsubsection{Bit of maths}
-
-% In order for the AI to have any impact on the doctor, the doctor has to actually take the AI's diagnosis into account. For an AI diagnosis $A^x, x\in \{+,- \}$ and an original doctor diagnosis $D^x, x\in \{+,- \}$. As shown visually in Fig. \ref{fig:coop_diagram}, we can model a bias factor $f^x_{\textrm{Agree/Disagree}}$. The doctor can be assumed to carry a unique bias towards agreeing or disagreeing with the AI, dependent on the AI's diagnosis, which here we've modelled as a factor change to the doctor's original efficacy.
-
-% \tikzstyle{arrow} = [thick,->,>=stealth]
-% \tikzstyle{node} = [rectangle, text centered, draw = black, fill = white!255, minimum width = 2.5cm]
-% \tikzstyle{correct} = [rectangle, text centered, draw = black, fill = green!50, minimum width = 2.5cm]
-% \tikzstyle{incorrect} = [rectangle, text centered, draw = black, fill = red!30, minimum width = 2.5cm]
-
-% \begin{figure}[h]
-% \centering
-
-% \begin{tikzpicture}[node distance=2cm]
-% \node (patient) [node] {Patient symptoms};
-
-% \node (AI_pos)  [node, right of = patient, xshift = 2cm] {AI positive diagnosis};
-% \node (AI_neg)  [node, below of = patient, yshift = -0cm] {AI negative diagnosis};
-
-% \node (Pos_pos) [correct, right of = AI_pos, xshift = 4cm] {Doctor agrees, positive diagnosis};
-% \node (Pos_neg) [incorrect, above of = AI_pos, yshift = 0cm] {Doctor disagrees, negative diagnosis};
-
-% \node (Neg_pos) [incorrect, right of = AI_neg, xshift = 5cm] {Doctor agrees, negative diagnosis};
-% \node (Neg_neg) [correct, below of = AI_neg, yshift = -0cm] {Doctor disagrees, positive diagnosis};
-
-% \draw [arrow] (patient) -- node[anchor=south] {$A^+$} (AI_pos);
-% \draw [arrow] (patient) -- node[anchor=west] {$A^-$} (AI_neg);
-
-% \draw [arrow] (AI_pos) -- node[anchor=south] {$f^+_{\textrm{Agree}}D^+$} (Pos_pos);
-% \draw [arrow] (AI_pos) -- node[anchor=west] {$f^+_{\textrm{Disagree}}D^-$} (Pos_neg);
-
-% \draw [arrow] (AI_neg) -- node[anchor=south] {$f^-_{\textrm{Disagree}}D^+$} (Neg_pos);
-% \draw [arrow] (AI_neg) -- node[anchor=west] {$f^-_{\textrm{Agree}}D^-$} (Neg_neg);
-
-% \end{tikzpicture}
-
-% \caption{The process of AI-cooperative diagnosis}
-% \label{fig:coop_diagram}
-% \end{figure}
-
-% In this model the probability of a correct diagnosis for a patient with COVID is:
-
-% \begin{equation}
-%     P(\textrm{correct}) = (f^+_{\textrm{A}}A^+ + f^-_{\textrm{D}}A^-) D^+
-% \label{eqn:correct_coop}
-% \end{equation}
-
-% with $f^+_{\textrm{A}}$ shorthand for $f^+_{\textrm{Agree}}$, and the same shortening notation for $f^-_{\textrm{Disagree}}$. We can assume that the probability of a correct diagnosis is limited to $0 \leq P(\textrm{correct}) \leq 1$, which sets limits
-
-% \begin{equation}
-%     0 \leq f^+_{\textrm{A}}A^+, f^+_{\textrm{D}}A^- \leq 1/D^+
-% \end{equation}
-
-
-% In this model the patients diagnosis is only improved if $(f^+_{\textrm{A}}A^+ + f^-_{\textrm{D}}A^-) > 1$, otherwise the chance of a COVID positive patient being correctly diagnosed decreases. Important to note is that if $f^+_A \textrm{ and } f^-_D = 1$, ie if the doctor has no interpretation of the AI's diagnosis, then Equation \ref{eqn:correct_coop} becomes
-
-% \begin{equation}
-%     P(\textrm{correct}) = (A^+ + A^-) D^+ = D^+
-% \end{equation}
-
-% the effect of which being that the AI has no impact on the doctor's efficacy. 
-
-
-% \begin{figure}[h]
-% \centering
-
-% \begin{tikzpicture}
-
-% \draw[opacity=0.5,fill=green!50] (0pt, 6cm) -- (0pt, 9cm) -- (9cm, 0pt) -- (6cm, 0pt) -- (0pt, 6cm);
-% \draw[opacity=0.5,fill=red!30] (0pt, 0pt) -- (0pt, 6cm) -- (6cm, 0pt) -- (0pt, 0pt);
-
-% \draw[thick,->] (0,0) -- (10,0) node[anchor=north west] {$f^+_{\textrm{A}}A^+$};
-% \draw[thick,->] (0,0) -- (0,10) node[anchor=south east] {$f^-_{\textrm{D}}A^-$};
-
-% \draw (9cm,2pt) -- (9cm,-2pt) node[anchor=north] {$1/D^+$};
-% \draw (2pt, 9cm) -- (-2pt, 9cm) node[anchor=east] {$1/D^+$};
-% \draw (0pt, 9cm) -- (4.5cm, 4.5cm) node[anchor=west] {Upper probability limits};
-% \draw (4.5cm, 4.5cm) -- (9cm, 0pt) node[anchor=west] {};
-
-% \draw (6cm,2pt) -- (6cm,-2pt) node[anchor=north] {$1; f^+_A = 1/A^+$};
-% \draw (2pt, 6cm) -- (-2pt, 6cm) node[anchor=east] {$1; f^-_D = 1/A^-$};
-% \draw (0pt, 6cm) -- (3cm, 3cm) node[anchor=west] {Improved diagnosis};
-% \draw (3cm, 3cm) -- (6cm, 0pt) node[anchor=west] {};
-
-% \draw [dotted] (4.5cm, 1pt) -- (4.5cm, 1.5cm); 
-% \draw [dotted] (4.5cm, 1.5cm) -- (1pt, 1.5cm); 
-% \draw (4.5cm,0pt) -- (4.5cm,-2pt) node[anchor=north] {$A^+$};
-% \draw (0pt,1.5cm) -- (-2pt, 1.5cm) node[anchor=east] {$A^-$};
-
-% \draw [dashed] (3cm, 1pt) -- (3cm, 3cm); 
-% \draw [dashed] (3cm, 3cm) -- (1pt, 3cm); 
-% \draw (3cm,0pt) -- (3cm,-2pt) node[anchor=north] {$D^+$};
-% \draw (0pt,3cm) -- (-2pt, 3cm) node[anchor=east] {$D^-$};
-
-% \draw (1pt,1pt) -- (-1pt, -1pt) node[anchor=north east] {$0,0$};
-
-% \end{tikzpicture}
-
-% \caption{\centering Regions of diagnosis efficacy in a human-AI cooperative scenario, with $f^{+/-}_{A/D}$ bias factors when interpreting the AI diagnosis $A^{+/-}$, and the non-AI doctor diagnosis $D^{+/-}$. Not to scale with the values in the survey scenarios.}
-% \label{fig:my_label}
-% \end{figure}
-
-% \begin{figure}[h]
-% \centering
-
-% \begin{tikzpicture}
-
-% \draw[opacity=0.5,fill=red!50] (0cm, 4cm) -- (4cm, 4cm) -- (4cm, 0cm) -- (0cm, 0cm) -- (0cm, 4cm);
-
-% \draw[opacity=0.5,fill=blue!30] (0cm, 4cm) -- (0cm, 6cm) -- (4cm, 6cm) -- (4cm, 4cm) -- (0cm, 4cm);
-
-% \draw[opacity=0.5,fill=green!30] (4cm, 4cm) -- (4cm, 6cm) -- (6cm, 6cm) -- (6cm, 4cm) -- (4cm, 4cm);
-
-% \draw[pattern=north west lines, pattern color=blue!30, opacity=0.5] (4cm, 0cm) -- (4cm, 4cm) -- (6cm, 4cm) -- (6cm, 0cm) -- (4cm, 0cm);
-
-% \draw (2cm,5cm) -- (2cm,5cm) node[anchor=north] {A};
-% \draw (5cm,5cm) -- (5cm,5cm) node[anchor=north] {B};
-% \draw (2cm,2cm) -- (2cm,2cm) node[anchor=north] {C};
-% \draw (5cm,2cm) -- (5cm,2cm) node[anchor=north] {D};
-
-% \draw (3cm,0pt) -- (3cm,0pt) node[anchor=north] {Glass box trust factor change};
-% \draw (0pt,3cm) -- (0pt,3cm) node[anchor=east, rotate=-90, xshift=2cm, yshift=-7pt]  {Black box trust factor change};
-
-% \end{tikzpicture}
-
-% \caption{\centering Interpretation schema for cooperative improvement plots. \textbf{A}: Black box improves diagnosis, glass box makes diagnosis worse \textbf{B}: Both glass box and black box improve diagnosis \textbf{C}: Neither glass box or black box improve diagnosis \textbf{D}: Glass box improves diagnosis, black box makes diagnosis worse}
-% \label{fig:quadrant explanation}
-% \end{figure}
-
-
-
-% From this model we can define some doctor profiles based on how they might interact with an AI tool:
-
-% \begin{itemize}
-%     \item \textbf{$f^+_A, f^-_D = 1/D^+$:}  A doctor who trusts the AI's positive diagnoses completely, but also catches every single mis-classification by the AI
-%     \item \textbf{$f^+_A, f^-_D = 0$:}      A doctor who never agrees with a positive AI diagnosis, and always agrees with a negative AI diagnosis
-%     \item ETC, FLESH OUT LATER
-% \end{itemize}
-
-\subsection{Focus Group}
-\begin{itemize}
-    \item Goals, how does it follow from survey data? (does trust mean you will be happy to use the AI?)
-    \item Who do we want to talk to? How will we use the information?
-    \item 
-\end{itemize}
-
-A focus group study was devised as a follow-up to the survey study, to gain insight into the reasoning and motivation behind survey responses, and to uncover topics of interest and concern as well as differences in opinion surrounding AI decision support tools.  
-
-
-
-\subsubsection{Recruitment}
-
-Recruitment was performed via the survey from Section [link to section?] - participants were presented with an option to provide an email address if they were interested in being contacted to participate in the focus group. Following the collection and analysis of survey data, a recruitment survey was sent to the participants of the first survey who agreed to be contacted. The recruitment survey was designed to gather a small amount of demographic information so that an appropriate spread of participants were included [change wording].
-
-[What is the requested demographic information? Use questionnaire data or ask for more? Inclusion of BAME and gender?]
-
-Subreddits:
-\begin{itemize}
-    \item r/machinelearning
-    \item r/london - awaiting approval
-    \item r/coronavirusuk - awaiting approval
-\end{itemize}
-
-This demographic information was used to recruit at least one person from the following categories:
-
-\textbf{Category 1: Experienced Senior AI Expert}
-\begin{itemize}
-\item High self-reported rating in AI expertise.
-\item Not a medical professional.
-\item Mid to high self-reported involvement in high-stakes decision making
-\end{itemize}
-(Ideally in a senior role or management position).
-
-\textbf{Category 2: AI Specialist}
-\begin{itemize}
-\item Mid to high self-reported rating in AI expertise.
-\item Not a medical professional.
-\item Low self-reported involvement/responsibility in high-stakes decision making.
-\end{itemize}
-
-Ideally not in a senior role or management position, could be early career or still in education)
-
-\textbf{Category 3: Experienced Senior Healthcare Expert}
-\begin{itemize}
-\item Low to Mid self-reported rating in AI expertise
-\item Is a medical professional, 
-\item High self-reported involvement/responsibility in high-stakes decision making
-\end{itemize}
-
-Ideally in a senior role or management position in a clinical hospital setting.
-
-\textbf{Category 4: Healthcare Specialist}
-\begin{itemize}
-\item Low self-reported rating in AI expertise
-\item Is a medical professional.
-\item Mid to High self-reported involvement/responsibility in high-stakes decision making
-\end{itemize}
-
-Ideally in a role with some responsibility for high-stakes decision making, or a role in which they provide information and evidence which supports others in making high stakes decisions. 
-
-This individual should be employed in a clinical hospital setting (could still be in education and training, but should currently be undertaking practical rotations, or have practical responsibilities in a clinical hospital setting). 
-
-
-\textbf{Category 5: Wildcard}
-Any combination of self-reported traits.
-Could be a member of the public.
-Could be a second member of any previous category. 
-Possibility of being a clinical informatician, or other clinical computer scientist.
-Possibility of being a software engineer who has experience with developing medical devices. 
-
-[Explain why you wanted to recruit people at the end of each spectrum, and avoid people who cross the demographics]
-
-\subsubsection{Topics of Discussion}
-
-
-
-\subsubsection{Data Gathering and Analysis}
-Interviews were conducted via Microsoft Teams [University of Bristol server?]. The audio from the entire session was recorded, and stored temporarily on a secure server. The session audio was used create an anonymised transcript, then promptly deleted. 
-
-Thematic analysis was performed on the focus group transcript using NVivo [cite]. 
-
-[Describe how you will do thematic analysis on the focus group data].
-
-
-
-
-
-
-
-
-\newpage
-\section{Findings - Survey}
-%Describe our findings from user research
-%Evaluation of our findings
-%\subsection{Survey}
-
-\subsection{Dis-aggregation and grouping}
+ Table \ref{table:study2_ethical_considerations} lists any ethical considerations for the focus group and the actions taken by the research team to address each consideration.
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{ | p{3cm} | p{11cm} |}
+\hline
+ Ethical Consideration & Action \\
+ \hline
+ \hline
+ Appropriate inclusion and exclusion criteria & The research team excluded minors and anyone who may be mentally or emotionally vulnerable when recruiting from personal networks. \\
+ \hline
+Informed Consent & An information and consent form (which can be accessed here: \href{https://forms.office.com/r/hup446NJZj}{https://forms.office.com/r/hup446NJZj}) was provided to each participant, detailing the research and any potential risks. Participants were asked to confirm consent before taking part in the focus group. \\
+ \hline
+ The safety and well-being of any participants & In accordance with the University of Bristol ethics approval process, Table \ref{table:study2_risks} identifies physical, psychological, legal and social risks associated with our research and any actions taken to mitigate these risks. \\
+\hline
+The protection of any participants data & The recording of the transcript was stored securely on private university-hosted servers, transcribed and the transcription anonymised. Such steps ensure no identifiable information is contained in the final project data repository. A separate email database was recorded for compensation of those who completed the focus group. \\
+\hline
+Compensation & The focus group required participation for one hour. To compensate participants for their time, each participant was given the a £10 amazon voucher. \\
+ \hline
+\end{tabular}
+\caption{Study 2: Ethical Considerations}
+\label{table:study2_ethical_considerations}
+\end{center}
+\end{table}
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{ | p{6cm} | c | p{6cm} |}
+\hline
+ Risk & Likelihood & Mitigation \\
+ \hline
+ \hline
+ Physical: None & N/A & N/A \\
+ \hline
+ Psychological: People might start to worry about their job safety or the quality of a diagnosis based on computer-aided decision-making tools should they require actual diagnosis in future. People might feel bad about themselves not knowing much about computer-aided decision-making tools. & Low & The hypothetical nature of the discussions in the focus group were clearly emphasised; it does not mention a concrete diagnosis and we clearly ask people to imagine being a patient. Any discussions about job safety are of important to our findings from the focus group and so it is deemed acceptable as a topic of discussion, with facilitators aware that they may need to push the conversation along if anyone is showing signs of distress. \\
+ \hline
+ Legal: : None & N/A & N/A \\
+ \hline
+Social: Risk of participant data/focus group recording becoming public. & Low & Focus group data is recorded and stored securely, anonymised, and the original data deleted.\\
+\hline
+\end{tabular}
+\caption{Study 2: Identifiable Risks to Participants}
+\label{table:study2_risks}
+\end{center}
+\end{table}
+
+
+\subsection{Data Analysis - Study 1}
+
+\subsubsection{Dis-aggregation and grouping}
 
 The demographic questions at the start of the survey allow us to investigate how different groups attribute trust in the scenario-based questions. We split into three bins for each of the AI expertise and high-stakes questions. 
 
@@ -960,6 +792,61 @@ We can also use the profiling questions from the survey to dis-aggregate the sur
 \end{itemize}
 
 These are intended to represent the three agents in each cooperative scenario - the doctor being the medical professional, the patient being the public, and the AI expert standing in for the AI.
+
+\subsubsection{Additional Features}
+
+We use the results of the first scenario, the trust in the doctor with no AI component $T_D$, as a baseline to assess the impact of AI-cooperation on diagnosis trust levels. We denote the trust level reported in these cooperative scenarios based on the nature of their model. Scenario two, with the interpretable or "glass box'' model is $T_{GB}$, and scenario three with the "black box'' model $T_{BB}$.
+
+We normalise the survey scale of [1,10] to [0,1] for $T_D, T_{BB}, T_{GB}$, via $T_i \rightarrow (T_i - 1) * (10/9)$, then produce two new features based on the percentage factor change in trust:
+
+\begin{equation} \label{eqn:change_vs_doctor}
+    f_i = 100 \cdot (T_i / T_D)
+\end{equation}
+
+These features allow analysis of whether participants view the cooperative use of AI as beneficial ($f_i > 0$), neutral ($f_i = 0$), or inhibitory ($f_i < 0$) to the diagnosis. 
+
+\subsubsection{Unsupervised Clustering}
+
+Having disaggregated into profiling features, then analysed the trust levels of these cohorts, we can instead do the opposite. By starting with trust levels and finding distinct groups of how they are distributed, we can construct cohorts based on trust levels, then use profiling features to find the characteristics of these groups.
+
+Insights can be gained into the results of the survey by applying unsupervised methods. These do not rely on any labels or targets, as would be the case in supervised or semi-supervised methods, so avoid many of the biases that such methods would carry. In particular we apply Uniform Manifold Approximation and Projection (UMAP) \cite{McInnes2018} as dimensionality reduction, then Hierachical Density-Based Spatial Clustering And Noise (HDBSCAN) \cite{McInnes2017} as unsupervised clustering on the resulting UMAP embedding. Both UMAP and HDBSCAN use similar methods, and make similar assumptions, so work well in tandem as an unsupervised exploration method.
+
+UMAP makes the assumption that data is distributed on a uniform manifold, but that the data-space is warped. Using this assumption local distance metrics are learnt, then used to construct a distance graph of the data. A lower-dimensional embedding is then formed, which aims to conserve the form of the high-dimensional space, using a stochastic graph layout. HDBSCAN, similarly, constructs a minimum spanning tree based on distances in the data-space, then applies various sub-algorithms to find clusters. Full explanation of these algorithms is beyond the scope of this work, so the reader should consult the relevant papers for more information. 
+
+\subsection{Data Analysis - Study 2}
+\label{study2_data_analysis}
+
+The pseudonymised focus group transcript was subject to thematic analysis; participant contributions were systematically coded by two of the authors, by labeling with meaning, context and theme. The coded statements were then collated and used to synthesise descriptive and analytical themes. The suggested themes were reviewed independently by all authors prior to collectively reviewing their implications to agree upon the central themes emerging from the data.    
+
+
+
+\newpage
+\section{Findings - Survey}
+%Describe our findings from user research
+%Evaluation of our findings
+%\subsection{Survey}
+
+% \subsection{Dis-aggregation and grouping}
+
+% The demographic questions at the start of the survey allow us to investigate how different groups attribute trust in the scenario-based questions. We split into three bins for each of the AI expertise and high-stakes questions. 
+
+% These bins are:
+
+% \begin{itemize}
+%     \item Low: $(f_{AI}, f_{stakes}) \leq 3$
+%     \item Medium: $3 < (f_{AI}, f_{stakes}) \leq 7$
+%     \item High: $7 < (f_{AI}, f_{stakes})$
+% \end{itemize}
+% % $1 \leq (f_{AI}, f_{stakes}) \leq 3$, $3 < (f_{AI}, f_{stakes}) \leq 7$, and $7 < (f_{AI}, f_{stakes}) \leq 10$.
+% We can also use the profiling questions from the survey to dis-aggregate the survey participants into distinct cohorts that are particularly relevant in discussions of AI transparency: 
+
+% \begin{itemize}
+%     \item Medical professional: Answered "yes" to relevant question
+%     \item AI Expert: Not a medical professional, and AI experience level reported as $\geq 7$
+%     \item Public (model patient): Neither a medical professional nor an AI expert
+% \end{itemize}
+
+% These are intended to represent the three agents in each cooperative scenario - the doctor being the medical professional, the patient being the public, and the AI expert standing in for the AI.
 
 \subsection{Mean Results}
 
@@ -1015,9 +902,9 @@ The black box by itself is, regardless of tied-rank resolution strategy, the low
 
 It is interesting to look at each of the ranks 1-4 and the order in which the different scenarios are appearing in that rank:
 
-For the lowest rank - a ranking of 1 - the BB was by far the lowest ranking scenario followed by the Dr on their own, then the black box with the doctor. The glass box with the doctor was  least frequently ranked the lowest. Figure? \ref{fig:overall-ranking}
+For the lowest rank - a ranking of 1 - the BB was by far the lowest ranking scenario followed by the Dr on their own, then the black box with the doctor. The glass box with the doctor was  least frequently ranked the lowest, see figure\ref{fig:overall-ranking}.
 
-For the highest rank - ranking of 4 - the glass box with the dr was ranked most often the highest, the Dr on their own second most often, the black box with the Dr third most often and the black box on it's own was ranked least often the highest.\ref{fig:overall-ranking}
+For the highest rank - ranking of 4 - the glass box with the dr was ranked most often the highest, the Dr on their own second most often, the black box with the Dr third most often and the black box on it's own was ranked least often the highest, see figure\ref{fig:overall-ranking}.
 
 \begin{figure}[H]
     \centering{\includegraphics[width=0.8\textwidth]{graphics/ranking/rankingOverallNormalisedAvarageTies.png}}
@@ -1025,7 +912,7 @@ For the highest rank - ranking of 4 - the glass box with the dr was ranked most 
     \label{fig:overall-ranking}
 \end{figure}
 
-Looking at how the ranking changes based on if the participant works in healthcare or not we can see that the order for the highest rank (4) and lowest rank (1) stay the same as for the overall chart. However we can also see that people who work in healthcare more frequently rate the Dr on their own as the second lowest scenario that gets a rank Figure? \ref{fig:ranking-healthcare}..
+Looking at how the ranking changes based on if the participant works in healthcare or not we can see that the order for the highest rank (4) and lowest rank (1) stay the same as for the overall chart. However we can also see that people who work in healthcare more frequently rate the Dr on their own as the second most frequent rank(1), see figure\ref{fig:ranking-healthcare}.
 
 \begin{figure}[H]
     \centering{\includegraphics[width=0.8\textwidth]{graphics/ranking/ranking-healthcare-vs-notNormalised-average-ties.png}}
@@ -1070,18 +957,13 @@ Finally if we look at how the frequency how often a participants makes high-stak
 
 \subsection{Demographic Motivated Impact of AI}
 
+%=======================D
 
-\subsubsection{Additional Features}
+% \subsubsection{Additional Features}
 
-We use the results of the first scenario, the trust in the doctor with no AI component $T_D$, as a baseline to assess the impact of AI-cooperation on diagnosis trust levels. We denote the trust level reported in these cooperative scenarios based on the nature of their model. Scenario two, with the interpretable or "glass box'' model is $T_{GB}$, and scenario three with the "black box'' model $T_{BB}$.
 
-We normalise the survey scale of [1,10] to [0,1] for $T_D, T_{BB}, T_{GB}$, via $T_i \rightarrow (T_i - 1) * (10/9)$, then produce two new features based on the percentage factor change in trust:
 
-\begin{equation} \label{eqn:change_vs_doctor}
-    f_i = 100 \cdot (T_i / T_D)
-\end{equation}
-
-These features allow analysis of whether participants view the cooperative use of AI as beneficial ($f_i > 0$), neutral ($f_i = 0$), or inhibitory ($f_i < 0$) to the diagnosis. 
+%=======================D
 
 % We plot the results in Figure \ref{fig:improvement}, along with an interpretation schema, with participants dis-aggregated into three cohorts given the following criteria:
 
@@ -1090,7 +972,7 @@ These features allow analysis of whether participants view the cooperative use o
 % The survey was closed after XXX days, with XXX participants. We use the two key profile features - AI experience level and whether the participant is a medical professional - to dis-aggregate into three demographic bins:
 
 
-We then apply Equation \ref{eqn:change_vs_doctor} and analyse the changes in participant trust in the two doctor/AI cooperative scenarios using Figure \ref{fig:improvement}.
+We apply Equation \ref{eqn:change_vs_doctor} and analyse the changes in participant trust in the two doctor/AI cooperative scenarios using Figure \ref{fig:improvement}.
 
 \begin{figure}[h!]
     \centering
@@ -1125,11 +1007,7 @@ This analysis has shown that across all cohorts at least some version of doctor-
 
 \subsection{Trust Motivated Clustering}
 
-Having disaggregated into profiling features, then analysed the trust levels of these cohorts, we can instead do the opposite. By starting with trust levels and finding distinct groups of how they are distributed, we can construct cohorts based on trust levels, then use profiling features to find the characteristics of these groups.
 
-Insights can be gained into the results of the survey by applying unsupervised methods. These do not rely on any labels or targets, as would be the case in supervised or semi-supervised methods, so avoid many of the biases that such methods would carry. In particular we apply Uniform Manifold Approximation and Projection (UMAP) \cite{McInnes2018} as dimensionality reduction, then Hierachical Density-Based Spatial Clustering And Noise (HDBSCAN) \cite{McInnes2017} as unsupervised clustering on the resulting UMAP embedding. Both UMAP and HDBSCAN use similar methods, and make similar assumptions, so work well in tandem as an unsupervised exploration method.
-
-UMAP makes the assumption that data is distributed on a uniform manifold, but that the data-space is warped. Using this assumption local distance metrics are learnt, then used to construct a distance graph of the data. A lower-dimensional embedding is then formed, which aims to conserve the form of the high-dimensional space, using a stochastic graph layout. HDBSCAN, similarly, constructs a minimum spanning tree based on distances in the data-space, then applies various sub-algorithms to find clusters. Full explanation of these algorithms is beyond the scope of this work, so the reader should consult the relevant papers for more information. 
 
 We apply UMAP, then HDBSCAN to the resulting embedding, and present the results in Figures \ref{fig:embedding}, \ref{fig:cluster_means}. UMAP produces four distinct clusters, which are recognised by HDBSCAN. HDBSCAN is designed to find clusters in noisy data, and so can identify points as noise, but none are found here, indicating that clusters are clearly defined.
 
@@ -1164,60 +1042,95 @@ Cluster 2, which leans the most towards following efficacy statistics, has the h
 
 Clusters 0 and 3 are less easily identified, but might represent different subsets of the general population. Cluster 0 has a higher self-reported stake level, but a lower than average medic proportion, so might represent high-stakes decision makers from outside the medical field. Cluster 3 is very close to the average in all three of our profiling features, and is the largest, so could be said to represent the public, or the equivalent for our participant pool.
 
+
+\newpage
 \section{Findings - Focus Group}
 
 This section details the findings from thematic analysis of the transcript from the focus-group session, comprising several recurring themes from the discussion, and statements relevant to the results of the survey study. 
 
-The pseudonymised transcript was divided into individual statements, which were independently systematically coded by two of the authors, by labeling with meaning and context. The coded statements were then collated and used to synthesise descriptive and analytical themes. The suggested themes were reviewed by independently by all authors, before meeting to discuss their implications, and to agree upon the central themes emerging from the data.    
+% The pseudonymised transcript was divided into individual statements, which were independently systematically coded by two of the authors, by labeling with meaning and context. The coded statements were then collated and used to synthesise descriptive and analytical themes. The suggested themes were reviewed by independently by all authors, before meeting to discuss their implications, and to agree upon the central themes emerging from the data.    
 
 Whilst the focus-group was designed to encourage discussion about the subject of trustworthy AI in any context, discussion tended to remain focused on a clinical context unless otherwise prompted.
 
 Statements associated with each of the six participants are labeled as P1-P6. 
 
 
-\subsection{Themes: Performance vs. Transparency}
+\subsection{Performance of AI is Important, Detailed Information is Needed}
+When evaluating the trustworthiness of the example scenarios given in the survey study, some participants may have made their decision based entirely on the stated performance. In this context, this was a single value indicating the average percentage of patients that would be correctly diagnosed by either the doctor, glass-box or black-box systems in isolation. Some participants of the focus outlined a compatible belief, that the system which has the best performance is the one they would trust the most. 
 
-\subsubsection{Performance of AI is Important}
+P6 “I think it said in the survey that the black box had a higher percentage [accuracy] than the human, so I'm pretty sure that I put it higher than just the human as well”
+
+P1: “I think all of this is based around how accurate the black box is.” 
+
+The above statements appear to be made on the assumption that the stated performance is consistent across demographics and future use cases.
+
+P6 suggests later in the discussion that a single overall performance metric may not be sufficient information to secure trust in an AI system due to difference in performance over different demographics “One of the biggest things is how good the performance is depending on the group of people that it is assessing. I'm guessing that we are assuming that it is the same across the board i.e. diagnosing women or men or children and adults. I guess that is good because you could be like “performance is worse for children, and this is a child so maybe we have to take that into consideration”“. 
+
+P5 identifies the importance of understanding the data on which a model has been trained -
+ “The AI is only as good as the data it's got and if it's not got a lot of data for a certain minority or gender or children then it won't perform well there”. Transparency in terms of explainable AI may not be needed to address this issue if information regarding how the black-box system was developed and trained is provided, as well as performance statistics broken down by demographic.
 
 
-\subsubsection{Transparency Less Important for Low-Stakes Contexts}\hfill\\
+\subsection{Low Transparency may Cause Susceptibility to Bias} 
+Several participants demonstrate awareness of the implications of opaque AI - a user cannot know how an algorithm or AI system can make a decision.
+
+P6  "if whoever is using the algorithm doesn’t understand how it reaches those decisions then I guess it can reach the wrong decisions and no one will know and there is no way of catching that." 
+
+P1 [on AI in the context of phone app recommendations]  "ultimately, it decides what those apps are going to be and it may not be influenced by my decisions. It may be choosing those based on whatever it likes, I have no idea".
+
+P6 discusses how a lack of transparency can make it difficult to address bias in the context of black-box systems: “I guess it's hard because with the black box you don’t know how it has reached its decision, so you don’t know what sort of biases are going to be in the system”....”in an ideal work you'd know that black box was taking in all the different information that it needed to. Especially I think in terms of minorities which have a history of not having that much data. So, I think that’s one element of having the human there that they could take that sort of information into account when maybe the black box doesn’t.“
+
+P2 raises concerns around AI systems introducing or perpetuating social bias - "I think there was one [example] about insurance, where if your name was [X] then your insurance was multiple time higher than if your name was [Y] That is the fear side of it, the more we allow those sort of decisions to be made by people called [Y] then that’s great because all the [Y]'s get cheap insurance but that’s where my fear lies.
+
+
+
+\subsection{Transparency Less Important for Low-Stakes Contexts}
 
 P1 [on AI in targeted advertising and social media] - ''Honestly, it doesn’t really bother me. If I'm getting targeted ads that are for me, you know I don’t want to get adverts for things that I don’t need in my life. So, it doesn’t bother me that much.''
 
 [Quote in response from P5 suggesting there may be more issues with low-stakes scenarios as well regarding data protection]
 
-[Quote on not knowing what app suggestions are doing]
+P1 describes a scenario in which, for low stakes decisions, a lack of explainability and transparency can be beneficial due to it’s convenience. "My phone knows what app I want to use before I even do. I open my phone and it says “do you want to use [App]?” and I'm like yeah I do, I don’t know how you know that but I do. So in that sense I think that it’s a really positive thing, and I think that it makes organisation a lot easier. But there are definitely scary parts to it". 
+
+There is a trade off here, where the user may be willing to relinquish control and autonomy in return for convenience and utility for low-stakes applications. 
+
+When asked if there were circumstances where an autonomous blackbox system may be appropriate in healthcare, P4 responded described a low-stakes clinical scenario “I think something more like minor ailments is more appropriate and you do see that quite a bit with online pharmacies, they have sites available for minor things that you wouldn’t have to go to a GP for like UTI. You just go through a bunch of questions and tick your symptoms, how long you’ve had it and all the safety questions. But to be fair that does get reviewed by a doctor at the end of the line before everything gets signed off. But if something had a high accuracy rate then that wouldn’t, to me, be much of a problem, if the patients been given all the relevant information.”. 
+
+\subsection{Transparency Required for Higher Stakes Contexts to Address Accountability}
+Later in the discussion, when discussing the use of AI for identifying criminal suspects, P2 expresses that it may be reasonable to require transparency as we would for a human decision maker in the same context:  “Say for example you as a human being say: “I've looked at the evidence and I think we should get X in for some questioning”. If the computer said the same thing, you'd want to know the evidence that gave it that conclusion. We'd want an analogous process. Rather than it be a black box, you want to know why. It feels like that’s the bit that you'd want for machines to be trustworthy.”
+
+P1 echoes this sentiment later in the discussion with respect to the clinical scenario from the survey by comparing doctors and blackboxes: “...aren’t doctors black boxes anyway? I don’t know what their thought process is”... “they can give you their evidence for it but how often do we ask: “how did you get to that diagnosis?” Most patients just accept it at face value”. 
+
+P4, a healthcare professional involved in some diagnostic and other clinical decision making, explained their perspective on why transparency is necessary. “I think that I'm really adverse to relying solely on [a decision making system for which] you can't tell how that decision is made. More like an accountability type thing if something goes wrong. How can you explain to that patient or their family if you don’t really know how it came to that decision”. 
+
+When asked who’s at fault when an AI draws the wrong conclusion, P3 responded “Can you blame a robot? I don’t know?”.
 
 
+\subsection{Transparency Less Important if there Is Justifiable Need, However there Are Concerns to Be Addressed}
 
-\subsubsection{Transparency Required for Higher Stakes Contexts}\hfill\\
+P2 “if you could scale up the diagnosis and allow it to be quicker and earlier, then that could be a really valuable thing for me to trust in a black box, at least for a first port of call. Say for example I could install an app on my phone where I could take a picture everyday and you could tell me if I've got covid, that for me could be low stakes or could be high stakes, but that gets rid of the onset of it all and do all those horrible tests. If something like that was a computer and could give me a 90% accuracy or even say “you look a bit jaundiced, you should probably go to a doctor” that feels like a really valuable use of a black box technology. 
 
-Several participants demonstrate awareness of the implications of opaque AI - a user cannot know how an algorithm or AI system can to a decision.
+P3 “The problem with hospitals or GPs is that there is not enough staff and too many patients so something like that would speed up the process where people can’t see a GP. “... “I guess sending pictures of yourself to this unknown thing in the internet, you want to know where those pictures are going any what they are being used for. “
 
-P6 outlines the problem well when asked about their feelings on targeted advertising and social media - "if whoever is using the algorithm doesn’t understand how it reaches those decisions then I guess it can reach the wrong decisions and no one will know and there is no way of catching that." 
+\subsection{Importance of Transparency and Human Interaction for Patient/User Experience}
+P3 “I think in certain stuff like healthcare people want a personal touch, they want someone there. For me even if I'm doing a PhD in AI, I'd like someone there to talk to me about things. Because you always tend to have questions and follow ups and if you just have an AI make a decision then it might not be that transparent. “
 
-P1 describes a scenario in which, for low stakes decisions, a lack of explainability and transparency can be beneficial through it's convenience.
-"My phone knows what app I want to use before I even do. I open my phone and it says “do you want to use [App]?” and I'm like yeah I do, I don’t know how you know that but I do. So in that sense I think that it’s a really positive thing, and I think that it makes organisation a lot easier. But there are definitely scary parts to it". P1 acknowledges that a lack of transparency has "scary" aspects, despite having an overall positive sentiment towards it. 
+P3 “it comes back to what someone was saying earlier with the emotional side of work and everyday life... Does there need to be a human touch?”
 
-P1 continues "ultimately, it decides what those apps are going to be and it may not be influenced by my decisions. It may be choosing those based on whatever it likes, I have no idea". There is a trade off here, where the user may be willing to relinquish control and autonomy in return for convenience and utility. 
+P2 “I was just thinking about what if you are on the wrong side of the decisions and how that makes you feel. What if I go to doctor and they misdiagnose me, I think would be more forgiving than if a computer misdiagnoses me. Because I think a human is more fallible.”
 
+P5 “I probably would be more forgiving to a doctor than a black box. And I think if a doctor can give a reason for why they’ve picked that then it might make sense to me. I think the same thing with the glass box where I can see why it thought that rather than just giving an answer.”
 
+\subsection{The importance of transparency and human accountability may be greater for higher stakes scenarios}
 
-subsubsection{Bias and Accountability}\hfill\\
+P2: “Well if it’s a terminal diagnosis or something like that that feels like you couldn’t leave that to a computer, right?”... “I wonder how people would feel? If there was a black box that said “you have cancer and you have 6 months to live”. 
 
-P2 raises concerns around AI systems introducing or perpetuating social bias - "I think there was one [example] about insurance, where if your name was [X] then your insurance was multiple time higher than if your name was [Y] That is the fear side of it, the more we allow those sort of decisions to be made by people called [Y] then that’s great because all the [Y]'s get cheap insurance but that’s where my fear lies.
+P4 identifies that a human is required to convey and discuss certain results to a patient, and that an autonomous AI system may not be appropriate - “You’d have to be really sensitive to what that patient actually would benefit from knowing. Some people don’t have the capacity to know the full amount, some people might have other things going one, whereas a human doctor can pick up on the nuances of that and gauge the reactions, especially when it is breaking bad news like that.” P4 confirms that they “think it’s really important actually” to have at least a human interface for delivering information, even if the information is produced by an AI system. 
 
+In practice, a human healthcare professional will always be responsible for the care of a particular patient or service user. This responsibility includes acting in the interests of patients safety and wellbeing, and upholding the interests of vulnerable individuals in how care is delivered. 
 
-\subsubsection{The Importance of a Human in Clinical Pathways}
+P2 “if you're going to tell that by adding in a computer that it’s going to get more accurate, even if it’s a terminal diagnosis I'm very comfortable with that, but I'm not sure I'd want just the AI. It comes back to what P4 was saying a bit, as a human being I'm probably going to have quite an irrational response in the first instance to something that life changing and I might say things like “are you sure, how do you know that, can I get a second opinion” and with the black box it feels like none of that is possible.”
 
-
-
-
-\subsubsection{}
-
-
-\subsubsection{Human-AI Collaboration in the Diagnostic Pathway - AI as a Second Opinion}
-
+\subsection{Design of the Cooperation Between AI and Human Is Important}
 Survey findings show that in general, participants ranked scenario (3/C) [black-box with human] higher than scenario D/4 [blackbox alone]. 
 Participants of the focus-group discussed why they agreed or disagreed with this trend. One participant explained why they did not perceive that the human in scenario (3/C) improved the trustworthiness with respect to scenario 4/D without the human. 
 
@@ -1228,8 +1141,11 @@ Participant 5 responded to this point, and explained their reasoning for thinkin
 
 58 (P5) “a black box and human should be better just a black box because... [it's similar to] who wants to be a millionaire where you ask the audience... you get a bunch of statistics, and you can confirm your belief or not”. 
 The participant makes the point that the doctor has their own assessment of the situation in addition to the assessment provided by the black-box.
+
 The doctor could use the black-box output as a way of confirming their belief (a kind of second opinion), or to indicate where they may need to review their assessment. Further the participant suggests that the doctor may over time develop an intuition for the kinds of mistakes the black-box will make:
 “if they have had past results and background then they’ll know roughly whether it’s accurate or not”.
+
+P2:“it could be that the doctor makes the diagnosis and uses the AI as confirmation rather than a diagnostic itself. The doctor would first parse the information in of what he thinks is pertinent, but I think that there are risks there because you’ve got the human bias in there as well.”
 
 Participant 6 clarifies the reasoning behind their decision by raising valid questions which highlight the ambiguity surrounding the relationship between the  human and AI system within the decision making process.
 
@@ -1238,10 +1154,17 @@ Participant 6 clarifies the reasoning behind their decision by raising valid que
 “I guess in an ideal work you'd know that black box was taking in all the different information that it needed to. Especially I think in terms of minorities which have a history of not having that much data. So, I think that’s one element of having the human there that they could take that sort of information into account when maybe the black box doesn’t. “
 The human and AI could fit into the wider decision making process in different places and in different ways, which could result in or address different biases.
 
+P2 also highlights that in the survey scenarios, the  - “it could be that the doctor makes the diagnosis and uses the AI as confirmation rather than a diagnostic itself. The doctor would first pass the information in that he thinks is pertinent, but I think that there are risks there because you’ve got the human bias in there as well.”
 
-\subsection{The Importance of Human Contact}
+P1 “If the AI is smarter than the doctor, does it not have the capability to then sway the doctor...?“
+
+If the doctor is aware that on average, the AI system is more likely to be correct than they are, they may be more likely to dismiss their own perspective when it conflicts with the AI system. In some contexts, this could mean that a human working with a black-box AI system could perform worse than either in isolation due to variations in human bias when evaluating the output of the blackbox. 
 
 
+
+
+
+\newpage
 \section{Discussion}
 Contribution we've made
 
@@ -1306,6 +1229,10 @@ Contribution we've made
 
 The use of both demographic-lead and trust-level-lead analysis has demonstrated that the key stakeholders in a high-stakes decision attribute different trust levels to AI-assisted decisions. Unsupervised analysis using UMAP and HDBSCAN identified four distinct families of thought, with the largest of these groups heavily weighted against non-transparent AI. 
 
+This analysis is useful as a way to check whether our demographic features can fully explain the differences in assigned trust - it seems as if they cannot. While each cluster was demographically distinct, it was not to the extent that might be expected. The cluster with the highest average AI expertise was only 10\% higher than the whole population average, indicating that AI expertise does not play an overly influential part in how trust levels differ between these groups. One cluster had a significant proportion of medical professionals - 30\% higher than the whole population mean proportion of medical professionals - and the participants in this cluster actually rated the scenarios with the black-box AI as more trustworthy than other scenarios. This might indicate a result-oriented or efficacy-weighted consideration of the scenarios.
+
+This differed significantly from the largest cluster, who had roughly average demographic features. This cluster - perhaps representing the general perspective and thought on AI decision making tools - had the opposite trend to the cluster with highest medical professionals, rating any black-box scenario as much less trustworthy than transparent AI equivalents. 
+
 Through all analysis of the survey results and from the focus group it is clear that a human should be involved in the diagnosis process.
 
 We find that the perceived benefit of AI-cooperation, essentially using AI as a diagnostic tool, tracks technical level of expertise in our model scenarios. AI experts are the most likely to favour either AI-tool being used in diagnosis, and a majority of medical professionals do the same, but this is not true of the general public. Given that the public as a stakeholder in these scenarios represent the patient, it is worth further discussion of where they do in fact view AI assistance as beneficial.
@@ -1328,9 +1255,11 @@ Interestingly, despite this, across all demographics the black box by itself is 
 
 \textbf{Isabella can you add a bit here about what the literature says RE: is a glass box actually better than a black box in cooperation with a human? I remember there were a couple of papers saying not necessarily}
 
-Significant proportions of those who view both cooperations as beneficial rated their increased trust equally - see Table \ref{tab:demographic_trust_change}. 
+Significant proportions of those who view both cooperations as beneficial rated their increased trust equally - see Table \ref{tab:demographic_trust_change}. This, given the lens of a tradeoff between transparency and efficacy, would indicate that those who trust AI-cooperative decisions weight transparency and efficacy equally. 
 
 
+
+\newpage
 \section{Conclusion}
 
 \begin{itemize}
