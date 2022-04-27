@@ -847,7 +847,15 @@ The pseudonymised focus group transcript was subject to thematic analysis; parti
     \label{fig:distributions}
 \end{figure}
 
+Our survey concluded with $n = 278$ participants. Figure \ref{fig:distributions} shows histograms of the demographic features form the survey. From the AI-score histogram we can see that our population is, among non-medics, close to binary, with a large proportion of participants rating their AI expertise either as none or the maximum. This probably represents the public at the minimum, and AI researchers or experts at the maximum, with fairly few AI-tool users in-between. Medics follow a similar, but not as extremely split, distribution.
 
+Self-reported high-stakes decision making frequency among medics peaks at around 5, which we had described as:
+
+\begin{quote}
+    "My work contributes to high-stakes decision making, but I don't personally make many."
+\end{quote}
+
+We interpret this as meaning that our population of medics are mostly not themselves doctors, as this would constitute (for most people) the extreme of high-stakes decision making. Non-medics peak at a high-stakes decision making frequency of the minimum 1/10 score, but with a secondary peak at 5/10. The peak at 1/10 represents a large number of people who do not think that they ever make high-stakes decisions. The peak at 5/10 might represent those who are high-stakes decision-supporting - however the nature of the question may have biased some people to an inflated sense of the stakes of their work.
 %Describe our findings from user research
 %Evaluation of our findings
 %\subsection{Survey}
@@ -922,7 +930,7 @@ For the lowest rank - a ranking of 1 - the BB was by far the lowest ranking scen
 For the highest rank - ranking of 4 - the glass box with the dr was ranked most often the highest, the Dr on their own second most often, the black box with the Dr third most often and the black box on it's own was ranked least often the highest, see Figure \ref{fig:overall-ranking}.
 
 \begin{figure}[h]
-    \centering{\includegraphics[width=\textwidth]{graphics/ranking/rankingOverallNormalisedAvarageTies.png}}
+    \centering{\includegraphics[width=0.75\textwidth]{graphics/ranking/rankingOverallNormalisedAvarageTies.png}}
     \caption{Overall ranking for each of the four scenarios. Rank 1 is the lowest, rank 4 the highest ranking.}
     \label{fig:overall-ranking}
 \end{figure}
@@ -930,7 +938,7 @@ For the highest rank - ranking of 4 - the glass box with the dr was ranked most 
 Looking at how the ranking changes based on if the participant works in healthcare or not we can see that the order for the highest rank (4) and lowest rank (1) stay the same as for the overall chart. However we can also see that people who work in healthcare more frequently rate the Dr on their own as the second most frequent rank(1), see Figure \ref{fig:ranking-healthcare}.
 
 \begin{figure}[h]
-    \centering{\includegraphics[width=\textwidth]{graphics/ranking/ranking-healthcare-vs-notNormalised-average-ties.png}}
+    \centering{\includegraphics[width=0.75\textwidth]{graphics/ranking/ranking-healthcare-vs-notNormalised-average-ties.png}}
     \caption{Ranking based on participants working in healthcare or not for each of the four scenarios. Rank 1 is the lowest, rank 4 the highest ranking.}
     \label{fig:ranking-healthcare}
 \end{figure}
@@ -938,7 +946,7 @@ Looking at how the ranking changes based on if the participant works in healthca
 If we look at how the ranking changes with regards to how much AI experience the participants have we again see no change compared to the overall ranking for the highest and lowest rank. We can however see that black box together with the doctor is more frequently ranked in rank 3 for participants with medium and high AI experience and that the black box on it's own is more frequently getting a rank 3 then the Dr on it's own does, see Figure \ref{fig:ranking-ai}.
 
 \begin{figure}[h]
-    \centering{\includegraphics[width=\textwidth]{graphics/ranking/ranking-ai-experience-normalised-average-ties.png}}
+    \centering{\includegraphics[width=0.75\textwidth]{graphics/ranking/ranking-ai-experience-normalised-average-ties.png}}
     \caption{Ranking based on participant's AI experience of low, medium or high experience for each of the four scenarios. Rank 1 is the lowest, rank 4 the highest ranking.}
     \label{fig:ranking-ai}
 \end{figure}
@@ -1349,7 +1357,7 @@ We find that the perceived benefit of AI-cooperation, essentially using AI as a 
 Responses from the focus group indicate that the level of transparency is indeed significant to trust levels:
 
 \begin{quote}
-    \textit{``...if whoever is using the algorithm doesn't understand how it reaches those decisions then I guess it can each the wrong decisions and no one will know and there is no way of catching that"} - P6
+    \textit{``...if whoever is using the algorithm doesn't understand how it reaches those decisions then I guess it can reach the wrong decisions and no one will know and there is no way of catching that"} - P6
 \end{quote}
 
 This aligns with survey results from demographic motivated analysis, where significantly higher proportions of all cohorts view the glass-box cooperative scenario beneficial and the black-box as inhibitory than the inverse. This correlates with results from the focus group, where we found that participants' desire for transparency increases with the stakes of the decision. Out of those that view both scenarios as beneficial, only AI experts prefer the glass box. This might be due to the currently popular discussion around interpretability and transparency. Future work could convene surveys or qualitative research specifically on AI experts to ascertain whether this is true.
@@ -1362,7 +1370,7 @@ Interestingly, despite this, across all demographics the black box by itself is 
     \textit{``...I probably would be more forgiving to a doctor than a black box. And I think if a doctor can give a reason for why they’ve picked that} [diagnosis/decision] \textit{then it might make sense to me. I think the same thing with the glass box where I can see why it thought that} [diagnosis/decision] \textit{rather than just giving an answer."} - P5
 \end{quote}
 
-\textbf{Isabella can you add a bit here about what the literature says RE: is a glass box actually better than a black box in cooperation with a human? I remember there were a couple of papers saying not necessarily}
+\textbf{Add a bit here about what the literature says RE: is a glass box actually better than a black box in cooperation with a human? I remember there were a couple of papers saying not necessarily}
 
 Significant proportions of those who view both cooperations as beneficial rated their increased trust equally - see Table \ref{tab:demographic_trust_change}. This, given the lens of a trade-off between transparency and efficacy, would indicate that those who trust AI-cooperative decisions weight transparency and efficacy equally. 
 
@@ -1394,7 +1402,7 @@ The focus group found that the design of the cooperation between AI and doctor/u
 %% identification of the section in the article metadata, and the
 %% consistent spelling of the heading.
 \begin{acks}
-Acknowledgments
+The real interpretable AI was the friends we made along the way
 \end{acks}
 
 %%
@@ -1431,32 +1439,32 @@ The study has been reviewed by the unit director, Dr Paul Marshall.
 The risks associated with participating in the study were assessed as low likelihood and low severity. 
 
 \section{Survey Questionnaire}
-\begin{figure}[H]
+\begin{figure}[h]
     \centering{\includegraphics[height=\textheight]{graphics/questionnaire/demographics.png}}
     \caption{Questions about participants demographic}
     \label{fig:questionnaire-demographic}
 \end{figure}
-\begin{figure}[H]
+\begin{figure}[h]
     \centering{\includegraphics[width=\textwidth]{graphics/questionnaire/IntroToScenario.png}}
     \caption{Intro to Scenarios}
     \label{fig:questionnaire-scenario-intro}
 \end{figure}
-\begin{figure}[H]
+\begin{figure}[h]
     \centering{\includegraphics[width=\textwidth]{graphics/questionnaire/Scenario1.png}}
     \caption{Scenario One: Dr on their own}
     \label{fig:questionnaire-scenario-1}
 \end{figure}
-\begin{figure}[H]
+\begin{figure}[h]
     \centering{\includegraphics[width=\textwidth]{graphics/questionnaire/Scenario2.png}}
     \caption{Scenario two: Dr together with the Glass Box}
     \label{fig:questionnaire-scenario-2}
 \end{figure}
-\begin{figure}[H]
+\begin{figure}[h]
     \centering{\includegraphics[width=\textwidth]{graphics/questionnaire/Scenario3.png}}
     \caption{Scenario three: Dr together with the Black Box}
     \label{fig:questionnaire-scenario-3}
 \end{figure}
-\begin{figure}[H]
+\begin{figure}[h]
     \centering{\includegraphics[width=\textwidth]{graphics/questionnaire/Scenario4.png}}
     \caption{Scenario four: Black box on its own}
     \label{fig:questionnaire-scenario-4}
